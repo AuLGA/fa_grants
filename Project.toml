@@ -1,0 +1,6 @@
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+Optim = "429524aa-4258-5aef-a3af-852621145aeb"
+XLSX = "fdbf4ff8-1666-58a4-91e7-1b58723a45e0"
