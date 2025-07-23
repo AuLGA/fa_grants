@@ -3,12 +3,16 @@ import streamlit as st
 import pandas as pd
 import numpy as np 
 
+pd.options.mode.chained_assignment = None
+
+from tqdm import tqdm
+
 st.set_page_config(
      page_title="Financial Assistance Grants to Local Government",
      layout="wide"
      )
 
-@st.cache_data
+#@st.cache_data
 def read_data(): 
     pop_30_jun = pd.read_excel("./Data/FA Grants Tables - Python.xlsx", sheet_name="Population", skiprows=9, nrows=7) 
     pop_30_jun.set_index("Population by state, at 30 June (million)", inplace=True) 
@@ -173,7 +177,7 @@ def simulate(per_capita_minimum, per_capita_minimum_base):
         # Absense of reliable documentation means that we use the same approach as used in Queensland's modelling. 
         
         st.write("Simulating New South Wales grants...")
-        for i in range(1000):
+        for i in tqdm(range(1000)):
             nsw_grants = nsw_grants_base.copy() 
             nsw_grants["UID"] = nsw_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1) 
             for year in range(2025, 2029):
@@ -198,7 +202,7 @@ def simulate(per_capita_minimum, per_capita_minimum_base):
         # Victoria OLG has a cap/collar of [2%, 10%] for non minimum grant councils. 
 
         st.write("Simulating Victoria grants...")
-        for i in range(1000):
+        for i in tqdm(range(1000)):
             vic_grants = vic_grants_base.copy() 
             vic_grants["UID"] = vic_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1) 
             for year in range(2025, 2029):
@@ -234,7 +238,7 @@ def simulate(per_capita_minimum, per_capita_minimum_base):
         # There's no cap/collar and minimum grant eligibility is based on population > 80,000. 
 
         st.write("Simulating Queensland grants...")
-        for i in range(1000):
+        for i in tqdm(range(1000)):
             qld_grants = qld_grants_base.copy() 
             qld_grants["UID"] = qld_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1) 
             for year in range(2025, 2029):
@@ -259,7 +263,7 @@ def simulate(per_capita_minimum, per_capita_minimum_base):
         # South Australia OLG has a cap/collar of [-15%, 30%] for councils. 
 
         st.write("Simulating South Australia grants...")
-        for i in range(1000):
+        for i in tqdm(range(1000)):
             sa_grants = sa_grants_base.copy() 
             sa_grants["UID"] = sa_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1) 
             for year in range(2025, 2029):
@@ -293,7 +297,7 @@ def simulate(per_capita_minimum, per_capita_minimum_base):
         # WA State Grants Commission has no ceiling on change, but claims to limit year on year decrease. No explicit floor is given, but the biggest 2023-24 to 2024-25 decrease was about -60%. So, that's the floor we'll use. 
         
         st.write("Simulating Western Australia grants...")
-        for i in range(1000):
+        for i in tqdm(range(1000)):
             wa_grants = wa_grants_base.copy() 
             wa_grants["UID"] = wa_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1) 
             for year in range(2025, 2029):
@@ -327,7 +331,7 @@ def simulate(per_capita_minimum, per_capita_minimum_base):
         # Tasmania State Grants Commission has a cap/collar of [-5%, 10%] for all councils. 
 
         st.write("Simulating Tasmania grants...")
-        for i in range(1000):
+        for i in tqdm(range(1000)):
             tas_grants = tas_grants_base.copy() 
             tas_grants["UID"] = tas_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1) 
             for year in range(2025, 2029):
@@ -361,7 +365,7 @@ def simulate(per_capita_minimum, per_capita_minimum_base):
         # Northern Territory has a collar of -5% for all councils. 
 
         st.write("Simulating Northern Territory grants...")
-        for i in range(1000):
+        for i in tqdm(range(1000)):
             nt_grants = nt_grants_base.copy() 
             nt_grants["UID"] = nt_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1) 
             for year in range(2025, 2029):
