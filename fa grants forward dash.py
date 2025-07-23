@@ -159,7 +159,7 @@ def correct_delta_nt(sub_nt, year):
         sub_nt["delta"] = (sub_nt["alloc"] - sub_nt[f"Grant_{year-1}"]) / sub_nt[f"Grant_{year-1}"] * 100
     return sub_nt 
 
-@st.cache_data
+#@st.cache_data
 def simulate(per_capita_minimum, per_capita_minimum_base):
 
     with st.status("Running simulation...", expanded=True) as status:
