@@ -1,0 +1,253 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A Characterization of the Australian Financial Assistance Grants System",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "methodology.html",
+    "href": "methodology.html",
+    "title": "2  FA Grant Allocation Methodology",
+    "section": "",
+    "text": "2.1 At the Federal Level\n30% of the General Purpose Component grant is allocated on a per capita basis.\nGeneral Purpose Component - Allocation to states on a per capital basis Roads Component - Allocation to states based on fixed ratios:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>FA Grant Allocation Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "methodology.html#at-the-federal-level",
+    "href": "methodology.html#at-the-federal-level",
+    "title": "2  FA Grant Allocation Methodology",
+    "section": "",
+    "text": "State\nRoads Component %\n\n\n\n\nNew South Wales\n29.0%\n\n\nVictoria\n20.6%\n\n\nQueensland\n18.7%\n\n\nSouth Australia\n5.5%\n\n\nWestern Australia\n15.3%\n\n\nTasmania\n5.3%\n\n\nNorthern Territory\n2.3%\n\n\nAustralian Capital Territory\n3.2%\n\n\n\n\nNSW, WA, SA : Population &gt; 50,000 -&gt; Minimum grant council",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>FA Grant Allocation Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "methodology.html#new-south-wales",
+    "href": "methodology.html#new-south-wales",
+    "title": "2  FA Grant Allocation Methodology",
+    "section": "2.2 New South Wales",
+    "text": "2.2 New South Wales",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>FA Grant Allocation Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "methodology.html#victoria",
+    "href": "methodology.html#victoria",
+    "title": "2  FA Grant Allocation Methodology",
+    "section": "2.3 Victoria",
+    "text": "2.3 Victoria\n\nhttps://www.localgovernment.vic.gov.au/funding-programs/victoria-grants-commission/financial-assistance-grants https://www.localgovernment.vic.gov.au/funding-programs/victoria-grants-commission/publications https://www.localgovernment.vic.gov.au/__data/assets/pdf_file/0019/210727/2024-25-VLGGC-Annual-Allocation-Report-Sept-2024.pdf",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>FA Grant Allocation Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "methodology.html#queensland",
+    "href": "methodology.html#queensland",
+    "title": "2  FA Grant Allocation Methodology",
+    "section": "2.4 Queensland",
+    "text": "2.4 Queensland\n\nhttps://www.localgovernment.qld.gov.au/for-councils/governance/queensland-local-government-grants-commission/financial-assistance-grant https://www.localgovernment.qld.gov.au/__data/assets/pdf_file/0030/99174/commission-report-2024.pdf\n\nPopulation &gt; 80,000 -&gt; Minimum grant council",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>FA Grant Allocation Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "methodology.html#south-australia",
+    "href": "methodology.html#south-australia",
+    "title": "2  FA Grant Allocation Methodology",
+    "section": "2.5 South Australia",
+    "text": "2.5 South Australia\n\nhttps://dit.sa.gov.au/local-government/grants-commission/methodology-review https://www.dit.sa.gov.au/local-government/grants-commission/general-purpose-grants https://www.dit.sa.gov.au/local-government/documents/office-of-local-government/grants-commission/general_purpose_grants-adelaide-holdfast_bay.pdf https://www.dit.sa.gov.au/local-government/grants-commission/publications https://www.dit.sa.gov.au/__data/assets/pdf_file/0008/1275470/Database-Reports-2021-22.pdf",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>FA Grant Allocation Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "methodology.html#western-australia",
+    "href": "methodology.html#western-australia",
+    "title": "2  FA Grant Allocation Methodology",
+    "section": "2.6 Western Australia",
+    "text": "2.6 Western Australia\n\nhttps://www.dlgsc.wa.gov.au/local-government/local-governments/financial-assistance-grants",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>FA Grant Allocation Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "methodology.html#tasmania",
+    "href": "methodology.html#tasmania",
+    "title": "2  FA Grant Allocation Methodology",
+    "section": "2.7 Tasmania",
+    "text": "2.7 Tasmania\n\nhttps://www.treasury.tas.gov.au/state-grants-commission/publications https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%20Annual%20Report%202023-24.pdf https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%202024-25%20Financial%20Assistance%20Grant%20Data%20Tables.pdf",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>FA Grant Allocation Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "methodology.html#northern-territory",
+    "href": "methodology.html#northern-territory",
+    "title": "2  FA Grant Allocation Methodology",
+    "section": "2.8 Northern Territory",
+    "text": "2.8 Northern Territory\n\nThe 2023-34 allocation data tables are used since the annual report is not out yet.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>FA Grant Allocation Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "methodology.html#australian-capital-territory",
+    "href": "methodology.html#australian-capital-territory",
+    "title": "2  FA Grant Allocation Methodology",
+    "section": "2.9 Australian Capital Territory",
+    "text": "2.9 Australian Capital Territory",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>FA Grant Allocation Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "NSW_methodology.html",
+    "href": "NSW_methodology.html",
+    "title": "4  New South Wales Methodology",
+    "section": "",
+    "text": "5 # New South Wales Methodology\nThis is the content for # New South Wales Methodology.",
+    "crumbs": [
+      "Where we stand",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>New South Wales Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "VIC_methodology.html",
+    "href": "VIC_methodology.html",
+    "title": "5  Victoria Methodology",
+    "section": "",
+    "text": "6 # Victoria Methodology\nThis is the content for # Victoria Methodology.",
+    "crumbs": [
+      "Where we stand",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Victoria Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "QLD_methodology.html",
+    "href": "QLD_methodology.html",
+    "title": "6  Queensland Methodology",
+    "section": "",
+    "text": "7 # Queensland Methodology\nThis is the content for # Queensland Methodology.",
+    "crumbs": [
+      "Where we stand",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Queensland Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "SA_methodology.html",
+    "href": "SA_methodology.html",
+    "title": "7  South Australia Methodology",
+    "section": "",
+    "text": "8 # South Australia Methodology\nThis is the content for # South Australia Methodology.",
+    "crumbs": [
+      "Where we stand",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>South Australia Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "WA_methodology.html",
+    "href": "WA_methodology.html",
+    "title": "8  Western Australia Methodology",
+    "section": "",
+    "text": "9 # Western Australia Methodology\nThis is the content for # Western Australia Methodology.",
+    "crumbs": [
+      "Where we stand",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Western Australia Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "TAS_methodology.html",
+    "href": "TAS_methodology.html",
+    "title": "9  Tasmania Methodology",
+    "section": "",
+    "text": "10 # Tasmania Methodology\nThis is the content for # Tasmania Methodology.",
+    "crumbs": [
+      "Where we stand",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tasmania Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "NT_methodology.html",
+    "href": "NT_methodology.html",
+    "title": "10  Northern Territory Methodology",
+    "section": "",
+    "text": "11 # Northern Territory Methodology\nThis is the content for # Northern Territory Methodology.",
+    "crumbs": [
+      "Where we stand",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Northern Territory Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "discussed-issues.html",
+    "href": "discussed-issues.html",
+    "title": "11  Discussed Issues",
+    "section": "",
+    "text": "12 # Discussed Issues\nThis is the content for # Discussed Issues.",
+    "crumbs": [
+      "A peek into the problems",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Discussed Issues</span>"
+    ]
+  },
+  {
+    "objectID": "methodology-detailed.html",
+    "href": "methodology-detailed.html",
+    "title": "12  Methodology Detailed",
+    "section": "",
+    "text": "13 # Methodology Detailed\nThis is the content for # Methodology Detailed.",
+    "crumbs": [
+      "Data Data Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Methodology Detailed</span>"
+    ]
+  },
+  {
+    "objectID": "methodology-simplified.html",
+    "href": "methodology-simplified.html",
+    "title": "13  Methodology Simplified",
+    "section": "",
+    "text": "14 # Methodology Simplified\nThis is the content for # Methodology Simplified.",
+    "crumbs": [
+      "Data Data Data",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Methodology Simplified</span>"
+    ]
+  },
+  {
+    "objectID": "lower_min_grant.html",
+    "href": "lower_min_grant.html",
+    "title": "14  Lower Minimum Grant",
+    "section": "",
+    "text": "15 # Lower Minimum Grant\nThis is the content for # Lower Minimum Grant.",
+    "crumbs": [
+      "Data Data Data",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lower Minimum Grant</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
