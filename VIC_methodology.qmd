@@ -1,7 +1,3 @@
----
-title: "# Victoria Methodology"
----
-
-# # Victoria Methodology
+# Victoria Methodology
 
 This is the content for # Victoria Methodology.

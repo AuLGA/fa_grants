@@ -124,7 +124,7 @@
     "href": "NSW_methodology.html",
     "title": "4  New South Wales Methodology",
     "section": "",
-    "text": "5 # New South Wales Methodology\nThis is the content for # New South Wales Methodology.",
+    "text": "This is the content for # New South Wales Methodology.",
     "crumbs": [
       "Where we stand",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>New South Wales Methodology</span>"
@@ -135,7 +135,7 @@
     "href": "VIC_methodology.html",
     "title": "5  Victoria Methodology",
     "section": "",
-    "text": "6 # Victoria Methodology\nThis is the content for # Victoria Methodology.",
+    "text": "This is the content for # Victoria Methodology.",
     "crumbs": [
       "Where we stand",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Victoria Methodology</span>"
@@ -146,7 +146,7 @@
     "href": "QLD_methodology.html",
     "title": "6  Queensland Methodology",
     "section": "",
-    "text": "7 # Queensland Methodology\nThis is the content for # Queensland Methodology.",
+    "text": "This is the content for # Queensland Methodology.",
     "crumbs": [
       "Where we stand",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Queensland Methodology</span>"
@@ -157,7 +157,7 @@
     "href": "SA_methodology.html",
     "title": "7  South Australia Methodology",
     "section": "",
-    "text": "8 # South Australia Methodology\nThis is the content for # South Australia Methodology.",
+    "text": "This is the content for # South Australia Methodology.",
     "crumbs": [
       "Where we stand",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>South Australia Methodology</span>"
@@ -168,7 +168,7 @@
     "href": "WA_methodology.html",
     "title": "8  Western Australia Methodology",
     "section": "",
-    "text": "9 # Western Australia Methodology\nThis is the content for # Western Australia Methodology.",
+    "text": "This is the content for # Western Australia Methodology.",
     "crumbs": [
       "Where we stand",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Western Australia Methodology</span>"
@@ -179,7 +179,7 @@
     "href": "TAS_methodology.html",
     "title": "9  Tasmania Methodology",
     "section": "",
-    "text": "10 # Tasmania Methodology\nThis is the content for # Tasmania Methodology.",
+    "text": "This is the content for # Tasmania Methodology.",
     "crumbs": [
       "Where we stand",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tasmania Methodology</span>"
@@ -190,7 +190,7 @@
     "href": "NT_methodology.html",
     "title": "10  Northern Territory Methodology",
     "section": "",
-    "text": "11 # Northern Territory Methodology\nThis is the content for # Northern Territory Methodology.",
+    "text": "This is the content for # Northern Territory Methodology.",
     "crumbs": [
       "Where we stand",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Northern Territory Methodology</span>"
@@ -201,7 +201,7 @@
     "href": "discussed-issues.html",
     "title": "11  Discussed Issues",
     "section": "",
-    "text": "12 # Discussed Issues\nThis is the content for # Discussed Issues.",
+    "text": "This is the content for # Discussed Issues.",
     "crumbs": [
       "A peek into the problems",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Discussed Issues</span>"
@@ -210,34 +210,34 @@
   {
     "objectID": "methodology-detailed.html",
     "href": "methodology-detailed.html",
-    "title": "12  Methodology Detailed",
+    "title": "12  Detailed Methodology",
     "section": "",
-    "text": "13 # Methodology Detailed\nThis is the content for # Methodology Detailed.",
+    "text": "This is the content for # Detailed Methodology.",
     "crumbs": [
       "Data Data Data",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Methodology Detailed</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Detailed Methodology</span>"
     ]
   },
   {
     "objectID": "methodology-simplified.html",
     "href": "methodology-simplified.html",
-    "title": "13  Methodology Simplified",
+    "title": "13  Simplified Methodology",
     "section": "",
-    "text": "14 # Methodology Simplified\nThis is the content for # Methodology Simplified.",
+    "text": "This is the content for # Simplified Methodology.",
     "crumbs": [
       "Data Data Data",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Methodology Simplified</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Simplified Methodology</span>"
     ]
   },
   {
     "objectID": "lower_min_grant.html",
     "href": "lower_min_grant.html",
-    "title": "14  Lower Minimum Grant",
+    "title": "14  Lower Minimum Grant Scenario",
     "section": "",
-    "text": "15 # Lower Minimum Grant\nThis is the content for # Lower Minimum Grant.",
+    "text": "This is the content for # Lower Minimum Grant Scenario.",
     "crumbs": [
       "Data Data Data",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lower Minimum Grant</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lower Minimum Grant Scenario</span>"
     ]
   },
   {

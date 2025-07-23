@@ -1,7 +1,3 @@
----
-title: "# Methodology Simplified"
----
+# Simplified Methodology
 
-# # Methodology Simplified
-
-This is the content for # Methodology Simplified.
+This is the content for # Simplified Methodology.

@@ -1,7 +1,3 @@
----
-title: "# Tasmania Methodology"
----
-
-# # Tasmania Methodology
+# Tasmania Methodology
 
 This is the content for # Tasmania Methodology.
