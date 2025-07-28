@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>14&nbsp; Lower Minimum Grant Scenario – A Characterization of the Australian Financial Assistance Grants System</title>
+<title>13&nbsp; A 17% Per Capita Minimum Grant – A Characterization of the Australian Financial Assistance Grants System</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,10 +20,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -31,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./references.html" rel="next">
-<link href="./methodology-simplified.html" rel="prev">
+<link href="./simulation_methodology.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -69,6 +104,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -82,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./methodology-detailed.html">Data Data Data</a></li><li class="breadcrumb-item"><a href="./lower_min_grant.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lower Minimum Grant Scenario</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./simulation_methodology.html">Data Data Data</a></li><li class="breadcrumb-item"><a href="./lower_min_grant.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A 17% Per Capita Minimum Grant</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -212,20 +250,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./methodology-detailed.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Detailed Methodology</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./methodology-simplified.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simplified Methodology</span></span></a>
+  <a href="./simulation_methodology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Methodology: Grants Simulation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lower_min_grant.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lower Minimum Grant Scenario</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A 17% Per Capita Minimum Grant</span></span></a>
   </div>
 </li>
       </ul>
@@ -247,9 +279,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./methodology-detailed.html">Data Data Data</a></li><li class="breadcrumb-item"><a href="./lower_min_grant.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lower Minimum Grant Scenario</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./simulation_methodology.html">Data Data Data</a></li><li class="breadcrumb-item"><a href="./lower_min_grant.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A 17% Per Capita Minimum Grant</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lower Minimum Grant Scenario</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">A 17% Per Capita Minimum Grant</span></h1>
 </div>
 
 
@@ -266,7 +298,335 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is the content for # Lower Minimum Grant Scenario.</p>
+<ul>
+<li><p>The model here applies a per capita minimum grant constraint, set at 17%, to ensure that each jurisdiction receives at least this proportion of the funds if they were allocated on a per capita basis.</p></li>
+<li><p>The per capita minimum for the benchmark scenario is set to 30%, as is the status quo.</p></li>
+</ul>
+<div id="9fc6da13" class="cell" data-tags="[&quot;parameters&quot;]" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fagrants_module <span class="im">import</span> fagrants</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>inst <span class="op">=</span> fagrants.fagrants_model(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    data_path <span class="op">=</span> <span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>, </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    per_capita_minimum <span class="op">=</span> <span class="fl">0.17</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    per_capita_minimum_base <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>sim_grants <span class="op">=</span> inst.run()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="8c1afe6d" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sim_grants[<span class="st">"Sim_i"</span>] <span class="op">=</span> sim_grants[<span class="st">"UID"</span>].<span class="bu">str</span>.split(<span class="st">"_"</span>).<span class="bu">str</span>[<span class="dv">1</span>].astype(<span class="bu">str</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="b028b4e1" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sim_grants</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Jurisdiction</th>
+<th data-quarto-table-cell-role="th">LGA</th>
+<th data-quarto-table-cell-role="th">ACLG</th>
+<th data-quarto-table-cell-role="th">UID</th>
+<th data-quarto-table-cell-role="th">ERP_2024</th>
+<th data-quarto-table-cell-role="th">Grant_2024</th>
+<th data-quarto-table-cell-role="th">ERP_2025</th>
+<th data-quarto-table-cell-role="th">Grant_base_2025</th>
+<th data-quarto-table-cell-role="th">Grant_2025</th>
+<th data-quarto-table-cell-role="th">ERP_2026</th>
+<th data-quarto-table-cell-role="th">Grant_base_2026</th>
+<th data-quarto-table-cell-role="th">Grant_2026</th>
+<th data-quarto-table-cell-role="th">ERP_2027</th>
+<th data-quarto-table-cell-role="th">Grant_base_2027</th>
+<th data-quarto-table-cell-role="th">Grant_2027</th>
+<th data-quarto-table-cell-role="th">ERP_2028</th>
+<th data-quarto-table-cell-role="th">Grant_base_2028</th>
+<th data-quarto-table-cell-role="th">Grant_2028</th>
+<th data-quarto-table-cell-role="th">Sim_i</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>New South Wales</td>
+<td>The Council of the City of Sydney</td>
+<td>UCC</td>
+<td>TheCounciloftheCityofSydney_1</td>
+<td>231086</td>
+<td>5901858</td>
+<td>238154.0</td>
+<td>6.198876e+06</td>
+<td>3.512696e+06</td>
+<td>240869.0</td>
+<td>6.429082e+06</td>
+<td>3.643147e+06</td>
+<td>243445.0</td>
+<td>6.663437e+06</td>
+<td>3.775948e+06</td>
+<td>246049.0</td>
+<td>6.903611e+06</td>
+<td>3.912046e+06</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>New South Wales</td>
+<td>Hunter's Hill Council</td>
+<td>UDS</td>
+<td>Hunter'sHillCouncil_1</td>
+<td>14036</td>
+<td>441211</td>
+<td>14465.0</td>
+<td>4.585883e+05</td>
+<td>3.106787e+05</td>
+<td>14630.0</td>
+<td>4.818269e+05</td>
+<td>3.295757e+05</td>
+<td>14787.0</td>
+<td>4.928998e+05</td>
+<td>3.338842e+05</td>
+<td>14945.0</td>
+<td>5.212085e+05</td>
+<td>3.584223e+05</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>New South Wales</td>
+<td>Mosman Municipal Council</td>
+<td>UDM</td>
+<td>MosmanMunicipalCouncil_1</td>
+<td>29071</td>
+<td>908679</td>
+<td>29960.0</td>
+<td>9.480184e+05</td>
+<td>6.413304e+05</td>
+<td>30302.0</td>
+<td>9.819493e+05</td>
+<td>6.636276e+05</td>
+<td>30626.0</td>
+<td>1.025383e+06</td>
+<td>6.968779e+05</td>
+<td>30953.0</td>
+<td>1.090693e+06</td>
+<td>7.556230e+05</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>New South Wales</td>
+<td>Burwood Council</td>
+<td>UDM</td>
+<td>BurwoodCouncil_1</td>
+<td>42498</td>
+<td>1136510</td>
+<td>43798.0</td>
+<td>1.196932e+06</td>
+<td>7.134981e+05</td>
+<td>44297.0</td>
+<td>1.235242e+06</td>
+<td>7.327194e+05</td>
+<td>44771.0</td>
+<td>1.270678e+06</td>
+<td>7.480510e+05</td>
+<td>45250.0</td>
+<td>1.318094e+06</td>
+<td>7.769286e+05</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>New South Wales</td>
+<td>Lane Cove Municipal Council</td>
+<td>UDM</td>
+<td>LaneCoveMunicipalCouncil_1</td>
+<td>41549</td>
+<td>1123412</td>
+<td>42820.0</td>
+<td>1.179224e+06</td>
+<td>7.082598e+05</td>
+<td>43308.0</td>
+<td>1.223445e+06</td>
+<td>7.350727e+05</td>
+<td>43771.0</td>
+<td>1.261218e+06</td>
+<td>7.537792e+05</td>
+<td>44239.0</td>
+<td>1.301400e+06</td>
+<td>7.746948e+05</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">537995</td>
+<td>Northern Territory</td>
+<td>Tiwi Islands Regional Council</td>
+<td>RTM</td>
+<td>TiwiIslandsRegionalCouncil_1000</td>
+<td>2763</td>
+<td>450412</td>
+<td>2887.0</td>
+<td>5.626662e+05</td>
+<td>6.206389e+05</td>
+<td>2910.0</td>
+<td>7.182112e+05</td>
+<td>8.036014e+05</td>
+<td>2921.0</td>
+<td>7.915454e+05</td>
+<td>8.890983e+05</td>
+<td>2944.0</td>
+<td>8.845674e+05</td>
+<td>9.977177e+05</td>
+<td>1000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">537996</td>
+<td>Northern Territory</td>
+<td>Victoria Daly Regional Council</td>
+<td>RTL</td>
+<td>VictoriaDalyRegionalCouncil_1000</td>
+<td>3314</td>
+<td>589064</td>
+<td>3463.0</td>
+<td>5.787290e+05</td>
+<td>6.304029e+05</td>
+<td>3490.0</td>
+<td>6.382656e+05</td>
+<td>6.992433e+05</td>
+<td>3504.0</td>
+<td>7.076615e+05</td>
+<td>7.797667e+05</td>
+<td>3531.0</td>
+<td>6.652054e+05</td>
+<td>7.274230e+05</td>
+<td>1000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">537997</td>
+<td>Northern Territory</td>
+<td>Wagait Shire Council</td>
+<td>RTS</td>
+<td>WagaitShireCouncil_1000</td>
+<td>467</td>
+<td>12407</td>
+<td>488.0</td>
+<td>1.270314e+04</td>
+<td>7.198447e+03</td>
+<td>492.0</td>
+<td>1.310739e+04</td>
+<td>7.427519e+03</td>
+<td>494.0</td>
+<td>1.350900e+04</td>
+<td>7.655100e+03</td>
+<td>498.0</td>
+<td>1.397056e+04</td>
+<td>7.916649e+03</td>
+<td>1000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">537998</td>
+<td>Northern Territory</td>
+<td>West Arnhem Regional Council</td>
+<td>RTL</td>
+<td>WestArnhemRegionalCouncil_1000</td>
+<td>7449</td>
+<td>1953690</td>
+<td>7785.0</td>
+<td>1.867657e+06</td>
+<td>2.089056e+06</td>
+<td>7845.0</td>
+<td>1.713549e+06</td>
+<td>1.902399e+06</td>
+<td>7875.0</td>
+<td>1.668137e+06</td>
+<td>1.844621e+06</td>
+<td>7936.0</td>
+<td>1.742932e+06</td>
+<td>1.928800e+06</td>
+<td>1000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">537999</td>
+<td>Northern Territory</td>
+<td>West Daly Regional Council</td>
+<td>RTL</td>
+<td>WestDalyRegionalCouncil_1000</td>
+<td>3445</td>
+<td>579827</td>
+<td>3600.0</td>
+<td>6.601503e+05</td>
+<td>7.247376e+05</td>
+<td>3628.0</td>
+<td>6.820488e+05</td>
+<td>7.488817e+05</td>
+<td>3642.0</td>
+<td>6.896878e+05</td>
+<td>7.561188e+05</td>
+<td>3670.0</td>
+<td>7.705074e+05</td>
+<td>8.498672e+05</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+
+<p>538000 rows × 19 columns</p>
+</div>
+</div>
+</div>
+<div id="fec401ba" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2025</span>, <span class="dv">2029</span>):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    sim_grants[<span class="ss">f"Grant Delta_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> sim_grants[<span class="ss">f"Grant_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">-</span> sim_grants[<span class="ss">f"Grant_base_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="0ac7a8db" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sim_grants_udl <span class="op">=</span> sim_grants[sim_grants[<span class="st">"ACLG"</span>] <span class="op">==</span> <span class="st">"UDL"</span>].copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="0b0d312b" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sim_grants_udl.groupby(<span class="st">"Jurisdiction"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x70c3590b3790&gt;</code></pre>
+</div>
+</div>
+<div id="7ae9e331" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="005540ed" class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> monte_carlo_plot(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="6cc6cfbf" class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.FacetGrid(sim_grants_udl, row<span class="op">=</span><span class="st">"Jurisdiction"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lower_min_grant_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 
@@ -672,8 +1032,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./methodology-simplified.html" class="pagination-link" aria-label="Simplified Methodology">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simplified Methodology</span></span>
+      <a href="./simulation_methodology.html" class="pagination-link" aria-label="Methodology: Grants Simulation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Methodology: Grants Simulation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

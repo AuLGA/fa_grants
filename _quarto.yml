@@ -25,9 +25,8 @@ book:
         - discussed-issues.qmd
     - part: "Data Data Data"
       chapters:
-        - methodology-detailed.qmd
-        - methodology-simplified.qmd
-        - lower_min_grant.qmd
+        - simulation_methodology.ipynb
+        - lower_min_grant.ipynb
     - references.qmd
 
 bibliography: references.bib
