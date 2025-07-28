@@ -1,0 +1,41 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "A Characterization of the Australian Financial Assistance Grants System"
+  author: "Sreehari Pulickamadhom Sreedhar"
+  date: "7/23/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - methodology.qmd
+    - part: "Where we stand"
+      chapters:
+        - historical-context.qmd
+        - NSW_methodology.qmd
+        - VIC_methodology.qmd
+        - QLD_methodology.qmd
+        - SA_methodology.qmd
+        - WA_methodology.qmd
+        - TAS_methodology.qmd
+        - NT_methodology.qmd
+    - part: "A peek into the problems"
+      chapters:
+        - discussed-issues.qmd
+    - part: "Data Data Data"
+      chapters:
+        - simulation_methodology.ipynb
+        - lower_min_grant.ipynb
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - pandoc
+      - brand
+
+
+

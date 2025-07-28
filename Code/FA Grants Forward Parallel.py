@@ -39,14 +39,14 @@ nsw_grants_base["ERP_2028"] = nsw_grants_base["ERP_2028"].round(0)
 
 def run_nsw(i):
     nsw_grants = nsw_grants_base.copy()
-    nsw_grants["UID"] = nsw_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1)
+    nsw_grants["UID"] = nsw_grants["LGA"].str.replace(" ", "").replace("-", "") + "_" + str(i+1)
     for year in range(2025, 2029):
         min_per_capita_grant = budget_grants["NSW"][f"{year}-{(year+1)%1000}"] / nsw_grants[f"ERP_{year}"].sum() * per_capita_minimum
         min_grant = nsw_grants[f"ERP_{year}"] * min_per_capita_grant
         min_per_capita_grant_base = budget_grants["NSW"][f"{year}-{(year+1)%1000}"] / nsw_grants[f"ERP_{year}"].sum() * per_capita_minimum_base
         min_grant_base = nsw_grants[f"ERP_{year}"] * min_per_capita_grant_base
-        non_min = nsw_grants[f"Scaled Gap_{year-1}"].round(4) == 0.0
-        nsw_grants[f"Scaled Gap_{year}"] = (nsw_grants[f"Scaled Gap_{year-1}"] * np.random.normal(1, 0.1, size=nsw_grants.shape[0])) * non_min
+        #non_min = nsw_grants[f"Scaled Gap_{year-1}"].round(4) == 0.0
+        nsw_grants[f"Scaled Gap_{year}"] = (nsw_grants[f"Scaled Gap_{year-1}"] * np.random.normal(1, 0.1, size=nsw_grants.shape[0]))# * non_min
         nsw_grants[f"Scaled Gap_{year}"] = nsw_grants[f"Scaled Gap_{year}"]/nsw_grants[f"Scaled Gap_{year}"].sum()
         # New case
         raw_alloc = nsw_grants[f"Scaled Gap_{year}"] * (budget_grants["NSW"][f"{year}-{(year+1)%1000}"] - min_grant.sum())
@@ -87,7 +87,7 @@ vic_grants_base["Grant_base_2024"] = vic_grants_base["Grant_2024"]
 
 def run_vic(i):
     vic_grants = vic_grants_base.copy()
-    vic_grants["UID"] = vic_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1)
+    vic_grants["UID"] = vic_grants["LGA"].str.replace(" ", "").replace("-", "") + "_" + str(i+1)
     for year in range(2025, 2029):
         min_per_capita_grant = budget_grants["VIC"][f"{year}-{(year+1)%1000}"] / vic_grants[f"ERP_{year}"].sum() * per_capita_minimum
         min_grant = vic_grants[f"ERP_{year}"] * min_per_capita_grant
@@ -132,7 +132,7 @@ qld_grants_base["ERP_2028"] = qld_grants_base["ERP_2028"].round(0)
 
 def run_qld(i):
     qld_grants = qld_grants_base.copy()
-    qld_grants["UID"] = qld_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1)
+    qld_grants["UID"] = qld_grants["LGA"].str.replace(" ", "").replace("-", "") + "_" + str(i+1)
     for year in range(2025, 2029):
         min_per_capita_grant = budget_grants["QLD"][f"{year}-{(year+1)%1000}"] / qld_grants[f"ERP_{year}"].sum() * per_capita_minimum
         min_grant = qld_grants[f"ERP_{year}"] * min_per_capita_grant
@@ -179,7 +179,7 @@ sa_grants_base["Grant_base_2024"] = sa_grants_base["Grant_2024"]
 
 def run_sa(i):
     sa_grants = sa_grants_base.copy()
-    sa_grants["UID"] = sa_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1)
+    sa_grants["UID"] = sa_grants["LGA"].str.replace(" ", "").replace("-", "") + "_" + str(i+1)
     for year in range(2025, 2029):
         min_per_capita_grant = budget_grants["SA"][f"{year}-{(year+1)%1000}"] / sa_grants[f"ERP_{year}"].sum() * per_capita_minimum
         min_grant = sa_grants[f"ERP_{year}"] * min_per_capita_grant
@@ -235,7 +235,7 @@ wa_grants_base["Grant_base_2024"] = wa_grants_base["Grant_2024"]
 
 def run_wa(i):
     wa_grants = wa_grants_base.copy()
-    wa_grants["UID"] = wa_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1)
+    wa_grants["UID"] = wa_grants["LGA"].str.replace(" ", "").replace("-", "") + "_" + str(i+1)
     for year in range(2025, 2029):
         min_per_capita_grant = budget_grants["WA"][f"{year}-{(year+1)%1000}"] / wa_grants[f"ERP_{year}"].sum() * per_capita_minimum
         min_grant = wa_grants[f"ERP_{year}"] * min_per_capita_grant
@@ -295,7 +295,7 @@ tas_grants_base["Grant_base_2024"] = tas_grants_base["Grant_2024"]
 
 def run_tas(i):
     tas_grants = tas_grants_base.copy()
-    tas_grants["UID"] = tas_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1)
+    tas_grants["UID"] = tas_grants["LGA"].str.replace(" ", "").replace("-", "") + "_" + str(i+1)
     for year in range(2025, 2029):
         min_per_capita_grant = budget_grants["TAS"][f"{year}-{(year+1)%1000}"] / tas_grants[f"ERP_{year}"].sum() * per_capita_minimum
         min_grant = tas_grants[f"ERP_{year}"] * min_per_capita_grant
@@ -351,7 +351,7 @@ nt_grants_base["Grant_base_2024"] = nt_grants_base["Grant_2024"]
 
 def run_nt(i):
     nt_grants = nt_grants_base.copy()
-    nt_grants["UID"] = nt_grants["LGA"].str.replace(" ", "").replace("-", "") + str(i+1)
+    nt_grants["UID"] = nt_grants["LGA"].str.replace(" ", "").replace("-", "") + "_" + str(i+1)
     for year in range(2025, 2029):
         min_per_capita_grant = budget_grants["NT"][f"{year}-{(year+1)%1000}"] / nt_grants[f"ERP_{year}"].sum() * per_capita_minimum
         min_grant = nt_grants[f"ERP_{year}"] * min_per_capita_grant
