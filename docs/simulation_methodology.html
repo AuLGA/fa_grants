@@ -351,26 +351,18 @@ window.Quarto = {
 <p>For each year that follows, fund allocation methodology is implemented for each state based on that state’s Grant Commission’s methodology.</p>
 <p>This process is repeated 1000 times for each council to capture as much of the variability as possible.</p>
 <div id="e0ba7719" class="cell" data-execution_count="29">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>pd.options.mode.chained_assignment <span class="op">=</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <section id="controls-and-constants" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="controls-and-constants"><span class="header-section-number">12.1</span> Controls and constants</h2>
 <div id="4d861299" class="cell" data-execution_count="30">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>per_capita_minimum <span class="op">=</span> <span class="fl">0.17</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>per_capita_minimum_base <span class="op">=</span> <span class="fl">0.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <div id="395a3618" class="cell" data-execution_count="31">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pop_30_jun <span class="op">=</span> pd.read_excel(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    sheet_name<span class="op">=</span><span class="st">"Population"</span>,</span>
@@ -381,11 +373,8 @@ window.Quarto = {
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>pop_30_jun.set_index(<span class="st">"Population by state, at 30 June (million)"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>pop_30_jun <span class="op">=</span> pop_30_jun <span class="op">*</span> <span class="fl">1e6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <div id="7eccfd70" class="cell" data-execution_count="32">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>budget_grants <span class="op">=</span> pd.read_excel(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"Grants"</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -397,7 +386,6 @@ window.Quarto = {
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>budget_grants <span class="op">=</span> budget_grants.loc[[<span class="st">"2025-26"</span>, <span class="st">"2026-27"</span>, <span class="st">"2027-28"</span>, <span class="st">"2028-29"</span>]]</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>budget_grants <span class="op">=</span> budget_grants <span class="op">*</span> <span class="fl">1e6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>We first define two <code>per_capita_minimum</code> parameters for the simulation - one as the scenario under study and the other as a benchmark.</p>
 <p>Then, we grab projected values for FA Grants and the Estimated Resident Population in June from the budget papers. The June ERP was chosen as a metric over methodology specific ERP values (some states use population data from up to 5 years before the allocation year in their allocation methodology) simply to standardize the variable and make the model easy to maintain.</p>
@@ -412,8 +400,6 @@ window.Quarto = {
 <section id="new-south-wales" class="level3" data-number="12.2.1">
 <h3 data-number="12.2.1" class="anchored" data-anchor-id="new-south-wales"><span class="header-section-number">12.2.1</span> New South Wales</h3>
 <div id="656e6dab" class="cell" data-execution_count="33">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nsw_grants_base <span class="op">=</span> pd.read_excel(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"New South Wales"</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -502,15 +488,12 @@ window.Quarto = {
 <span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>        nsw_grants[<span class="ss">f"Grant_base_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> min_grant_base <span class="op">+</span> raw_alloc</span>
 <span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>    new_south_wales_master_sim <span class="op">=</span> pd.concat([new_south_wales_master_sim, nsw_grants])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>No explicit cap or collar has been defined.</p>
 </section>
 <section id="queensland" class="level3" data-number="12.2.2">
 <h3 data-number="12.2.2" class="anchored" data-anchor-id="queensland"><span class="header-section-number">12.2.2</span> Queensland</h3>
 <div id="22245343" class="cell" data-execution_count="34">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>qld_grants_base <span class="op">=</span> pd.read_excel(</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"Queensland"</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -598,7 +581,6 @@ window.Quarto = {
 <span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>        qld_grants[<span class="ss">f"Grant_base_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> min_grant_base <span class="op">+</span> raw_alloc</span>
 <span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>    queensland_master_sim <span class="op">=</span> pd.concat([queensland_master_sim, qld_grants])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>There’s no cap/collar and minimum grant eligibility is based on population &gt; 80,000.</p>
 </section>
@@ -619,8 +601,6 @@ window.Quarto = {
 <section id="victoria" class="level3" data-number="12.3.1">
 <h3 data-number="12.3.1" class="anchored" data-anchor-id="victoria"><span class="header-section-number">12.3.1</span> Victoria</h3>
 <div id="3431389c" class="cell" data-execution_count="35">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> correct_delta_vic(sub_vic, year, base<span class="op">=</span><span class="va">False</span>):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    total_funding_gap <span class="op">=</span> (sub_vic[<span class="ss">f"Funding Gap_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">*</span> sub_vic[<span class="st">"deficit"</span>]).<span class="bu">sum</span>()</span>
@@ -647,11 +627,8 @@ window.Quarto = {
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>        )</span>
 <span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sub_vic</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <div id="4a4eacf7" class="cell" data-execution_count="36">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>vic_grants_base <span class="op">=</span> pd.read_excel(</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"Victoria"</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -771,15 +748,12 @@ window.Quarto = {
 <span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>        vic_grants[<span class="ss">f"Grant_base_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> vic_grants[<span class="st">"alloc"</span>]</span>
 <span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>    victoria_master_sim <span class="op">=</span> pd.concat([victoria_master_sim, vic_grants])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>Victorial uses a cap/collar of [2%, 10%] for councils.</p>
 </section>
 <section id="south-australia" class="level3" data-number="12.3.2">
 <h3 data-number="12.3.2" class="anchored" data-anchor-id="south-australia"><span class="header-section-number">12.3.2</span> South Australia</h3>
 <div id="2105731e" class="cell" data-execution_count="37">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> correct_delta_sa(sub_sa, year, base<span class="op">=</span><span class="va">False</span>):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    total_funding_gap <span class="op">=</span> (sub_sa[<span class="ss">f"Funding Gap_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">*</span> sub_sa[<span class="st">"deficit"</span>]).<span class="bu">sum</span>()</span>
@@ -806,11 +780,8 @@ window.Quarto = {
 <span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        )</span>
 <span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sub_sa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <div id="cc7c80e6" class="cell" data-execution_count="38">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sa_grants_base <span class="op">=</span> pd.read_excel(</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"South Australia"</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -926,15 +897,12 @@ window.Quarto = {
 <span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a>        sa_grants[<span class="ss">f"Grant_base_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> sa_grants[<span class="st">"alloc"</span>]</span>
 <span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a>    south_australia_master_sim <span class="op">=</span> pd.concat([south_australia_master_sim, sa_grants])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>South Australia OLG has a cap/collar of [-15%, 30%] for councils.</p>
 </section>
 <section id="western-australia" class="level3" data-number="12.3.3">
 <h3 data-number="12.3.3" class="anchored" data-anchor-id="western-australia"><span class="header-section-number">12.3.3</span> Western Australia</h3>
 <div id="f53965c9" class="cell" data-editable="false" data-execution_count="39">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> correct_delta_wa(sub_wa, year, base<span class="op">=</span><span class="va">False</span>):</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    total_funding_gap <span class="op">=</span> (sub_wa[<span class="ss">f"Funding Gap_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">*</span> sub_wa[<span class="st">"deficit"</span>]).<span class="bu">sum</span>()</span>
@@ -959,11 +927,8 @@ window.Quarto = {
 <span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>        )</span>
 <span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sub_wa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <div id="10d6f52e" class="cell" data-execution_count="40">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>wa_grants_base <span class="op">=</span> pd.read_excel(</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"Western Australia"</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -1079,15 +1044,12 @@ window.Quarto = {
 <span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a>        wa_grants[<span class="ss">f"Grant_base_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> wa_grants[<span class="st">"alloc"</span>]</span>
 <span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a>    western_australia_master_sim <span class="op">=</span> pd.concat([western_australia_master_sim, wa_grants])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>WA State Grants Commission has no ceiling on change, but claims to limit year on year decrease. No explicit floor is given, but the biggest 2023-24 to 2024-25 decrease was about -60%. So, that’s the floor we’ll use.</p>
 </section>
 <section id="tasmania" class="level3" data-number="12.3.4">
 <h3 data-number="12.3.4" class="anchored" data-anchor-id="tasmania"><span class="header-section-number">12.3.4</span> Tasmania</h3>
 <div id="cdb57b1e" class="cell" data-execution_count="41">
-<details class="code-fold">
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> correct_delta_tas(sub_tas, year, base<span class="op">=</span><span class="va">False</span>):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    total_funding_gap <span class="op">=</span> (sub_tas[<span class="ss">f"Funding Gap_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">*</span> sub_tas[<span class="st">"deficit"</span>]).<span class="bu">sum</span>()</span>
@@ -1121,11 +1083,8 @@ window.Quarto = {
 <span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>        sub_tas[<span class="st">"delta"</span>] <span class="op">=</span> delta_new</span>
 <span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sub_tas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
-<div id="6a2662b1" class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
+<div id="6a2662b1" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tas_grants_base <span class="op">=</span> pd.read_excel(</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"Tasmania"</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -1243,15 +1202,12 @@ window.Quarto = {
 <span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a>        tas_grants[<span class="ss">f"Grant_base_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> tas_grants[<span class="st">"alloc"</span>]</span>
 <span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a>    tasmania_master_sim <span class="op">=</span> pd.concat([tasmania_master_sim, tas_grants])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>Tasmania State Grants Commission has a cap/collar of [-5%, 10%] for all councils.</p>
 </section>
 <section id="northern-territory" class="level3" data-number="12.3.5">
 <h3 data-number="12.3.5" class="anchored" data-anchor-id="northern-territory"><span class="header-section-number">12.3.5</span> Northern Territory</h3>
-<div id="21da5750" class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
+<div id="21da5750" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> correct_delta_nt(sub_nt, year, base<span class="op">=</span><span class="va">False</span>):</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    total_funding_gap <span class="op">=</span> (sub_nt[<span class="ss">f"Funding Gap_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">*</span> sub_nt[<span class="st">"deficit"</span>]).<span class="bu">sum</span>()</span>
@@ -1274,11 +1230,8 @@ window.Quarto = {
 <span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>        )</span>
 <span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sub_nt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
-<div id="49484d11" class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
+<div id="49484d11" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>nt_grants_base <span class="op">=</span> pd.read_excel(</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>, sheet_name<span class="op">=</span><span class="st">"Northern Territory"</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -1396,7 +1349,6 @@ window.Quarto = {
 <span id="cb16-115"><a href="#cb16-115" aria-hidden="true" tabindex="-1"></a>    northern_territory_master_sim <span class="op">=</span> pd.concat(</span>
 <span id="cb16-116"><a href="#cb16-116" aria-hidden="true" tabindex="-1"></a>        [northern_territory_master_sim, nt_grants]</span>
 <span id="cb16-117"><a href="#cb16-117" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>Northern Territory has a collar of -5% for all councils.</p>
 
