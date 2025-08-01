@@ -9,8 +9,8 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - methodology.qmd
-    - part: "Where we stand"
+  # - methodology.qmd
+    - part: "Jurisdictions and Approaches"
       chapters:
         - historical-context.qmd
         - NSW_methodology.qmd
@@ -20,16 +20,19 @@ book:
         - WA_methodology.qmd
         - TAS_methodology.qmd
         - NT_methodology.qmd
-    - part: "A peek into the problems"
+        - aclg_note.qmd
+    - part: "Key Issues and Debates"
       chapters:
         - discussed-issues.qmd
-    - part: "Data Data Data"
+    - part: "Empirical Analysis"
       chapters:
         - simulation_methodology.ipynb
-        - lower_min_grant.ipynb
+        - 20_perc_min_grant.ipynb
+        - 10_perc_min_grant.ipynb
+        - no_min_grant.ipynb
     - references.qmd
 
-bibliography: references.bib
+bibliography: [references.bib, euan_references.bib]
 
 format:
   html:
