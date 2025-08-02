@@ -383,24 +383,32 @@ class fagrants_model:
     def correct_delta_vic(self, sub_vic, year, base=False):
         total_funding_gap = (sub_vic[f"Funding Gap_{year}"] * sub_vic["deficit"]).sum()
         total_funding = sub_vic["alloc"].sum()
+
         comparison_column = "Grant_base_" if base else "Grant_"
 
-        while np.any(
-            (sub_vic["delta"].round(2) < 2) | (sub_vic["delta"].round(2) > 10)
-        ):
+        i = 0
+
+        while ((i < 100)&(np.any((sub_vic["delta"].round(2) < 2)|(sub_vic["delta"].round(2) > 10))))|((i >= 100)&np.any(sub_vic["delta"].round(2) < 2)):
             sub_vic["g"] = sub_vic["delta"].apply(
                 lambda x: (x - 2) / 100 if x < 2 else ((x - 10) / 100 if x > 10 else 0)
             )
-            sub_vic["alloc"] -= sub_vic["g"] * sub_vic[f"{comparison_column}{year-1}"]
+
+            sub_vic["alloc"] -= sub_vic["g"] * sub_vic[f"{comparison_column}{year - 1}"]
+
             remainder = total_funding - sub_vic["alloc"].sum()
+
             sub_vic["alloc"] += (
                 sub_vic[f"Funding Gap_{year}"] * remainder / total_funding_gap
             )
+
             sub_vic["delta"] = (
-                (sub_vic["alloc"] - sub_vic[f"{comparison_column}{year-1}"])
-                / sub_vic[f"{comparison_column}{year-1}"]
+                (sub_vic["alloc"] - sub_vic[f"{comparison_column}{year - 1}"])
+                / sub_vic[f"{comparison_column}{year - 1}"]
                 * 100
             )
+
+            i += 1
+
         return sub_vic
 
     def run_vic(self, i):
@@ -525,26 +533,26 @@ class fagrants_model:
     def correct_delta_sa(self, sub_sa, year, base=False):
         total_funding_gap = (sub_sa[f"Funding Gap_{year}"] * sub_sa["deficit"]).sum()
         total_funding = sub_sa["alloc"].sum()
+        
         comparison_column = "Grant_base_" if base else "Grant_"
 
-        while np.any(
-            (sub_sa["delta"].round(2) < -15) | (sub_sa["delta"].round(2) > 30)
-        ):
-            sub_sa["g"] = sub_sa["delta"].apply(
-                lambda x: (
-                    (x - (-15)) / 100 if x < -15 else ((x - 30) / 100 if x > 30 else 0)
-                )
-            )
+        i = 0
+        
+        #while np.any((sub_sa["delta"].round(2)<-15)|(sub_sa["delta"].round(2)>30)):
+        while ((i < 100)&(np.any((sub_sa["delta"].round(2) < -15)|(sub_sa["delta"].round(2) > 30))))|((i >= 100)&np.any(sub_sa["delta"].round(2) < -15)):
+
+            sub_sa["g"] = sub_sa["delta"].apply(lambda x: (x - (-15))/100 if x < -15 else ((x - 30)/100 if x > 30 else 0))
+
             sub_sa["alloc"] -= sub_sa["g"] * sub_sa[f"{comparison_column}{year-1}"]
+
             remainder = total_funding - sub_sa["alloc"].sum()
-            sub_sa["alloc"] += (
-                sub_sa[f"Funding Gap_{year}"] * remainder / total_funding_gap
-            )
-            sub_sa["delta"] = (
-                (sub_sa["alloc"] - sub_sa[f"{comparison_column}{year-1}"])
-                / sub_sa[f"{comparison_column}{year-1}"]
-                * 100
-            )
+
+            sub_sa["alloc"] += sub_sa[f"Funding Gap_{year}"] * remainder / total_funding_gap
+
+            sub_sa["delta"] = (sub_sa["alloc"] - sub_sa[f"{comparison_column}{year-1}"]) / sub_sa[f"{comparison_column}{year-1}"] * 100
+
+            i += 1
+
         return sub_sa
 
     def run_sa(self, i):

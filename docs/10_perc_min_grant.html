@@ -76,7 +76,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d479fe214a40f71c0149221e31967b46.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-231ef2f9d4ce3268f31ef752336c15d2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -323,7 +323,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>The model here applies a hypothetical per capita minimum grant constraint, set at 10%, to ensure that each jurisdiction receives at least this proportion of the funds if they were allocated on a per capita basis.</p></li>
 <li><p>The per capita minimum for the benchmark scenario is set to 30%, as is the status quo.</p></li>
 </ul>
-<div id="8207acac" class="cell" data-execution_count="1">
+<div id="8207acac" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -379,1067 +379,83 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">+</span> <span class="st">" - "</span> <span class="op">+</span> sim_grants_melted[<span class="st">"ACLG"</span>]</span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Process ForkPoolWorker-11:
-Process ForkPoolWorker-7:
-Process ForkPoolWorker-24:
-Process ForkPoolWorker-1:
-Process ForkPoolWorker-21:
-Process ForkPoolWorker-12:
-Process ForkPoolWorker-19:
-Process ForkPoolWorker-14:
-Process ForkPoolWorker-15:
-Process ForkPoolWorker-10:
-Process ForkPoolWorker-8:
-Process ForkPoolWorker-16:
-Process ForkPoolWorker-20:
-Process ForkPoolWorker-2:
-Process ForkPoolWorker-4:
-Process ForkPoolWorker-22:
-Process ForkPoolWorker-6:
-Process ForkPoolWorker-3:
-Process ForkPoolWorker-5:
-Process ForkPoolWorker-17:
-Process ForkPoolWorker-9:
-Process ForkPoolWorker-13:
-Process ForkPoolWorker-18:
-Process ForkPoolWorker-23:
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-Traceback (most recent call last):
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-Traceback (most recent call last):
-Traceback (most recent call last):
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
-    self.run()
-    ~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 125, in worker
-    result = (True, func(*args, **kwds))
-                    ~~~~^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 400, in correct_delta_vic
-    (sub_vic["alloc"] - sub_vic[f"{comparison_column}{year-1}"])
-     ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 389, in correct_delta_vic
-    (sub_vic["delta"].round(2) &lt; 2) | (sub_vic["delta"].round(2) &gt; 10)
-                                       ~~~~~~~~~~~~~~~~~~~~~~^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 388, in correct_delta_vic
-    while np.any(
-          ~~~~~~^
-        (sub_vic["delta"].round(2) &lt; 2) | (sub_vic["delta"].round(2) &gt; 10)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 400, in correct_delta_vic
-    (sub_vic["alloc"] - sub_vic[f"{comparison_column}{year-1}"])
-     ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 400, in correct_delta_vic
-    (sub_vic["alloc"] - sub_vic[f"{comparison_column}{year-1}"])
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    / sub_vic[f"{comparison_column}{year-1}"]
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 397, in correct_delta_vic
-    sub_vic[f"Funding Gap_{year}"] * remainder / total_funding_gap
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 389, in correct_delta_vic
-    (sub_vic["delta"].round(2) &lt; 2) | (sub_vic["delta"].round(2) &gt; 10)
-     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 394, in correct_delta_vic
-    sub_vic["alloc"] -= sub_vic["g"] * sub_vic[f"{comparison_column}{year-1}"]
-                        ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 397, in correct_delta_vic
-    sub_vic[f"Funding Gap_{year}"] * remainder / total_funding_gap
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 391, in correct_delta_vic
-    sub_vic["g"] = sub_vic["delta"].apply(
-                   ~~~~~~~~~~~~~~~~~~~~~~^
-        lambda x: (x - 2) / 100 if x &lt; 2 else ((x - 10) / 100 if x &gt; 10 else 0)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 2819, in round
-    new_mgr = self._mgr.round(decimals=decimals, using_cow=using_copy_on_write())
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py", line 48, in mapstar
-    return list(map(*args))
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/numpy/_core/fromnumeric.py", line 2580, in any
-    return _wrapreduction_any_all(a, np.logical_or, 'any', axis, out,
-                                  keepdims=keepdims, where=where)
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 394, in correct_delta_vic
-    sub_vic["alloc"] -= sub_vic["g"] * sub_vic[f"{comparison_column}{year-1}"]
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 397, in correct_delta_vic
-    sub_vic[f"Funding Gap_{year}"] * remainder / total_funding_gap
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 399, in correct_delta_vic
-    sub_vic["delta"] = (
-    ~~~~~~~^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 395, in correct_delta_vic
-    remainder = total_funding - sub_vic["alloc"].sum()
-                                ~~~~~~~~~~~~~~~~~~~~^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 389, in correct_delta_vic
-    (sub_vic["delta"].round(2) &lt; 2) | (sub_vic["delta"].round(2) &gt; 10)
-                                       ~~~~~~~~~~~~~~~~~~~~~~^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 395, in correct_delta_vic
-    remainder = total_funding - sub_vic["alloc"].sum()
-                                ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 4935, in apply
-    ).apply()
-      ~~~~~^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 446, in run_vic
-    vic_grants.combine_first(self.correct_delta_vic(non_min_vic, year))
-                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 396, in correct_delta_vic
-    sub_vic["alloc"] += (
-        sub_vic[f"Funding Gap_{year}"] * remainder / total_funding_gap
-    )
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4316, in __setitem__
-    self._set_item(key, value)
-    ~~~~~~~~~~~~~~^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 394, in correct_delta_vic
-    sub_vic["alloc"] -= sub_vic["g"] * sub_vic[f"{comparison_column}{year-1}"]
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 194, in __sub__
-    return self._arith_method(other, operator.sub)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 389, in correct_delta_vic
-    (sub_vic["delta"].round(2) &lt; 2) | (sub_vic["delta"].round(2) &gt; 10)
-                                       ~~~~~~~~~~~~~~~~~~~~~~^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/internals/base.py", line 237, in round
-    return self.apply_with_block(
-           ~~~~~~~~~~~~~~~~~~~~~^
-        "round",
-        ^^^^^^^^
-        decimals=decimals,
-        ^^^^^^^^^^^^^^^^^^
-        using_cow=using_cow,
-        ^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 396, in correct_delta_vic
-    sub_vic["alloc"] += (
-        sub_vic[f"Funding Gap_{year}"] * remainder / total_funding_gap
-    )
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 395, in correct_delta_vic
-    remainder = total_funding - sub_vic["alloc"].sum()
-                                ~~~~~~~^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/numpy/_core/fromnumeric.py", line 100, in _wrapreduction_any_all
-    return reduction(axis=axis, out=out, **passkwargs)
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 389, in correct_delta_vic
-    (sub_vic["delta"].round(2) &lt; 2) | (sub_vic["delta"].round(2) &gt; 10)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 210, in __truediv__
-    return self._arith_method(other, operator.truediv)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 194, in __sub__
-    return self._arith_method(other, operator.sub)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 210, in __truediv__
-    return self._arith_method(other, operator.truediv)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12743, in __isub__
-    return self._inplace_method(other, type(self).__sub__)  # type: ignore[operator]
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 48, in __lt__
-    return self._cmp_method(other, operator.lt)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 2819, in round
-    new_mgr = self._mgr.round(decimals=decimals, using_cow=using_copy_on_write())
-                                                           ~~~~~~~~~~~~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/apply.py", line 1422, in apply
-    return self.apply_standard()
-           ~~~~~~~~~~~~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6146, in _arith_method
-    return base.IndexOpsMixin._arith_method(self, other, op)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 394, in correct_delta_vic
-    sub_vic["alloc"] -= sub_vic["g"] * sub_vic[f"{comparison_column}{year-1}"]
-    ~~~~~~~^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 202, in __mul__
-    return self._arith_method(other, operator.mul)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12738, in __iadd__
-    return self._inplace_method(other, type(self).__add__)  # type: ignore[operator]
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12743, in __isub__
-    return self._inplace_method(other, type(self).__sub__)  # type: ignore[operator]
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6539, in sum
-    return NDFrame.sum(self, axis, skipna, numeric_only, min_count, **kwargs)
-           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4543, in _set_item
-    self._set_item_mgr(key, value, refs)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 202, in __mul__
-    return self._arith_method(other, operator.mul)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6539, in sum
-    return NDFrame.sum(self, axis, skipna, numeric_only, min_count, **kwargs)
-           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/internals/managers.py", line 366, in apply
-    out = type(self).from_blocks(result_blocks, self.axes)
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 389, in correct_delta_vic
-    (sub_vic["delta"].round(2) &lt; 2) | (sub_vic["delta"].round(2) &gt; 10)
-                                       ~~~~~~~^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4083, in __getitem__
-    return self._get_item_cache(key)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12738, in __iadd__
-    return self._inplace_method(other, type(self).__add__)  # type: ignore[operator]
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6482, in any
-    return self._reduce(
-           ~~~~~~~~~~~~^
-        nanops.nanany,
-        ^^^^^^^^^^^^^^
-    ...&lt;4 lines&gt;...
-        filter_type="bool",
-        ^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12720, in _inplace_method
-    self._mgr.setitem_inplace(  # type: ignore[union-attr]
-    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        slice(None), result._values, warn=warn
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6146, in _arith_method
-    return base.IndexOpsMixin._arith_method(self, other, op)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6132, in _cmp_method
-    return self._construct_result(res_values, name=res_name)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 2820, in round
-    return self._constructor_from_mgr(new_mgr, axes=new_mgr.axes).__finalize__(
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6146, in _arith_method
-    return base.IndexOpsMixin._arith_method(self, other, op)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 202, in __mul__
-    return self._arith_method(other, operator.mul)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6146, in _arith_method
-    return base.IndexOpsMixin._arith_method(self, other, op)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/apply.py", line 1502, in apply_standard
-    mapped = obj._map_values(
-        mapper=curried, na_action=action, convert=self.convert_dtype
-    )
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/__init__.py", line 34, in using_copy_on_write
-    def using_copy_on_write() -&gt; bool:
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 1390, in _arith_method
-    with np.errstate(all="ignore"):
-         ~~~~~~~~~~~^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12708, in _inplace_method
-    result = op(self, other)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/internals/managers.py", line 1850, in from_blocks
-    @classmethod
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12708, in _inplace_method
-    result = op(self, other)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12525, in sum
-    return self._min_count_stat_function(
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        "sum", nanops.nansum, axis, skipna, numeric_only, min_count, **kwargs
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4495, in _set_item_mgr
-    self._iset_item_mgr(loc, value, refs=refs)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12525, in sum
-    return self._min_count_stat_function(
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        "sum", nanops.nansum, axis, skipna, numeric_only, min_count, **kwargs
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6146, in _arith_method
-    return base.IndexOpsMixin._arith_method(self, other, op)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12708, in _inplace_method
-    result = op(self, other)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6146, in _arith_method
-    return base.IndexOpsMixin._arith_method(self, other, op)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4316, in __setitem__
-    self._set_item(key, value)
-    ~~~~~~~~~~~~~~^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4644, in _get_item_cache
-    res = self._ixs(loc, axis=1)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6146, in _arith_method
-    return base.IndexOpsMixin._arith_method(self, other, op)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6243, in _construct_result
-    out = out.__finalize__(self)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/internals/managers.py", line 2044, in setitem_inplace
-    super().setitem_inplace(indexer, value)
-    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 666, in _constructor_from_mgr
-    ser._name = None  # caller is responsible for setting real name
-    ^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 1391, in _arith_method
-    result = ops.arithmetic_op(lvalues, rvalues, op)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4083, in __getitem__
-    return self._get_item_cache(key)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6429, in _reduce
-    def _reduce(
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 925, in _map_values
-    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 56, in __gt__
-    return self._cmp_method(other, operator.gt)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 1393, in _arith_method
-    return self._construct_result(result, name=res_name)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 1393, in _arith_method
-    return self._construct_result(result, name=res_name)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4484, in _iset_item_mgr
-    self._clear_item_cache()
-    ~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12508, in _min_count_stat_function
-    return self._reduce(
-           ~~~~~~~~~~~~^
-        func,
-        ^^^^^
-    ...&lt;4 lines&gt;...
-        min_count=min_count,
-        ^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 12508, in _min_count_stat_function
-    return self._reduce(
-           ~~~~~~~~~~~~^
-        func,
-        ^^^^^
-    ...&lt;4 lines&gt;...
-        min_count=min_count,
-        ^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 1393, in _arith_method
-    return self._construct_result(result, name=res_name)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/numpy/_core/_ufunc_config.py", line 451, in __enter__
-    extobj = _make_extobj(
-            all=self._all, divide=self._divide, over=self._over,
-            under=self._under, invalid=self._invalid)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4543, in _set_item
-    self._set_item_mgr(key, value, refs)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/common.py", line 76, in new_method
-    return method(self, other)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4016, in _ixs
-    result = self._box_col_values(col_mgr, i)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4633, in _get_item_cache
-    if using_copy_on_write() or warn_copy_on_write():
-                                ~~~~~~~~~~~~~~~~~~^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 1391, in _arith_method
-    result = ops.arithmetic_op(lvalues, rvalues, op)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 6339, in __setattr__
-    object.__setattr__(self, name, value)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/internals/base.py", line 357, in setitem_inplace
-    value = np_can_hold_element(arr.dtype, value)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6132, in _cmp_method
-    return self._construct_result(res_values, name=res_name)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4628, in _clear_item_cache
-    def _clear_item_cache(self) -&gt; None:
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6242, in _construct_result
-    out = self._constructor(result, index=self.index, dtype=dtype, copy=False)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 1391, in _arith_method
-    result = ops.arithmetic_op(lvalues, rvalues, op)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 6285, in __finalize__
-    object.__setattr__(self, name, getattr(other, name, None))
-                                   ~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6242, in _construct_result
-    out = self._constructor(result, index=self.index, dtype=dtype, copy=False)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6468, in _reduce
-    return op(delegate, skipna=skipna, **kwds)
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6242, in _construct_result
-    out = self._constructor(result, index=self.index, dtype=dtype, copy=False)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/array_ops.py", line 279, in arithmetic_op
-    _bool_arith_check(op, left, right)  # type: ignore[arg-type]
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/array_ops.py", line 267, in arithmetic_op
-    should_extension_dispatch(left, right)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/algorithms.py", line 1743, in map_array
-    return lib.map_infer(values, mapper, convert=convert)
-           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/__init__.py", line 42, in warn_copy_on_write
-    def warn_copy_on_write() -&gt; bool:
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4495, in _set_item_mgr
-    self._iset_item_mgr(loc, value, refs=refs)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 186, in __add__
-    return self._arith_method(other, operator.add)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6468, in _reduce
-    return op(delegate, skipna=skipna, **kwds)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 186, in __add__
-    return self._arith_method(other, operator.add)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/arraylike.py", line 194, in __sub__
-    return self._arith_method(other, operator.sub)
-           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 584, in __init__
-    data = sanitize_array(data, index, dtype, copy)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4623, in _box_col_values
-    return obj.__finalize__(self)
-           ~~~~~~~~~~~~~~~~^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/dtypes/cast.py", line 1877, in np_can_hold_element
-    if lib.is_integer(element) or lib.is_float(element):
-       ~~~~~~~~~~~~~~^^^^^^^^^
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 586, in __init__
-    manager = _get_option("mode.data_manager", silent=True)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6242, in _construct_result
-    out = self._constructor(result, index=self.index, dtype=dtype, copy=False)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/array_ops.py", line 283, in arithmetic_op
-    res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 584, in __init__
-    data = sanitize_array(data, index, dtype, copy)
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/dispatch.py", line 30, in should_extension_dispatch
-    return isinstance(left, ABCExtensionArray) or isinstance(right, ABCExtensionArray)
-                                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/array_ops.py", line 594, in _bool_arith_check
-    def _bool_arith_check(op, a: np.ndarray, b):
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/nanops.py", line 85, in _f
-    return f(*args, **kwargs)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6146, in _arith_method
-    return base.IndexOpsMixin._arith_method(self, other, op)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6146, in _arith_method
-    return base.IndexOpsMixin._arith_method(self, other, op)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/frame.py", line 4475, in _iset_item_mgr
-    def _iset_item_mgr(
-    
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/nanops.py", line 85, in _f
-    return f(*args, **kwargs)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/construction.py", line 517, in sanitize_array
-    def sanitize_array(
-    
-  File "pandas/_libs/lib.pyx", line 2999, in pandas._libs.lib.map_infer
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6146, in _arith_method
-    return base.IndexOpsMixin._arith_method(self, other, op)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 6281, in __finalize__
-    self.flags.allows_duplicate_labels = other.flags.allows_duplicate_labels
-                                         ^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 593, in __init__
-    self.name = name
-    ^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/config.py", line 146, in _get_option
-    key = _get_single_key(pat, silent)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 1393, in _arith_method
-    return self._construct_result(result, name=res_name)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/construction.py", line 517, in sanitize_array
-    def sanitize_array(
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/ops/array_ops.py", line 218, in _na_arithmetic_op
-    result = func(left, right)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/dtypes/generic.py", line 42, in _instancecheck
-    @classmethod  # type: ignore[misc]
-    
-KeyboardInterrupt
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/nanops.py", line 404, in new_func
-    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 1393, in _arith_method
-    return self._construct_result(result, name=res_name)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/base.py", line 1393, in _arith_method
-    return self._construct_result(result, name=res_name)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/nanops.py", line 404, in new_func
-    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
-  File "/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py", line 392, in &lt;lambda&gt;
-    lambda x: (x - 2) / 100 if x &lt; 2 else ((x - 10) / 100 if x &gt; 10 else 0)
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 6339, in __setattr__
-    object.__setattr__(self, name, value)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/config.py", line 140, in _get_single_key
-    key = _translate_key(key)
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/computation/expressions.py", line 242, in evaluate
-    return _evaluate(op, op_str, a, b)  # type: ignore[misc]
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6242, in _construct_result
-    out = self._constructor(result, index=self.index, dtype=dtype, copy=False)
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 405, in flags
-    @final
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/nanops.py", line 477, in newfunc
-    return func(values, axis=axis, **kwargs)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6242, in _construct_result
-    out = self._constructor(result, index=self.index, dtype=dtype, copy=False)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/nanops.py", line 455, in newfunc
-    @functools.wraps(func)
-    
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 6242, in _construct_result
-    out = self._constructor(result, index=self.index, dtype=dtype, copy=False)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 784, in name
-    @name.setter
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/config.py", line 676, in _translate_key
-    def _translate_key(key: str) -&gt; str:
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 586, in __init__
-    manager = _get_option("mode.data_manager", silent=True)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/computation/expressions.py", line 73, in _evaluate_standard
-    return op(a, b)
-KeyboardInterrupt
-KeyboardInterrupt
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 586, in __init__
-    manager = _get_option("mode.data_manager", silent=True)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 593, in __init__
-    self.name = name
-    ^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/nanops.py", line 646, in nansum
-    the_sum = values.sum(axis, dtype=dtype_sum)
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/config.py", line 146, in _get_option
-    key = _get_single_key(pat, silent)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/numpy/_core/_methods.py", line 51, in _sum
-    return umr_sum(a, axis, dtype, out, keepdims, initial, where)
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/config.py", line 146, in _get_option
-    key = _get_single_key(pat, silent)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/generic.py", line 6339, in __setattr__
-    object.__setattr__(self, name, value)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/config.py", line 140, in _get_single_key
-    key = _translate_key(key)
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/core/series.py", line 784, in name
-    @name.setter
-    
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/config.py", line 140, in _get_single_key
-    key = _translate_key(key)
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/config.py", line 676, in _translate_key
-    def _translate_key(key: str) -&gt; str:
-    
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/config.py", line 681, in _translate_key
-    d = _get_deprecated_option(key)
-KeyboardInterrupt
-  File "/home/spulick/miniforge3/envs/fagrants/lib/python3.13/site-packages/pandas/_config/config.py", line 649, in _get_deprecated_option
-    def _get_deprecated_option(key: str):
-    
-KeyboardInterrupt</code></pre>
 </div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[1]</span><span class="ansi-green-fg">, line 11</span>
-<span class="ansi-green-fg">      4</span> <span style="font-weight:bold;color:rgb(0,135,0)">import</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">matplotlib</span><span class="ansi-blue-fg ansi-bold">.</span><span class="ansi-blue-fg ansi-bold">pyplot</span><span style="color:rgb(188,188,188)"> </span><span style="font-weight:bold;color:rgb(0,135,0)">as</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">plt</span>
-<span class="ansi-green-fg">      6</span> inst = fagrants.fagrants_model(
-<span class="ansi-green-fg">      7</span>     data_path=<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">./Data/FA Grants Tables - Python.xlsx</span><span class="ansi-yellow-fg">"</span>,
-<span class="ansi-green-fg">      8</span>     per_capita_minimum=<span class="ansi-green-fg">0.10</span>,  <span style="font-style:italic;color:rgb(95,135,135)"># Set to 10% for this simulation</span>
-<span class="ansi-green-fg">      9</span>     per_capita_minimum_base=<span class="ansi-green-fg">0.3</span>,
-<span class="ansi-green-fg">     10</span> )
-<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">11</span> sim_grants = <span class="ansi-yellow-bg">inst</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">run</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">     12</span> sim_grants[<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Sim_i</span><span class="ansi-yellow-fg">"</span>] = sim_grants[<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">UID</span><span class="ansi-yellow-fg">"</span>].str.split(<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">_</span><span class="ansi-yellow-fg">"</span>).str[<span class="ansi-green-fg">1</span>].astype(<span style="color:rgb(0,135,0)">int</span>)
-<span class="ansi-green-fg">     13</span> <span style="font-weight:bold;color:rgb(0,135,0)">for</span> year <span style="font-weight:bold;color:rgb(175,0,255)">in</span> <span style="color:rgb(0,135,0)">range</span>(<span class="ansi-green-fg">2025</span>, <span class="ansi-green-fg">2029</span>):
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/mnt/d/GitHub/fa_grants/fagrants_module/fagrants.py:264</span>, in <span class="ansi-cyan-fg">fagrants_model.run</span><span class="ansi-blue-fg">(self, out_path)</span>
-<span class="ansi-green-fg">    258</span> pool = Pool(initializer=<span style="color:rgb(0,135,0)">self</span>.init_pool_procs)
-<span class="ansi-green-fg">    260</span> nsw_grants_master = pd.concat(
-<span class="ansi-green-fg">    261</span>     pool.map_async(<span style="color:rgb(0,135,0)">self</span>.run_nsw, <span style="color:rgb(0,135,0)">range</span>(<span class="ansi-green-fg">1000</span>)).get(), axis=<span class="ansi-green-fg">0</span>, ignore_index=<span style="font-weight:bold;color:rgb(0,135,0)">True</span>
-<span class="ansi-green-fg">    262</span> )
-<span class="ansi-green-fg">    263</span> vic_grants_master = pd.concat(
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">264</span>     <span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">map_async</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">run_vic</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">range</span><span class="ansi-yellow-bg">(</span><span class="ansi-green-fg ansi-yellow-bg">1000</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">get</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>, axis=<span class="ansi-green-fg">0</span>, ignore_index=<span style="font-weight:bold;color:rgb(0,135,0)">True</span>
-<span class="ansi-green-fg">    265</span> )
-<span class="ansi-green-fg">    266</span> qld_grants_master = pd.concat(
-<span class="ansi-green-fg">    267</span>     pool.map_async(<span style="color:rgb(0,135,0)">self</span>.run_qld, <span style="color:rgb(0,135,0)">range</span>(<span class="ansi-green-fg">1000</span>)).get(), axis=<span class="ansi-green-fg">0</span>, ignore_index=<span style="font-weight:bold;color:rgb(0,135,0)">True</span>
-<span class="ansi-green-fg">    268</span> )
-<span class="ansi-green-fg">    269</span> sa_grants_master = pd.concat(
-<span class="ansi-green-fg">    270</span>     pool.map_async(<span style="color:rgb(0,135,0)">self</span>.run_sa, <span style="color:rgb(0,135,0)">range</span>(<span class="ansi-green-fg">1000</span>)).get(), axis=<span class="ansi-green-fg">0</span>, ignore_index=<span style="font-weight:bold;color:rgb(0,135,0)">True</span>
-<span class="ansi-green-fg">    271</span> )
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py:768</span>, in <span class="ansi-cyan-fg">ApplyResult.get</span><span class="ansi-blue-fg">(self, timeout)</span>
-<span class="ansi-green-fg">    767</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg">get</span>(<span style="color:rgb(0,135,0)">self</span>, timeout=<span style="font-weight:bold;color:rgb(0,135,0)">None</span>):
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">768</span>     <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">wait</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">timeout</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    769</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="color:rgb(0,135,0)">self</span>.ready():
-<span class="ansi-green-fg">    770</span>         <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">TimeoutError</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/miniforge3/envs/fagrants/lib/python3.13/multiprocessing/pool.py:765</span>, in <span class="ansi-cyan-fg">ApplyResult.wait</span><span class="ansi-blue-fg">(self, timeout)</span>
-<span class="ansi-green-fg">    764</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg">wait</span>(<span style="color:rgb(0,135,0)">self</span>, timeout=<span style="font-weight:bold;color:rgb(0,135,0)">None</span>):
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">765</span>     <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_event</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">wait</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">timeout</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/miniforge3/envs/fagrants/lib/python3.13/threading.py:659</span>, in <span class="ansi-cyan-fg">Event.wait</span><span class="ansi-blue-fg">(self, timeout)</span>
-<span class="ansi-green-fg">    657</span> signaled = <span style="color:rgb(0,135,0)">self</span>._flag
-<span class="ansi-green-fg">    658</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> signaled:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">659</span>     signaled = <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_cond</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">wait</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">timeout</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    660</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> signaled
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/miniforge3/envs/fagrants/lib/python3.13/threading.py:359</span>, in <span class="ansi-cyan-fg">Condition.wait</span><span class="ansi-blue-fg">(self, timeout)</span>
-<span class="ansi-green-fg">    357</span> <span style="font-weight:bold;color:rgb(0,135,0)">try</span>:    <span style="font-style:italic;color:rgb(95,135,135)"># restore state no matter what (e.g., KeyboardInterrupt)</span>
-<span class="ansi-green-fg">    358</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> timeout <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">359</span>         <span class="ansi-yellow-bg">waiter</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">acquire</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    360</span>         gotit = <span style="font-weight:bold;color:rgb(0,135,0)">True</span>
-<span class="ansi-green-fg">    361</span>     <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
-</div>
-</div>
-</div>
-<div id="59201634" class="cell">
+<div id="59201634" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> grants_plot(sub_df):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> sns.FacetGrid(</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        sub_df,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        col<span class="op">=</span><span class="st">"State-ACLG"</span>,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">#x="Year",</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">#y="Expected Change in GPG ($)",</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># kind="line",</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        col_wrap<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="co"># legend="auto",</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        sharex<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        sharey<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        aspect<span class="op">=</span>(<span class="dv">1</span> <span class="op">+</span> <span class="dv">5</span><span class="op">**</span><span class="fl">0.5</span>) <span class="op">/</span> <span class="dv">2</span>,</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        despine<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        height<span class="op">=</span><span class="dv">4</span>,</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># g.map_dataframe(sns.lineplot,</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     x="Year",</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     y="Expected Change in GPG ($)",</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     hue="ACLG",</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     units="Sim_i",</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     dashes=False,</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     legend=False,</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     alpha=0.1,</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     color="0.3",</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     estimator=None,</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># )</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    g.map_dataframe(</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>         sns.lineplot,</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>         x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>         y<span class="op">=</span><span class="st">"Expected Change in GPG ($)"</span>,</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>         errorbar<span class="op">=</span><span class="st">"ci"</span>,</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>         marker<span class="op">=</span><span class="st">"o"</span>,</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>         dashes<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>         legend<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>         zorder<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>         err_style<span class="op">=</span><span class="st">"band"</span>,</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>         color<span class="op">=</span><span class="st">"#062E4A"</span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>     )</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax <span class="kw">in</span> g.axes.flat:</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>        state_aclg <span class="op">=</span> ax.get_title()</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.9</span>, <span class="dv">1</span>, state_aclg.split(<span class="st">" - "</span>)[<span class="op">-</span><span class="dv">1</span>], transform<span class="op">=</span>ax.transAxes, fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>        ax.set_title(<span class="st">""</span>)</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>        ax.set_xticks([<span class="dv">2025</span>, <span class="dv">2026</span>, <span class="dv">2027</span>, <span class="dv">2028</span>])</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>        ax.set_xticklabels([<span class="st">"2025-26"</span>, <span class="st">"2026-27"</span>, <span class="st">"2027-28"</span>, <span class="st">"2028-29"</span>])</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> grants_plot(sub_df):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> sns.FacetGrid(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        sub_df,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        col<span class="op">=</span><span class="st">"State-ACLG"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">#x="Year",</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">#y="Expected Change in GPG ($)",</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># kind="line",</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        col_wrap<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="co"># legend="auto",</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        sharex<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        sharey<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        aspect<span class="op">=</span>(<span class="dv">1</span> <span class="op">+</span> <span class="dv">5</span><span class="op">**</span><span class="fl">0.5</span>) <span class="op">/</span> <span class="dv">2</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        despine<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        height<span class="op">=</span><span class="dv">4</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># g.map_dataframe(sns.lineplot,</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     x="Year",</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     y="Expected Change in GPG ($)",</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     hue="ACLG",</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     units="Sim_i",</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     dashes=False,</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     legend=False,</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     alpha=0.1,</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     color="0.3",</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     estimator=None,</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># )</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    g.map_dataframe(</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>         sns.lineplot,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>         x<span class="op">=</span><span class="st">"Year"</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>         y<span class="op">=</span><span class="st">"Expected Change in GPG ($)"</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>         errorbar<span class="op">=</span><span class="st">"ci"</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>         marker<span class="op">=</span><span class="st">"o"</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>         dashes<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>         legend<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>         zorder<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>         err_style<span class="op">=</span><span class="st">"band"</span>,</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>         color<span class="op">=</span><span class="st">"#062E4A"</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax <span class="kw">in</span> g.axes.flat:</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        state_aclg <span class="op">=</span> ax.get_title()</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.9</span>, <span class="dv">1</span>, state_aclg.split(<span class="st">" - "</span>)[<span class="op">-</span><span class="dv">1</span>], transform<span class="op">=</span>ax.transAxes, fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        ax.set_title(<span class="st">""</span>)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        ax.set_xticks([<span class="dv">2025</span>, <span class="dv">2026</span>, <span class="dv">2027</span>, <span class="dv">2028</span>])</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        ax.set_xticklabels([<span class="st">"2025-26"</span>, <span class="st">"2026-27"</span>, <span class="st">"2027-28"</span>, <span class="st">"2028-29"</span>])</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <section id="new-south-wales" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="new-south-wales"><span class="header-section-number">14.1</span> New South Wales</h2>
-<div id="2989d397" class="cell">
+<div id="2989d397" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"New South Wales"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"New South Wales"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="victoria" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="victoria"><span class="header-section-number">14.2</span> Victoria</h2>
-<div id="c9344ffd" class="cell">
+<div id="c9344ffd" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Victoria"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Victoria"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -1452,10 +468,10 @@ KeyboardInterrupt</code></pre>
 </section>
 <section id="queensland" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="queensland"><span class="header-section-number">14.3</span> Queensland</h2>
-<div id="35276908" class="cell">
+<div id="35276908" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Queensland"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Queensland"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -1468,10 +484,10 @@ KeyboardInterrupt</code></pre>
 </section>
 <section id="south-austrlalia" class="level2" data-number="14.4">
 <h2 data-number="14.4" class="anchored" data-anchor-id="south-austrlalia"><span class="header-section-number">14.4</span> South Austrlalia</h2>
-<div id="045c80d4" class="cell">
+<div id="045c80d4" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"South Australia"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"South Australia"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -1484,10 +500,10 @@ KeyboardInterrupt</code></pre>
 </section>
 <section id="western-australia" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="western-australia"><span class="header-section-number">14.5</span> Western Australia</h2>
-<div id="cf894894" class="cell">
+<div id="cf894894" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Western Australia"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Western Australia"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -1500,10 +516,10 @@ KeyboardInterrupt</code></pre>
 </section>
 <section id="tasmania" class="level2" data-number="14.6">
 <h2 data-number="14.6" class="anchored" data-anchor-id="tasmania"><span class="header-section-number">14.6</span> Tasmania</h2>
-<div id="b6b46b25" class="cell">
+<div id="b6b46b25" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Tasmania"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Tasmania"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -1516,10 +532,10 @@ KeyboardInterrupt</code></pre>
 </section>
 <section id="northern-territory" class="level2" data-number="14.7">
 <h2 data-number="14.7" class="anchored" data-anchor-id="northern-territory"><span class="header-section-number">14.7</span> Northern Territory</h2>
-<div id="76cc075b" class="cell">
+<div id="76cc075b" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Northern Territory"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Northern Territory"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
