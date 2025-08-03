@@ -39,6 +39,7 @@ format:
     theme:
       - pandoc
       - brand
-
+  docx:
+    reference-doc: custom-reference-doc.docx
 
 

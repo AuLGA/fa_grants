@@ -108,14 +108,25 @@
     ]
   },
   {
+    "objectID": "aclg_note.html",
+    "href": "aclg_note.html",
+    "title": "10  A note on the Australian Classification of Local Government",
+    "section": "",
+    "text": "Step 1\nStep 2\nStep 3\n\nCategory\nAlpha\n\n\n\n\nURBAN (U)\n\n\n\n\n\n\n\n\nCapital City (CC)\nNot applicable\n\n1\nUCC\n\n\nPop. &gt; 20,000\nMetropolitan Developed (D) - Part of an urban centre &gt; 1,000,000 and pop. density &gt; 600/sq km.\nSmall (S)\nup to 30,000\n2\nUDS\n\n\n\n\nMedium (M)\n30,001-70,000\n3\nUDM\n\n\n\n\nLarge (L)\n70,001-120,000\n4\nUDL\n\n\n\n\nVery large (VL)\n&gt; 120,000\n5\nUDV\n\n\nPop. Density &gt; 30 persons per sq km\nRegional Town/City (R) - Part of an urban centre with population &lt;1,000,000 and predominantly urban in nature\nSmall\nup to 30,000\n6\nURS\n\n\n\n\nMedium\n30,001-70,000\n7\nURM\n\n\n\n\nLarge\n70,001-120,000\n8\nURL\n\n\n\n\nVery large\n&gt;120,001\n9\nURV\n\n\n&gt;90% of LGA population is urban\nFringe (F) - A developing LGA on the margin of a developed or regional urban centre.\nSmall\nup to 30,000\n10\nUFS\n\n\n\n\nMedium\n30,001-70,000\n11\nUFM\n\n\n\n\nLarge\n70,001-120,000\n12\nUFL\n\n\n\n\nVery large\n&gt;120,001\n13\nUFV\n\n\nRURAL (R)\n\n\n\n\n\n\n\n\nSignificant Growth (SG) - Average annual Population growth &gt; 3%, population &gt; 5,000 and not remote.\nNot applicable\n\n14\nRSG\n\n\n\nAgricultural (A)\nSmall\nUp to 2,000\n15\nRAS\n\n\n\n\nMedium\n2,001-5,000\n16\nRAM\n\n\n\n\nLarge\n5,001,-10,000\n17\nRAL\n\n\n\n\nVery large\n10,001 to 20,000\n18\nRAV\n\n\n\nRemote (T) - Situated in a remote locality.\nExtra small\nUp to 400\n19\nRTX\n\n\n\n\nSmall\n401-1,000\n20\nRTS\n\n\n\n\nMedium\n1,001–3,000\n21\nRTM\n\n\n\n\nLarge\n3,001 to 20,000\n22\nRTL",
+    "crumbs": [
+      "Jurisdictions and Approaches",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>A note on the Australian Classification of Local Government</span>"
+    ]
+  },
+  {
     "objectID": "discussed-issues.html",
     "href": "discussed-issues.html",
-    "title": "10  Discussed Issues",
+    "title": "11  Discussed Issues",
     "section": "",
     "text": "This is the content for # Discussed Issues.",
     "crumbs": [
       "Key Issues and Debates",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Discussed Issues</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Discussed Issues</span>"
     ]
   },
   {
@@ -390,17 +401,6 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
-    ]
-  },
-  {
-    "objectID": "aclg_note.html",
-    "href": "aclg_note.html",
-    "title": "10  A note on the Australian Classification of Local Government",
-    "section": "",
-    "text": "Step 1\nStep 2\nStep 3\n\nCategory\nAlpha\n\n\n\n\nURBAN (U)\n\n\n\n\n\n\n\n\nCapital City (CC)\nNot applicable\n\n1\nUCC\n\n\nPop. &gt; 20,000\nMetropolitan Developed (D) - Part of an urban centre &gt; 1,000,000 and pop. density &gt; 600/sq km.\nSmall (S)\nup to 30,000\n2\nUDS\n\n\n\n\nMedium (M)\n30,001-70,000\n3\nUDM\n\n\n\n\nLarge (L)\n70,001-120,000\n4\nUDL\n\n\n\n\nVery large (VL)\n&gt; 120,000\n5\nUDV\n\n\nPop. Density &gt; 30 persons per sq km\nRegional Town/City (R) - Part of an urban centre with population &lt;1,000,000 and predominantly urban in nature\nSmall\nup to 30,000\n6\nURS\n\n\n\n\nMedium\n30,001-70,000\n7\nURM\n\n\n\n\nLarge\n70,001-120,000\n8\nURL\n\n\n\n\nVery large\n&gt;120,001\n9\nURV\n\n\n&gt;90% of LGA population is urban\nFringe (F) - A developing LGA on the margin of a developed or regional urban centre.\nSmall\nup to 30,000\n10\nUFS\n\n\n\n\nMedium\n30,001-70,000\n11\nUFM\n\n\n\n\nLarge\n70,001-120,000\n12\nUFL\n\n\n\n\nVery large\n&gt;120,001\n13\nUFV\n\n\nRURAL (R)\n\n\n\n\n\n\n\n\nSignificant Growth (SG) - Average annual Population growth &gt; 3%, population &gt; 5,000 and not remote.\nNot applicable\n\n14\nRSG\n\n\n\nAgricultural (A)\nSmall\nUp to 2,000\n15\nRAS\n\n\n\n\nMedium\n2,001-5,000\n16\nRAM\n\n\n\n\nLarge\n5,001,-10,000\n17\nRAL\n\n\n\n\nVery large\n10,001 to 20,000\n18\nRAV\n\n\n\nRemote (T) - Situated in a remote locality.\nExtra small\nUp to 400\n19\nRTX\n\n\n\n\nSmall\n401-1,000\n20\nRTS\n\n\n\n\nMedium\n1,001–3,000\n21\nRTM\n\n\n\n\nLarge\n3,001 to 20,000\n22\nRTL",
-    "crumbs": [
-      "Jurisdictions and Approaches",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>A note on the Australian Classification of Local Government</span>"
     ]
   }
 ]
