@@ -39,7 +39,13 @@ format:
     theme:
       - pandoc
       - brand
+    code-fold: true
+    code-summary: "Show the code"
+    code-tools: true
   docx:
     reference-doc: custom-reference-doc.docx
+    execute:
+      echo: false
+      output: true
 
 
