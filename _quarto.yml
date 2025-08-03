@@ -4,7 +4,7 @@ project:
 
 book:
   title: "A Characterization of the Australian Financial Assistance Grants System"
-  author: "Sreehari Pulickamadhom Sreedhar"
+  author: ["Sreehari Pulickamadhom Sreedhar", "Euan Maclean"]
   date: "7/23/2025"
   chapters:
     - index.qmd
