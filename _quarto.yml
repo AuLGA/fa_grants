@@ -1,11 +1,15 @@
 project:
   type: book
   output-dir: docs
+  pre-render: meta/fix_page_breaks.py
 
 book:
   title: "A Characterization of the Australian Financial Assistance Grants System"
-  author: ["Sreehari Pulickamadhom Sreedhar", "Euan Maclean"]
   date: "7/23/2025"
+  reader-mode: false
+  site-url: https://spulick.github.io/fa_grants/
+  search: true
+
   chapters:
     - index.qmd
     - intro.qmd
@@ -33,6 +37,7 @@ book:
     - references.qmd
 
 bibliography: [references.bib, euan_references.bib]
+csl: meta/style-manual-australian-government.csl
 
 format:
   html:
@@ -44,10 +49,11 @@ format:
     code-tools: true
   docx:
     order: 1
-    reference-doc: custom-reference-doc.docx
+    reference-doc: meta/custom-reference-doc.docx
     toc-depth: 1
     fig-align: "center"
     fig-dpi: 600
+    df-print: paged
     execute:
       echo: false
       output: true

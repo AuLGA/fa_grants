@@ -1,0 +1,10 @@
+typography:
+  fonts:
+    - family: Arial
+      source: google
+  base: Arial
+  headings: Arial
+
+meta: 
+  name: Australian Local Government Association
+  link: https://www.alga.com.au
