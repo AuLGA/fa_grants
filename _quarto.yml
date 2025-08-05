@@ -15,6 +15,10 @@ book:
     - index.qmd
     - intro.qmd
   # - methodology.qmd
+    - part: "Key Issues and Debates"
+      chapters:
+        - historical-context.qmd
+        - discussed-issues.qmd
     - part: "Jurisdictions and Approaches"
       chapters:
         - NSW_methodology.qmd
@@ -25,10 +29,7 @@ book:
         - TAS_methodology.qmd
         - NT_methodology.qmd
         - aclg_note.qmd
-    - part: "Key Issues and Debates"
-      chapters:
-        - historical-context.qmd
-        - discussed-issues.qmd
+   
     - part: "Empirical Analysis"
       chapters:
         - simulation_methodology.ipynb
