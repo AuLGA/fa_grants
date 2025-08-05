@@ -1,12 +1,7 @@
 ---
 title: "Historical Context"
-author: [Wiwiwi, Bobby]
-bibliography: references.bib
+author: Euan Maclean
+bibliography: euan_references.bib
 ---
-
-[@knuth84]
-
-
-[@knuth84]
 
 

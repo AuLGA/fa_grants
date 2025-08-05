@@ -76,7 +76,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-19312defdacc65a273450a2a5e9e4ae7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-947dccf6f2a604cb0cf268958e2d2030.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -323,120 +323,118 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>The model here applies a hypothetical per capita minimum grant constraint, set at 10%, to ensure that each jurisdiction receives at least this proportion of the funds if they were allocated on a per capita basis.</p></li>
 <li><p>The per capita minimum for the benchmark scenario is set to 30%, as is the status quo.</p></li>
 </ul>
-<div id="8207acac" class="cell" data-execution_count="3">
+<div id="8207acac" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fagrants_module <span class="im">import</span> fagrants</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>inst <span class="op">=</span> fagrants.fagrants_model(</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    data_path<span class="op">=</span><span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    per_capita_minimum<span class="op">=</span><span class="fl">0.10</span>,  <span class="co"># Set to 10% for this simulation</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    per_capita_minimum_base<span class="op">=</span><span class="fl">0.3</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>sim_grants <span class="op">=</span> inst.run()</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>sim_grants[<span class="st">"Sim_i"</span>] <span class="op">=</span> sim_grants[<span class="st">"UID"</span>].<span class="bu">str</span>.split(<span class="st">"_"</span>).<span class="bu">str</span>[<span class="dv">1</span>].astype(<span class="bu">int</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2025</span>, <span class="dv">2029</span>):</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    sim_grants[<span class="ss">f"Grant Delta_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> (</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        sim_grants[<span class="ss">f"Grant_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">-</span> sim_grants[<span class="ss">f"Grant_base_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>]</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># sim_grants_udl = sim_grants[sim_grants["ACLG"] == "UDL"].copy()</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> weighted_group_delta(grouped_df):</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    return_dict <span class="op">=</span> {}</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2025</span>, <span class="dv">2029</span>):</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        total_weight <span class="op">=</span> grouped_df[<span class="ss">f"ERP_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>].<span class="bu">sum</span>()</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        return_dict[<span class="ss">f"Population_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> total_weight</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        weighted_mean <span class="op">=</span> (</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            grouped_df[<span class="ss">f"Grant Delta_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">*</span> grouped_df[<span class="ss">f"ERP_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>]</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        ).<span class="bu">sum</span>() <span class="op">/</span> total_weight</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        return_dict[<span class="ss">f"Grant Delta_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> weighted_mean</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.Series(return_dict)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>sim_grants_grouped <span class="op">=</span> (</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    sim_grants.groupby([<span class="st">"Jurisdiction"</span>, <span class="st">"ACLG"</span>, <span class="st">"Sim_i"</span>])</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">apply</span>(weighted_group_delta, include_groups<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>sim_grants_melted <span class="op">=</span> pd.melt(</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    sim_grants_grouped,</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span>[<span class="st">"Jurisdiction"</span>, <span class="st">"ACLG"</span>, <span class="st">"Sim_i"</span>],</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    value_vars<span class="op">=</span>[<span class="ss">f"Grant Delta_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2025</span>, <span class="dv">2029</span>)],</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    var_name<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    value_name<span class="op">=</span><span class="st">"Expected Change in GPG ($)"</span>,</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>sim_grants_melted[<span class="st">"Year"</span>] <span class="op">=</span> sim_grants_melted[<span class="st">"Year"</span>].<span class="bu">str</span>.split(<span class="st">"_"</span>).<span class="bu">str</span>[<span class="dv">1</span>].astype(<span class="bu">int</span>)</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>sim_grants_melted[<span class="st">"State-ACLG"</span>] <span class="op">=</span> (</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">+</span> <span class="st">" - "</span> <span class="op">+</span> sim_grants_melted[<span class="st">"ACLG"</span>]</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>inst <span class="op">=</span> fagrants.fagrants_model(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    data_path<span class="op">=</span><span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    per_capita_minimum<span class="op">=</span><span class="fl">0.10</span>,  <span class="co"># Set to 10% for this simulation</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    per_capita_minimum_base<span class="op">=</span><span class="fl">0.3</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>sim_grants <span class="op">=</span> inst.run()</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>sim_grants[<span class="st">"Sim_i"</span>] <span class="op">=</span> sim_grants[<span class="st">"UID"</span>].<span class="bu">str</span>.split(<span class="st">"_"</span>).<span class="bu">str</span>[<span class="dv">1</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2025</span>, <span class="dv">2029</span>):</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    sim_grants[<span class="ss">f"Grant Delta_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> (</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        sim_grants[<span class="ss">f"Grant_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">-</span> sim_grants[<span class="ss">f"Grant_base_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># sim_grants_udl = sim_grants[sim_grants["ACLG"] == "UDL"].copy()</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> weighted_group_delta(grouped_df):</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    return_dict <span class="op">=</span> {}</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2025</span>, <span class="dv">2029</span>):</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        total_weight <span class="op">=</span> grouped_df[<span class="ss">f"ERP_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>].<span class="bu">sum</span>()</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        return_dict[<span class="ss">f"Population_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> total_weight</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        weighted_mean <span class="op">=</span> (</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            grouped_df[<span class="ss">f"Grant Delta_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">*</span> grouped_df[<span class="ss">f"ERP_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>]</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        ).<span class="bu">sum</span>() <span class="op">/</span> total_weight</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        return_dict[<span class="ss">f"Grant Delta_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> weighted_mean</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.Series(return_dict)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>sim_grants_grouped <span class="op">=</span> (</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    sim_grants.groupby([<span class="st">"Jurisdiction"</span>, <span class="st">"ACLG"</span>, <span class="st">"Sim_i"</span>])</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">apply</span>(weighted_group_delta, include_groups<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2025</span>, <span class="dv">2029</span>):</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    sim_grants_grouped[<span class="ss">f"Grant Delta Per Capita_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> sim_grants_grouped[<span class="ss">f"Grant Delta_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>]<span class="op">/</span> sim_grants_grouped[<span class="ss">f"Population_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>]</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>sim_grants_melted <span class="op">=</span> pd.melt(</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    sim_grants_grouped,</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span>[<span class="st">"Jurisdiction"</span>, <span class="st">"ACLG"</span>, <span class="st">"Sim_i"</span>],</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    value_vars<span class="op">=</span>[<span class="ss">f"Grant Delta Per Capita_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2025</span>, <span class="dv">2029</span>)],</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    var_name<span class="op">=</span><span class="st">"Year"</span>,</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    value_name<span class="op">=</span><span class="st">"Expected Change in GPG Per Capita($)"</span>,</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>sim_grants_melted[<span class="st">"Year"</span>] <span class="op">=</span> sim_grants_melted[<span class="st">"Year"</span>].<span class="bu">str</span>.split(<span class="st">"_"</span>).<span class="bu">str</span>[<span class="dv">1</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>sim_grants_melted[<span class="st">"State-ACLG"</span>] <span class="op">=</span> (</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">+</span> <span class="st">" - "</span> <span class="op">+</span> sim_grants_melted[<span class="st">"ACLG"</span>]</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="59201634" class="cell" data-execution_count="4">
+<div id="59201634" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> grants_plot(sub_df):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> sns.FacetGrid(</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        sub_df,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        col<span class="op">=</span><span class="st">"State-ACLG"</span>,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">#x="Year",</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">#y="Expected Change in GPG ($)",</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># kind="line",</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        col_wrap<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="co"># legend="auto",</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        sharex<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        sharey<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        aspect<span class="op">=</span>(<span class="dv">1</span> <span class="op">+</span> <span class="dv">5</span><span class="op">**</span><span class="fl">0.5</span>) <span class="op">/</span> <span class="dv">2</span>,</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        despine<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        height<span class="op">=</span><span class="dv">4</span>,</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># g.map_dataframe(sns.lineplot,</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     x="Year",</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     y="Expected Change in GPG ($)",</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     hue="ACLG",</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     units="Sim_i",</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     dashes=False,</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     legend=False,</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     alpha=0.1,</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     color="0.3",</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">#     estimator=None,</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># )</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    g.map_dataframe(</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>         sns.lineplot,</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>         x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>         y<span class="op">=</span><span class="st">"Expected Change in GPG ($)"</span>,</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>         errorbar<span class="op">=</span><span class="st">"ci"</span>,</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>         marker<span class="op">=</span><span class="st">"o"</span>,</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>         dashes<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>         legend<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>         zorder<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>         err_style<span class="op">=</span><span class="st">"band"</span>,</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>         color<span class="op">=</span><span class="st">"#062E4A"</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>     )</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax <span class="kw">in</span> g.axes.flat:</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        state_aclg <span class="op">=</span> ax.get_title()</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        ax.text(<span class="fl">0.9</span>, <span class="dv">1</span>, state_aclg.split(<span class="st">" - "</span>)[<span class="op">-</span><span class="dv">1</span>], transform<span class="op">=</span>ax.transAxes, fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        ax.set_title(<span class="st">""</span>)</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        ax.set_xticks([<span class="dv">2025</span>, <span class="dv">2026</span>, <span class="dv">2027</span>, <span class="dv">2028</span>])</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        ax.set_xticklabels([<span class="st">"2025-26"</span>, <span class="st">"2026-27"</span>, <span class="st">"2027-28"</span>, <span class="st">"2028-29"</span>])</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    aclg <span class="op">=</span> <span class="bu">list</span>(sub_df[<span class="st">"ACLG"</span>].unique())</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    chunks <span class="op">=</span> [aclg[i:i<span class="op">+</span><span class="dv">4</span>] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(aclg), <span class="dv">4</span>)]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> chunk <span class="kw">in</span> chunks:</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        sub_df_chunk <span class="op">=</span> sub_df[sub_df[<span class="st">"ACLG"</span>].isin(chunk)]</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        g <span class="op">=</span> sns.FacetGrid(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            sub_df_chunk,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            col<span class="op">=</span><span class="st">"State-ACLG"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>            <span class="co">#x="Year",</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            <span class="co">#y="Expected Change in GPG ($)",</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>            <span class="co"># kind="line",</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>            col_wrap<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>            <span class="co"># legend="auto",</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>            sharex<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>            sharey<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>            aspect<span class="op">=</span>(<span class="dv">1</span> <span class="op">+</span> <span class="dv">5</span><span class="op">**</span><span class="fl">0.5</span>) <span class="op">/</span> <span class="dv">2</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            despine<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>            height<span class="op">=</span><span class="dv">4</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        g.map_dataframe(</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>            sns.lineplot,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>            x<span class="op">=</span><span class="st">"Year"</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span><span class="st">"Expected Change in GPG Per Capita($)"</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>            errorbar<span class="op">=</span><span class="st">"ci"</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>            marker<span class="op">=</span><span class="st">"o"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>            dashes<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>            legend<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>            zorder<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>            err_style<span class="op">=</span><span class="st">"band"</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span><span class="st">"#062E4A"</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ax <span class="kw">in</span> g.axes.flat:</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>            state_aclg <span class="op">=</span> ax.get_title()</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>            ax.text(<span class="fl">0.9</span>, <span class="dv">1</span>, state_aclg.split(<span class="st">" - "</span>)[<span class="op">-</span><span class="dv">1</span>], transform<span class="op">=</span>ax.transAxes, fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>            ax.set_title(<span class="st">""</span>)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>            ax.set_xticks([<span class="dv">2025</span>, <span class="dv">2026</span>, <span class="dv">2027</span>, <span class="dv">2028</span>])</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>            ax.set_xticklabels([<span class="st">"2025-26"</span>, <span class="st">"2026-27"</span>, <span class="st">"2027-28"</span>, <span class="st">"2028-29"</span>])</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <section id="new-south-wales" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="new-south-wales"><span class="header-section-number">14.1</span> New South Wales</h2>
-<div id="2989d397" class="cell" data-execution_count="5">
+<div id="2989d397" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"New South Wales"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -448,11 +446,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-4-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-4-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-4-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-4-output-5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="victoria" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="victoria"><span class="header-section-number">14.2</span> Victoria</h2>
-<div id="c9344ffd" class="cell" data-execution_count="6">
+<div id="c9344ffd" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Victoria"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -464,11 +490,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-5-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-5-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="queensland" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="queensland"><span class="header-section-number">14.3</span> Queensland</h2>
-<div id="35276908" class="cell" data-execution_count="7">
+<div id="35276908" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Queensland"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -480,11 +527,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-6-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-6-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-6-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="south-austrlalia" class="level2" data-number="14.4">
 <h2 data-number="14.4" class="anchored" data-anchor-id="south-austrlalia"><span class="header-section-number">14.4</span> South Austrlalia</h2>
-<div id="045c80d4" class="cell" data-execution_count="8">
+<div id="045c80d4" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"South Australia"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -496,11 +564,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-7-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-7-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="western-australia" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="western-australia"><span class="header-section-number">14.5</span> Western Australia</h2>
-<div id="cf894894" class="cell" data-execution_count="9">
+<div id="cf894894" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Western Australia"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -512,11 +601,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-8-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-8-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-8-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-8-output-5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="tasmania" class="level2" data-number="14.6">
 <h2 data-number="14.6" class="anchored" data-anchor-id="tasmania"><span class="header-section-number">14.6</span> Tasmania</h2>
-<div id="b6b46b25" class="cell" data-execution_count="10">
+<div id="b6b46b25" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Tasmania"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -528,11 +645,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-9-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-9-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="northern-territory" class="level2" data-number="14.7">
 <h2 data-number="14.7" class="anchored" data-anchor-id="northern-territory"><span class="header-section-number">14.7</span> Northern Territory</h2>
-<div id="76cc075b" class="cell" data-execution_count="11">
+<div id="76cc075b" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Northern Territory"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -541,6 +672,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
 <figure class="figure">
 <p><img src="10_perc_min_grant_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10_perc_min_grant_files/figure-html/cell-10-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
