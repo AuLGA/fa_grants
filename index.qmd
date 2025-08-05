@@ -1,5 +1,7 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This is a repository - a knowledge base if you will, of the Financial Assistance Grants system to Local Government Councils. 
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+In the first section of the book, we explore the different methods employed by state grants commissions to determine the quantum of the grant allocaiton. 
+
+The second section then explores issues commonly reported by councils. We also explore debates surrounding optimal grant allocation strategies.

@@ -5,7 +5,7 @@ project:
 
 book:
   title: "A Characterization of the Australian Financial Assistance Grants System"
-  date: "7/23/2025"
+  date: today
   reader-mode: false
   site-url: https://spulick.github.io/fa_grants/
   search: true
@@ -16,7 +16,6 @@ book:
   # - methodology.qmd
     - part: "Jurisdictions and Approaches"
       chapters:
-        - historical-context.qmd
         - NSW_methodology.qmd
         - VIC_methodology.qmd
         - QLD_methodology.qmd
@@ -27,6 +26,7 @@ book:
         - aclg_note.qmd
     - part: "Key Issues and Debates"
       chapters:
+        - historical-context.qmd
         - discussed-issues.qmd
     - part: "Empirical Analysis"
       chapters:
