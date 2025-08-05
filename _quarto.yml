@@ -5,6 +5,7 @@ project:
 
 book:
   title: "A Characterization of the Australian Financial Assistance Grants System"
+  author: ["S Pulick", "E Ritchie"]
   date: today
   reader-mode: false
   site-url: https://spulick.github.io/fa_grants/
