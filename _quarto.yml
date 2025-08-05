@@ -13,6 +13,7 @@ book:
 
   chapters:
     - index.qmd
+    - Abstract.qmd 
     - intro.qmd
   # - methodology.qmd
     - part: "Key Issues and Debates"
