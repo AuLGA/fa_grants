@@ -1,0 +1,6 @@
+---
+title: "Abstract"
+author: "Euan Maclean"
+date: today
+references: euan_references.bib
+---

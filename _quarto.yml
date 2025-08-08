@@ -11,15 +11,15 @@ book:
   site-url: https://spulick.github.io/fa_grants/
   search: true
 
-  chapters:
+  chapters: # naming convention to remember: 1. always use lowercase for file names, 2. use underscores for spaces
     - index.qmd
-    - Abstract.qmd 
+    - abstract.qmd 
     - intro.qmd
   # - methodology.qmd
     - part: "Key Issues and Debates"
       chapters:
-        - historical-context.qmd
-        - discussed-issues.qmd
+        - historical_context.qmd
+        - discussed_issues.qmd
     - part: "Jurisdictions and Approaches"
       chapters:
         - NSW_methodology.qmd

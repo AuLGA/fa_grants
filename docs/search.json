@@ -12,11 +12,11 @@
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction",
+    "title": "2  An introduction to the FA Grants System",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\n\n\nKnuth DE (1984) “Literate programming,” Comput. J., 27(2):97–111, doi:10.1093/comjnl/27.2.97.",
+    "text": "Financial Assistance Grants (FA Grants) are a funding mechanism used by the Commonwealth government to distribute funding to Australia’s 538 local councils. Funding for the FA grant program has evolved since its initial introduction, and funding has not kept up with an increase in costs for local councils.\nThe FA Grant distribution process consists of three components: a local road network component; a general purpose component; and a per capita minimum grant component. This component requires every council to be given at least 30% of what their grant would be if FA grants were distributed on a per capita basis.\nThis allocation mechanism is controversial with our members (Australia’s 538 local governments), as regional and rural councils see the third of these components as a way to funnel money towards urban and peri-urban councils, even though they are not as financially reliant on FA grants as their regional and rural counterparts.\nALGA holds a long standing view that a more practical way to achieve greater financial sustainability for councils is to increase the size of the pie rather than how it is sliced. This is reflected in ALGA’s call for a return to FA Grants being equal to 1% of Commonwealth taxation revenue.\nIn this report, we break from this view to consider the impacts of a change to the minimum allocation. This is done through modelling the per capita gains and losses of a shift from 30%, considering lower minimums and the removal of a minimum allocation in its entirety.\nAdditional to our analysis of council impacts, we will also perform a macroeconomic modelling of how these changes could impact the broader economy. The goal of this analysis is to provide insights into a change to the distribution process that would optimise financial sustainability whilst also not negatively impacting GDP.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>An introduction to the FA Grants System</span>"
     ]
   },
   {
@@ -99,12 +99,12 @@
   {
     "objectID": "aclg_note.html",
     "href": "aclg_note.html",
-    "title": "9  A note on the Australian Classification of Local Government",
+    "title": "12  A note on the Australian Classification of Local Government",
     "section": "",
     "text": "Step 1\nStep 2\nStep 3\n\nCategory\nAlpha\n\n\n\n\nURBAN (U)\n\n\n\n\n\n\n\n\nCapital City (CC)\nNot applicable\n\n1\nUCC\n\n\nPop. &gt; 20,000\nMetropolitan Developed (D) - Part of an urban centre &gt; 1,000,000 and pop. density &gt; 600/sq km.\nSmall (S)\nup to 30,000\n2\nUDS\n\n\n\n\nMedium (M)\n30,001-70,000\n3\nUDM\n\n\n\n\nLarge (L)\n70,001-120,000\n4\nUDL\n\n\n\n\nVery large (VL)\n&gt; 120,000\n5\nUDV\n\n\nPop. Density &gt; 30 persons per sq km\nRegional Town/City (R) - Part of an urban centre with population &lt;1,000,000 and predominantly urban in nature\nSmall\nup to 30,000\n6\nURS\n\n\n\n\nMedium\n30,001-70,000\n7\nURM\n\n\n\n\nLarge\n70,001-120,000\n8\nURL\n\n\n\n\nVery large\n&gt;120,001\n9\nURV\n\n\n&gt;90% of LGA population is urban\nFringe (F) - A developing LGA on the margin of a developed or regional urban centre.\nSmall\nup to 30,000\n10\nUFS\n\n\n\n\nMedium\n30,001-70,000\n11\nUFM\n\n\n\n\nLarge\n70,001-120,000\n12\nUFL\n\n\n\n\nVery large\n&gt;120,001\n13\nUFV\n\n\nRURAL (R)\n\n\n\n\n\n\n\n\nSignificant Growth (SG) - Average annual Population growth &gt; 3%, population &gt; 5,000 and not remote.\nNot applicable\n\n14\nRSG\n\n\n\nAgricultural (A)\nSmall\nUp to 2,000\n15\nRAS\n\n\n\n\nMedium\n2,001-5,000\n16\nRAM\n\n\n\n\nLarge\n5,001,-10,000\n17\nRAL\n\n\n\n\nVery large\n10,001 to 20,000\n18\nRAV\n\n\n\nRemote (T) - Situated in a remote locality.\nExtra small\nUp to 400\n19\nRTX\n\n\n\n\nSmall\n401-1,000\n20\nRTS\n\n\n\n\nMedium\n1,001–3,000\n21\nRTM\n\n\n\n\nLarge\n3,001 to 20,000\n22\nRTL",
     "crumbs": [
       "Jurisdictions and Approaches",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>A note on the Australian Classification of Local Government</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>A note on the Australian Classification of Local Government</span>"
     ]
   },
   {
@@ -308,78 +308,78 @@
   {
     "objectID": "no_min_grant.html",
     "href": "no_min_grant.html",
-    "title": "15  A World With No Per Capita Minimum Grant",
+    "title": "16  A World With No Per Capita Minimum Grant",
     "section": "",
-    "text": "15.1 New South Wales\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"New South Wales\"])",
+    "text": "16.1 New South Wales\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"New South Wales\"])",
     "crumbs": [
       "Empirical Analysis",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
     ]
   },
   {
     "objectID": "no_min_grant.html#victoria",
     "href": "no_min_grant.html#victoria",
-    "title": "15  A World With No Per Capita Minimum Grant",
-    "section": "15.2 Victoria",
-    "text": "15.2 Victoria\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Victoria\"])",
+    "title": "16  A World With No Per Capita Minimum Grant",
+    "section": "16.2 Victoria",
+    "text": "16.2 Victoria\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Victoria\"])",
     "crumbs": [
       "Empirical Analysis",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
     ]
   },
   {
     "objectID": "no_min_grant.html#queensland",
     "href": "no_min_grant.html#queensland",
-    "title": "15  A World With No Per Capita Minimum Grant",
-    "section": "15.3 Queensland",
-    "text": "15.3 Queensland\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Queensland\"])",
+    "title": "16  A World With No Per Capita Minimum Grant",
+    "section": "16.3 Queensland",
+    "text": "16.3 Queensland\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Queensland\"])",
     "crumbs": [
       "Empirical Analysis",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
     ]
   },
   {
     "objectID": "no_min_grant.html#south-austrlalia",
     "href": "no_min_grant.html#south-austrlalia",
-    "title": "15  A World With No Per Capita Minimum Grant",
-    "section": "15.4 South Austrlalia",
-    "text": "15.4 South Austrlalia\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"South Australia\"])",
+    "title": "16  A World With No Per Capita Minimum Grant",
+    "section": "16.4 South Austrlalia",
+    "text": "16.4 South Austrlalia\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"South Australia\"])",
     "crumbs": [
       "Empirical Analysis",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
     ]
   },
   {
     "objectID": "no_min_grant.html#western-australia",
     "href": "no_min_grant.html#western-australia",
-    "title": "15  A World With No Per Capita Minimum Grant",
-    "section": "15.5 Western Australia",
-    "text": "15.5 Western Australia\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Western Australia\"])",
+    "title": "16  A World With No Per Capita Minimum Grant",
+    "section": "16.5 Western Australia",
+    "text": "16.5 Western Australia\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Western Australia\"])",
     "crumbs": [
       "Empirical Analysis",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
     ]
   },
   {
     "objectID": "no_min_grant.html#tasmania",
     "href": "no_min_grant.html#tasmania",
-    "title": "15  A World With No Per Capita Minimum Grant",
-    "section": "15.6 Tasmania",
-    "text": "15.6 Tasmania\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Tasmania\"])",
+    "title": "16  A World With No Per Capita Minimum Grant",
+    "section": "16.6 Tasmania",
+    "text": "16.6 Tasmania\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Tasmania\"])",
     "crumbs": [
       "Empirical Analysis",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
     ]
   },
   {
     "objectID": "no_min_grant.html#northern-territory",
     "href": "no_min_grant.html#northern-territory",
-    "title": "15  A World With No Per Capita Minimum Grant",
-    "section": "15.7 Northern Territory",
-    "text": "15.7 Northern Territory\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Northern Territory\"])",
+    "title": "16  A World With No Per Capita Minimum Grant",
+    "section": "16.7 Northern Territory",
+    "text": "16.7 Northern Territory\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Northern Territory\"])",
     "crumbs": [
       "Empirical Analysis",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant</span>"
     ]
   },
   {
@@ -390,6 +390,27 @@
     "text": "Knuth DE (1984) ‘Literate programming’, Comput.\nJ., 27(2):97–111, doi:10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "abstract.html",
+    "href": "abstract.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>abstract.html</span>"
+    ]
+  },
+  {
+    "objectID": "discussed_issues.html",
+    "href": "discussed_issues.html",
+    "title": "4  Discussed Issues",
+    "section": "",
+    "text": "This is the content for # Discussed Issues.",
+    "crumbs": [
+      "Key Issues and Debates",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussed Issues</span>"
     ]
   }
 ]
