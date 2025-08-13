@@ -34,9 +34,12 @@ book:
     - part: "Empirical Analysis"
       chapters:
         - simulation_methodology.ipynb
+        - 20_perc_min_grant_agg.ipynb
         - 20_perc_min_grant.ipynb
+        - 10_perc_min_grant_agg.ipynb
         - 10_perc_min_grant.ipynb
         - no_min_grant.ipynb
+        - no_min_grant_agg.ipynb
     - references.qmd
 
 bibliography: [references.bib, euan_references.bib]

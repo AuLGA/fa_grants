@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./20_perc_min_grant.html" rel="next">
+<link href="./20_perc_min_grant_agg.html" rel="next">
 <link href="./aclg_note.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -76,7 +76,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9c15b9c3b2558e3310cb2fed5d9d6e95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-19312defdacc65a273450a2a5e9e4ae7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -288,20 +288,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./20_perc_min_grant_agg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">A 20% Per Capita Minimum Grant - Gains and Losses</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./20_perc_min_grant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">A 20% Per Capita Minimum Grant</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">A 20% Per Capita Minimum Grant - A per capita study</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_perc_min_grant_agg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">A 10% Per Capita Minimum Grant - Gains and Losses</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./10_perc_min_grant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">A 10% Per Capita Minimum Grant</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">A 10% Per Capita Minimum Grant - A per capita study</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./no_min_grant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">A World With No Per Capita Minimum Grant</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">A World With No Per Capita Minimum Grant - A per capita study</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./no_min_grant_agg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">A World With No Per Capita Minimum Grant - Gains and Losses</span></span></a>
   </div>
 </li>
       </ul>
@@ -368,7 +386,7 @@ window.Quarto = {
 <p>A reduction in the gap implies improved financial sustainability.</p>
 <p>For each year that follows, fund allocation methodology is implemented for each state based on that state’s Grant Commission’s methodology.</p>
 <p>This process is repeated 1000 times for each council to capture as much of the variability as possible.</p>
-<div id="e0ba7719" class="cell" data-execution_count="29">
+<div id="e0ba7719" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -379,14 +397,14 @@ window.Quarto = {
 </div>
 <section id="controls-and-constants" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="controls-and-constants"><span class="header-section-number">13.1</span> Controls and constants</h2>
-<div id="4d861299" class="cell" data-execution_count="30">
+<div id="4d861299" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>per_capita_minimum <span class="op">=</span> <span class="fl">0.17</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>per_capita_minimum_base <span class="op">=</span> <span class="fl">0.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="395a3618" class="cell" data-execution_count="31">
+<div id="395a3618" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pop_30_jun <span class="op">=</span> pd.read_excel(</span>
@@ -401,7 +419,7 @@ window.Quarto = {
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>pop_30_jun <span class="op">=</span> pop_30_jun <span class="op">*</span> <span class="fl">1e6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="7eccfd70" class="cell" data-execution_count="32">
+<div id="7eccfd70" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>budget_grants <span class="op">=</span> pd.read_excel(</span>
@@ -429,7 +447,7 @@ window.Quarto = {
 \]</span></p>
 <section id="new-south-wales" class="level3" data-number="13.2.1">
 <h3 data-number="13.2.1" class="anchored" data-anchor-id="new-south-wales"><span class="header-section-number">13.2.1</span> New South Wales</h3>
-<div id="656e6dab" class="cell" data-execution_count="33">
+<div id="656e6dab" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nsw_grants_base <span class="op">=</span> pd.read_excel(</span>
@@ -526,7 +544,7 @@ window.Quarto = {
 </section>
 <section id="queensland" class="level3" data-number="13.2.2">
 <h3 data-number="13.2.2" class="anchored" data-anchor-id="queensland"><span class="header-section-number">13.2.2</span> Queensland</h3>
-<div id="22245343" class="cell" data-execution_count="34">
+<div id="22245343" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>qld_grants_base <span class="op">=</span> pd.read_excel(</span>
@@ -639,7 +657,7 @@ window.Quarto = {
 </blockquote>
 <section id="victoria" class="level3" data-number="13.3.1">
 <h3 data-number="13.3.1" class="anchored" data-anchor-id="victoria"><span class="header-section-number">13.3.1</span> Victoria</h3>
-<div id="3431389c" class="cell" data-execution_count="35">
+<div id="3431389c" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> correct_delta_vic(sub_vic, year, base<span class="op">=</span><span class="va">False</span>):</span>
@@ -670,7 +688,7 @@ window.Quarto = {
 <span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sub_vic</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="4a4eacf7" class="cell" data-execution_count="36">
+<div id="4a4eacf7" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>vic_grants_base <span class="op">=</span> pd.read_excel(</span>
@@ -798,7 +816,7 @@ window.Quarto = {
 </section>
 <section id="south-australia" class="level3" data-number="13.3.2">
 <h3 data-number="13.3.2" class="anchored" data-anchor-id="south-australia"><span class="header-section-number">13.3.2</span> South Australia</h3>
-<div id="2105731e" class="cell" data-execution_count="37">
+<div id="2105731e" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> correct_delta_sa(sub_sa, year, base<span class="op">=</span><span class="va">False</span>):</span>
@@ -829,7 +847,7 @@ window.Quarto = {
 <span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sub_sa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="cc7c80e6" class="cell" data-execution_count="38">
+<div id="cc7c80e6" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sa_grants_base <span class="op">=</span> pd.read_excel(</span>
@@ -953,7 +971,7 @@ window.Quarto = {
 </section>
 <section id="western-australia" class="level3" data-number="13.3.3">
 <h3 data-number="13.3.3" class="anchored" data-anchor-id="western-australia"><span class="header-section-number">13.3.3</span> Western Australia</h3>
-<div id="f53965c9" class="cell" data-editable="false" data-execution_count="39">
+<div id="f53965c9" class="cell" data-editable="false">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> correct_delta_wa(sub_wa, year, base<span class="op">=</span><span class="va">False</span>):</span>
@@ -982,7 +1000,7 @@ window.Quarto = {
 <span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sub_wa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="10d6f52e" class="cell" data-execution_count="40">
+<div id="10d6f52e" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>wa_grants_base <span class="op">=</span> pd.read_excel(</span>
@@ -1106,7 +1124,7 @@ window.Quarto = {
 </section>
 <section id="tasmania" class="level3" data-number="13.3.4">
 <h3 data-number="13.3.4" class="anchored" data-anchor-id="tasmania"><span class="header-section-number">13.3.4</span> Tasmania</h3>
-<div id="cdb57b1e" class="cell" data-execution_count="41">
+<div id="cdb57b1e" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> correct_delta_tas(sub_tas, year, base<span class="op">=</span><span class="va">False</span>):</span>
@@ -1144,7 +1162,7 @@ window.Quarto = {
 <span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sub_tas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="6a2662b1" class="cell" data-execution_count="42">
+<div id="6a2662b1" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tas_grants_base <span class="op">=</span> pd.read_excel(</span>
@@ -1270,7 +1288,7 @@ window.Quarto = {
 </section>
 <section id="northern-territory" class="level3" data-number="13.3.5">
 <h3 data-number="13.3.5" class="anchored" data-anchor-id="northern-territory"><span class="header-section-number">13.3.5</span> Northern Territory</h3>
-<div id="21da5750" class="cell" data-execution_count="43">
+<div id="21da5750" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> correct_delta_nt(sub_nt, year, base<span class="op">=</span><span class="va">False</span>):</span>
@@ -1297,7 +1315,7 @@ window.Quarto = {
 <span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sub_nt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="49484d11" class="cell" data-execution_count="44">
+<div id="49484d11" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>nt_grants_base <span class="op">=</span> pd.read_excel(</span>
@@ -1883,8 +1901,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./20_perc_min_grant.html" class="pagination-link" aria-label="A 20% Per Capita Minimum Grant">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">A 20% Per Capita Minimum Grant</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./20_perc_min_grant_agg.html" class="pagination-link" aria-label="A 20% Per Capita Minimum Grant - Gains and Losses">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">A 20% Per Capita Minimum Grant - Gains and Losses</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
