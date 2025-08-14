@@ -154,23 +154,23 @@
   {
     "objectID": "20_perc_min_grant_agg.html",
     "href": "20_perc_min_grant_agg.html",
-    "title": "14  A 20% Per Capita Minimum Grant - Gains and Losses",
+    "title": "Appendix B — A 20% Per Capita Minimum Grant - Gains and Losses",
     "section": "",
-    "text": "14.1 A State and Territory breakdown\nShow the code\nsim_grants_grouped = (\n    sim_grants.groupby([\"Jurisdiction\", \"ACLG\", \"Sim_i\"])\n    .apply(weighted_group_delta, include_groups=False)\n    .reset_index()\n)\n\nsim_grants_melted = pd.melt(\n    sim_grants_grouped,\n    id_vars=[\"Jurisdiction\", \"ACLG\", \"Sim_i\"],\n    value_vars=[f\"Grant Delta_{year}\" for year in range(2025, 2029)],\n    var_name=\"Year\",\n    value_name=\"Expected Change in GPG ($)\",\n)\n\nsim_grants_melted[\"Year\"] = sim_grants_melted[\"Year\"].str.split(\"_\").str[1].astype(int)\nsim_grants_melted[\"State-ACLG\"] = (\n    sim_grants_melted[\"Jurisdiction\"] + \" - \" + sim_grants_melted[\"ACLG\"]\n)",
+    "text": "B.1 A State and Territory breakdown\nShow the code\nsim_grants_grouped = (\n    sim_grants.groupby([\"Jurisdiction\", \"ACLG\", \"Sim_i\"])\n    .apply(weighted_group_delta, include_groups=False)\n    .reset_index()\n)\n\nsim_grants_melted = pd.melt(\n    sim_grants_grouped,\n    id_vars=[\"Jurisdiction\", \"ACLG\", \"Sim_i\"],\n    value_vars=[f\"Grant Delta_{year}\" for year in range(2025, 2029)],\n    var_name=\"Year\",\n    value_name=\"Expected Change in GPG ($)\",\n)\n\nsim_grants_melted[\"Year\"] = sim_grants_melted[\"Year\"].str.split(\"_\").str[1].astype(int)\nsim_grants_melted[\"State-ACLG\"] = (\n    sim_grants_melted[\"Jurisdiction\"] + \" - \" + sim_grants_melted[\"ACLG\"]\n)",
     "crumbs": [
-      "Empirical Analysis",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>A 20% Per Capita Minimum Grant - Gains and Losses</span>"
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>A 20% Per Capita Minimum Grant - Gains and Losses</span>"
     ]
   },
   {
     "objectID": "20_perc_min_grant_agg.html#a-state-and-territory-breakdown",
     "href": "20_perc_min_grant_agg.html#a-state-and-territory-breakdown",
-    "title": "14  A 20% Per Capita Minimum Grant - Gains and Losses",
+    "title": "Appendix B — A 20% Per Capita Minimum Grant - Gains and Losses",
     "section": "",
-    "text": "14.1.1 New South Wales\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"New South Wales\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14.1.2 Victoria\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Victoria\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14.1.3 Queensland\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Queensland\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14.1.4 South Austrlalia\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"South Australia\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14.1.5 Western Australia\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Western Australia\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14.1.6 Tasmania\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Tasmania\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14.1.7 Northern Territory\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Northern Territory\"])",
+    "text": "B.1.1 New South Wales\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"New South Wales\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB.1.2 Victoria\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Victoria\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB.1.3 Queensland\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Queensland\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB.1.4 South Austrlalia\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"South Australia\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB.1.5 Western Australia\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Western Australia\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB.1.6 Tasmania\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Tasmania\"])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB.1.7 Northern Territory\n\n\nShow the code\ngrants_plot(sim_grants_melted[sim_grants_melted[\"Jurisdiction\"] == \"Northern Territory\"])",
     "crumbs": [
-      "Empirical Analysis",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>A 20% Per Capita Minimum Grant - Gains and Losses</span>"
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>A 20% Per Capita Minimum Grant - Gains and Losses</span>"
     ]
   },
   {
@@ -281,6 +281,86 @@
     "crumbs": [
       "Empirical Analysis",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>A World With No Per Capita Minimum Grant - Gains and Losses</span>"
+    ]
+  },
+  {
+    "objectID": "jurisdictional_approaches.html",
+    "href": "jurisdictional_approaches.html",
+    "title": "4  Jurisdictional Approaches",
+    "section": "",
+    "text": "4.1 New South Wales",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jurisdictional Approaches</span>"
+    ]
+  },
+  {
+    "objectID": "jurisdictional_approaches.html#victoria",
+    "href": "jurisdictional_approaches.html#victoria",
+    "title": "4  Jurisdictional Approaches",
+    "section": "4.2 Victoria",
+    "text": "4.2 Victoria",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jurisdictional Approaches</span>"
+    ]
+  },
+  {
+    "objectID": "jurisdictional_approaches.html#queensland",
+    "href": "jurisdictional_approaches.html#queensland",
+    "title": "4  Jurisdictional Approaches",
+    "section": "4.3 Queensland",
+    "text": "4.3 Queensland",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jurisdictional Approaches</span>"
+    ]
+  },
+  {
+    "objectID": "jurisdictional_approaches.html#south-australia",
+    "href": "jurisdictional_approaches.html#south-australia",
+    "title": "4  Jurisdictional Approaches",
+    "section": "4.4 South Australia",
+    "text": "4.4 South Australia",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jurisdictional Approaches</span>"
+    ]
+  },
+  {
+    "objectID": "jurisdictional_approaches.html#western-australia",
+    "href": "jurisdictional_approaches.html#western-australia",
+    "title": "4  Jurisdictional Approaches",
+    "section": "4.5 Western Australia",
+    "text": "4.5 Western Australia",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jurisdictional Approaches</span>"
+    ]
+  },
+  {
+    "objectID": "jurisdictional_approaches.html#tasmania",
+    "href": "jurisdictional_approaches.html#tasmania",
+    "title": "4  Jurisdictional Approaches",
+    "section": "4.6 Tasmania",
+    "text": "4.6 Tasmania",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jurisdictional Approaches</span>"
+    ]
+  },
+  {
+    "objectID": "jurisdictional_approaches.html#northern-territory",
+    "href": "jurisdictional_approaches.html#northern-territory",
+    "title": "4  Jurisdictional Approaches",
+    "section": "4.7 Northern Territory",
+    "text": "4.7 Northern Territory",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jurisdictional Approaches</span>"
+    ]
+  },
+  {
+    "objectID": "jurisdictional_approaches.html#australian-capital-territory",
+    "href": "jurisdictional_approaches.html#australian-capital-territory",
+    "title": "4  Jurisdictional Approaches",
+    "section": "4.8 Australian Capital Territory",
+    "text": "4.8 Australian Capital Territory",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jurisdictional Approaches</span>"
     ]
   }
 ]
