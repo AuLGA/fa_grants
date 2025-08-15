@@ -4,11 +4,23 @@ author: ["Sreehari Pulickamadhom Sreedhar", "Euan Maclean"]
 date: today
 references: euan_references.bib
 ---
-Financial Assistance Grants (FA Grants) are a funding mechanism used by the Commonwealth government to distribute funding to Australia's 538 local councils. Funding for the FA grant program has evolved since its initial introduction, and the program has not kept up with the expanding role that local councils play in our every day lives. 
+Financial Assistance Grants (FA Grants) are a funding mechanism used by the Commonwealth government to distribute funding to Australia's 538 local councils. Every year, the federal government allocates a pull of money to be distributed to councils nation wide. FA Grants are untied, meaning that councils spend money from the FA Grant program autonomously. 
 
-The FA Grant distribution process consists of three components: a local road network component; a general purpose component; and a per capita minimum grant component. This final component requires every council to be given at least 30% of what their grant would be if FA grants were distributed on a purely per capita basis. 
+**1.1 Allocation of FA Grants** 
 
-The minimum allocation requirement is controversial with our members (Australia's 538 local governments), as regional and rural councils see it as a way to funnel money towards urban and peri-urban councils, even though they are not as financially reliant on FA grants as their regional and rural counterparts. This is an understandable perspective, given inner city councils often run in surplus, with a wide range of revenue streams due to high economic activity and a more dense populus.
+FA Grants are allocated according to the "Local Government (Financial Assistance) Act" (1995). The FA Grant distribution process consists of three components: a local road network component; a general purpose component; and a per capita minimum grant component. This final component requires every council to be given at least 30% of what their grant would be if distributed on a purely per capita basis. 
+
+Whilst the Commonwealth is responsible for providing FA Grants, it is state government appointed grant commissions which decide how FA Grant money will be distributed, and the more intricate details of the general purpose and roads components. This means councils are assessed differently depending on their state jurisdiction. 
+
+The federal government directs states to allocate FA grants based on two principles: horizontal equilisation and effort neutrality. Horizontal equilisation refers to allocating funds in a way that takes into consideration the differing revenue raising capacities of councils, and effort neutrality directs grant commissions not to punish councils for political or accounting decisions. 
+
+**1.2 FA Grants as they stand today** 
+
+Funding for the FA grant program has evolved since its initial introduction, and the program has not kept up with the expanding role that local councils play. Over the past 30 years, FA grants have been cut from equaling 1% of Commonwealth taxation revenue in 1996, to the present day, where they are worth 0.5% of Commonwealth taxation revenue. 
+
+This decline in real value has been due to a number of factors; including the pausing of the program's indexing between 2014 and 2017. 
+
+The requirement for each council to receive at least 30% of a per capita equivelant grant program is controversial with our members (Australia's 538 local governments). Regional and rural councils see it as a way to funnel money towards urban and peri-urban councils, even though they are not as financially reliant on FA grants as their regional and rural counterparts. This is an understandable perspective, given inner city councils often run in surplus, with a wide range of revenue streams due to high economic activity and a more dense populus.
 
 ALGA holds a long standing view that a more practical way to achieve greater financial sustainability for councils is to increase the size of the pie rather than how it is sliced. This is reflected in ALGA's call for a return to FA Grants being equal to 1% of Commonwealth taxation revenue. 
 
@@ -16,7 +28,7 @@ In this report, we break from this view to consider the impacts of a change to t
 
 Building off this analysis, we will also perform a macroeconomic modelling of how these changes could impact the broader economy. 
  
-The goal of this analysis is to provide insights into what type of change to the distribution process would optimise the financial sustainability of local governments, whilst also contributing to economic growth and productivity. 
+The goal of this analysis is to provide insights into what type of change to the distribution process would optimise the financial sustainability of local governments, whilst also improving the productivity of the broader economy. 
 
 
 
