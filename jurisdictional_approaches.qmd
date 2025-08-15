@@ -2,11 +2,14 @@
 title: Jurisdictional Approaches
 author: Sreehari Pulickamadhom Sreedhar
 date: today
+references: references.bib
 ---
 
 ## New South Wales
 
 ## Victoria
+
+[@vict]
 
 ## Queensland
 
