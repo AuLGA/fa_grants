@@ -1,0 +1,24 @@
+---
+title: Jurisdictional Approaches
+author: Sreehari Pulickamadhom Sreedhar
+date: today
+references: references.bib
+---
+
+## New South Wales
+
+## Victoria
+
+[@vict]
+
+## Queensland
+
+## South Australia
+
+## Western Australia
+
+## Tasmania
+
+## Northern Territory
+
+## Australian Capital Territory

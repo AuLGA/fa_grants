@@ -5,39 +5,33 @@ project:
 
 book:
   title: "A Characterization of the Australian Financial Assistance Grants System"
-  author: ["S Pulick", "E Ritchie"]
+  author: ["Sreehari Pulickamadhom Sreedhar", "Euan Maclean"]
   date: today
   reader-mode: false
   site-url: https://spulick.github.io/fa_grants/
   search: true
 
-  chapters:
+  chapters: # naming convention to remember: 1. always use lowercase for file names, 2. use underscores for spaces
     - index.qmd
-    - Abstract.qmd 
+    - abstract.qmd 
     - intro.qmd
   # - methodology.qmd
-    - part: "Key Issues and Debates"
-      chapters:
-        - historical-context.qmd
-        - discussed-issues.qmd
-    - part: "Jurisdictions and Approaches"
-      chapters:
-        - NSW_methodology.qmd
-        - VIC_methodology.qmd
-        - QLD_methodology.qmd
-        - SA_methodology.qmd
-        - WA_methodology.qmd
-        - TAS_methodology.qmd
-        - NT_methodology.qmd
-        - aclg_note.qmd
-   
-    - part: "Empirical Analysis"
-      chapters:
-        - simulation_methodology.ipynb
-        - 20_perc_min_grant.ipynb
-        - 10_perc_min_grant.ipynb
-        - no_min_grant.ipynb
+    - historical_context.qmd
+    - jurisdictional_approaches.qmd
+    - discussed_issues.qmd
+
     - references.qmd
+   
+  appendices:
+    - simulation_methodology.ipynb
+    - 20_perc_min_grant_agg.ipynb
+    - 20_perc_min_grant.ipynb
+    - 10_perc_min_grant_agg.ipynb
+    - 10_perc_min_grant.ipynb
+    - no_min_grant_agg.ipynb
+    - no_min_grant.ipynb
+    - aclg_note.qmd
+    
 
 bibliography: [references.bib, euan_references.bib]
 csl: meta/style-manual-australian-government.csl
