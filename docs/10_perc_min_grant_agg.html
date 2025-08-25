@@ -76,7 +76,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-19312defdacc65a273450a2a5e9e4ae7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9c15b9c3b2558e3310cb2fed5d9d6e95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -253,15 +253,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#a-state-and-territory-breakdown" id="toc-a-state-and-territory-breakdown" class="nav-link active" data-scroll-target="#a-state-and-territory-breakdown"><span class="header-section-number">D.1</span> A State and Territory breakdown</a>
+  <li><a href="#a-state-and-territory-breakdown" id="toc-a-state-and-territory-breakdown" class="nav-link active" data-scroll-target="#a-state-and-territory-breakdown">A State and Territory breakdown</a>
   <ul class="collapse">
-  <li><a href="#new-south-wales" id="toc-new-south-wales" class="nav-link" data-scroll-target="#new-south-wales"><span class="header-section-number">D.1.1</span> New South Wales</a></li>
-  <li><a href="#victoria" id="toc-victoria" class="nav-link" data-scroll-target="#victoria"><span class="header-section-number">D.1.2</span> Victoria</a></li>
-  <li><a href="#queensland" id="toc-queensland" class="nav-link" data-scroll-target="#queensland"><span class="header-section-number">D.1.3</span> Queensland</a></li>
-  <li><a href="#south-austrlalia" id="toc-south-austrlalia" class="nav-link" data-scroll-target="#south-austrlalia"><span class="header-section-number">D.1.4</span> South Austrlalia</a></li>
-  <li><a href="#western-australia" id="toc-western-australia" class="nav-link" data-scroll-target="#western-australia"><span class="header-section-number">D.1.5</span> Western Australia</a></li>
-  <li><a href="#tasmania" id="toc-tasmania" class="nav-link" data-scroll-target="#tasmania"><span class="header-section-number">D.1.6</span> Tasmania</a></li>
-  <li><a href="#northern-territory" id="toc-northern-territory" class="nav-link" data-scroll-target="#northern-territory"><span class="header-section-number">D.1.7</span> Northern Territory</a></li>
+  <li><a href="#new-south-wales" id="toc-new-south-wales" class="nav-link" data-scroll-target="#new-south-wales">New South Wales</a></li>
+  <li><a href="#victoria" id="toc-victoria" class="nav-link" data-scroll-target="#victoria">Victoria</a></li>
+  <li><a href="#queensland" id="toc-queensland" class="nav-link" data-scroll-target="#queensland">Queensland</a></li>
+  <li><a href="#south-austrlalia" id="toc-south-austrlalia" class="nav-link" data-scroll-target="#south-austrlalia">South Austrlalia</a></li>
+  <li><a href="#western-australia" id="toc-western-australia" class="nav-link" data-scroll-target="#western-australia">Western Australia</a></li>
+  <li><a href="#tasmania" id="toc-tasmania" class="nav-link" data-scroll-target="#tasmania">Tasmania</a></li>
+  <li><a href="#northern-territory" id="toc-northern-territory" class="nav-link" data-scroll-target="#northern-territory">Northern Territory</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -292,7 +292,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>The model here applies a hypothetical per capita minimum grant constraint, set at 10%, to ensure that each jurisdiction receives at least this proportion of the funds if they were allocated on a per capita basis.</p></li>
 <li><p>The per capita minimum for the benchmark scenario is set to 30%, as is the status quo.</p></li>
 </ul>
-<div id="8207acac" class="cell" data-execution_count="1">
+<div id="8207acac" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.Series(return_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="59201634" class="cell">
+<div id="59201634" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> grants_plot(sub_df, col: <span class="bu">str</span> <span class="op">=</span> <span class="st">"State-ACLG"</span>, var: <span class="bu">str</span> <span class="op">=</span> <span class="st">"Expected Change in GPG ($)"</span>):</span>
@@ -389,7 +389,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="a71a73ea" class="cell" data-execution_count="3">
+<div id="a71a73ea" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sim_grants_grouped <span class="op">=</span> (</span>
@@ -409,7 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>sim_grants_melted[<span class="st">"Year"</span>] <span class="op">=</span> sim_grants_melted[<span class="st">"Year"</span>].<span class="bu">str</span>.split(<span class="st">"_"</span>).<span class="bu">str</span>[<span class="dv">1</span>].astype(<span class="bu">int</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="53a18d51" class="cell" data-execution_count="4">
+<div id="53a18d51" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted, col<span class="op">=</span><span class="st">"ACLG"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -457,9 +457,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<section id="a-state-and-territory-breakdown" class="level2" data-number="D.1">
-<h2 data-number="D.1" class="anchored" data-anchor-id="a-state-and-territory-breakdown"><span class="header-section-number">D.1</span> A State and Territory breakdown</h2>
-<div id="2d92f73c" class="cell" data-execution_count="5">
+<section id="a-state-and-territory-breakdown" class="level2">
+<h2 class="anchored" data-anchor-id="a-state-and-territory-breakdown">A State and Territory breakdown</h2>
+<div id="2d92f73c" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sim_grants_grouped <span class="op">=</span> (</span>
@@ -482,9 +482,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<section id="new-south-wales" class="level3" data-number="D.1.1">
-<h3 data-number="D.1.1" class="anchored" data-anchor-id="new-south-wales"><span class="header-section-number">D.1.1</span> New South Wales</h3>
-<div id="2989d397" class="cell" data-execution_count="6">
+<section id="new-south-wales" class="level3">
+<h3 class="anchored" data-anchor-id="new-south-wales">New South Wales</h3>
+<div id="2989d397" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"New South Wales"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -526,9 +526,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="victoria" class="level3" data-number="D.1.2">
-<h3 data-number="D.1.2" class="anchored" data-anchor-id="victoria"><span class="header-section-number">D.1.2</span> Victoria</h3>
-<div id="c9344ffd" class="cell" data-execution_count="7">
+<section id="victoria" class="level3">
+<h3 class="anchored" data-anchor-id="victoria">Victoria</h3>
+<div id="c9344ffd" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Victoria"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -563,9 +563,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="queensland" class="level3" data-number="D.1.3">
-<h3 data-number="D.1.3" class="anchored" data-anchor-id="queensland"><span class="header-section-number">D.1.3</span> Queensland</h3>
-<div id="35276908" class="cell" data-execution_count="8">
+<section id="queensland" class="level3">
+<h3 class="anchored" data-anchor-id="queensland">Queensland</h3>
+<div id="35276908" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Queensland"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -600,9 +600,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="south-austrlalia" class="level3" data-number="D.1.4">
-<h3 data-number="D.1.4" class="anchored" data-anchor-id="south-austrlalia"><span class="header-section-number">D.1.4</span> South Austrlalia</h3>
-<div id="045c80d4" class="cell" data-execution_count="9">
+<section id="south-austrlalia" class="level3">
+<h3 class="anchored" data-anchor-id="south-austrlalia">South Austrlalia</h3>
+<div id="045c80d4" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"South Australia"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -637,9 +637,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="western-australia" class="level3" data-number="D.1.5">
-<h3 data-number="D.1.5" class="anchored" data-anchor-id="western-australia"><span class="header-section-number">D.1.5</span> Western Australia</h3>
-<div id="cf894894" class="cell" data-execution_count="10">
+<section id="western-australia" class="level3">
+<h3 class="anchored" data-anchor-id="western-australia">Western Australia</h3>
+<div id="cf894894" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Western Australia"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -681,9 +681,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="tasmania" class="level3" data-number="D.1.6">
-<h3 data-number="D.1.6" class="anchored" data-anchor-id="tasmania"><span class="header-section-number">D.1.6</span> Tasmania</h3>
-<div id="b6b46b25" class="cell" data-execution_count="11">
+<section id="tasmania" class="level3">
+<h3 class="anchored" data-anchor-id="tasmania">Tasmania</h3>
+<div id="b6b46b25" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Tasmania"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -711,9 +711,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="northern-territory" class="level3" data-number="D.1.7">
-<h3 data-number="D.1.7" class="anchored" data-anchor-id="northern-territory"><span class="header-section-number">D.1.7</span> Northern Territory</h3>
-<div id="76cc075b" class="cell" data-execution_count="12">
+<section id="northern-territory" class="level3">
+<h3 class="anchored" data-anchor-id="northern-territory">Northern Territory</h3>
+<div id="76cc075b" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>grants_plot(sim_grants_melted[sim_grants_melted[<span class="st">"Jurisdiction"</span>] <span class="op">==</span> <span class="st">"Northern Territory"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

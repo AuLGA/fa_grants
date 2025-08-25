@@ -76,7 +76,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-19312defdacc65a273450a2a5e9e4ae7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9c15b9c3b2558e3310cb2fed5d9d6e95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -254,14 +254,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./no_min_grant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">A World With No Per Capita Minimum Grant - A per capita study</span></span></a>
+  <a href="./no_min_grant_agg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">A World With No Per Capita Minimum Grant - Gains and Losses</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./no_min_grant_agg.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">A World With No Per Capita Minimum Grant - Gains and Losses</span></span></a>
+  <a href="./no_min_grant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">A World With No Per Capita Minimum Grant - A per capita study</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -282,19 +282,19 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#controls-and-constants" id="toc-controls-and-constants" class="nav-link active" data-scroll-target="#controls-and-constants"><span class="header-section-number">A.1</span> Controls and constants</a></li>
-  <li><a href="#states-with-data-constraints" id="toc-states-with-data-constraints" class="nav-link" data-scroll-target="#states-with-data-constraints"><span class="header-section-number">A.2</span> States with data constraints</a>
+  <li><a href="#controls-and-constants" id="toc-controls-and-constants" class="nav-link active" data-scroll-target="#controls-and-constants">Controls and constants</a></li>
+  <li><a href="#states-with-data-constraints" id="toc-states-with-data-constraints" class="nav-link" data-scroll-target="#states-with-data-constraints">States with data constraints</a>
   <ul class="collapse">
-  <li><a href="#new-south-wales" id="toc-new-south-wales" class="nav-link" data-scroll-target="#new-south-wales"><span class="header-section-number">A.2.1</span> New South Wales</a></li>
-  <li><a href="#queensland" id="toc-queensland" class="nav-link" data-scroll-target="#queensland"><span class="header-section-number">A.2.2</span> Queensland</a></li>
+  <li><a href="#new-south-wales" id="toc-new-south-wales" class="nav-link" data-scroll-target="#new-south-wales">New South Wales</a></li>
+  <li><a href="#queensland" id="toc-queensland" class="nav-link" data-scroll-target="#queensland">Queensland</a></li>
   </ul></li>
-  <li><a href="#states-with-workable-data" id="toc-states-with-workable-data" class="nav-link" data-scroll-target="#states-with-workable-data"><span class="header-section-number">A.3</span> States with workable data</a>
+  <li><a href="#states-with-workable-data" id="toc-states-with-workable-data" class="nav-link" data-scroll-target="#states-with-workable-data">States with workable data</a>
   <ul class="collapse">
-  <li><a href="#victoria" id="toc-victoria" class="nav-link" data-scroll-target="#victoria"><span class="header-section-number">A.3.1</span> Victoria</a></li>
-  <li><a href="#south-australia" id="toc-south-australia" class="nav-link" data-scroll-target="#south-australia"><span class="header-section-number">A.3.2</span> South Australia</a></li>
-  <li><a href="#western-australia" id="toc-western-australia" class="nav-link" data-scroll-target="#western-australia"><span class="header-section-number">A.3.3</span> Western Australia</a></li>
-  <li><a href="#tasmania" id="toc-tasmania" class="nav-link" data-scroll-target="#tasmania"><span class="header-section-number">A.3.4</span> Tasmania</a></li>
-  <li><a href="#northern-territory" id="toc-northern-territory" class="nav-link" data-scroll-target="#northern-territory"><span class="header-section-number">A.3.5</span> Northern Territory</a></li>
+  <li><a href="#victoria" id="toc-victoria" class="nav-link" data-scroll-target="#victoria">Victoria</a></li>
+  <li><a href="#south-australia" id="toc-south-australia" class="nav-link" data-scroll-target="#south-australia">South Australia</a></li>
+  <li><a href="#western-australia" id="toc-western-australia" class="nav-link" data-scroll-target="#western-australia">Western Australia</a></li>
+  <li><a href="#tasmania" id="toc-tasmania" class="nav-link" data-scroll-target="#tasmania">Tasmania</a></li>
+  <li><a href="#northern-territory" id="toc-northern-territory" class="nav-link" data-scroll-target="#northern-territory">Northern Territory</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -337,8 +337,8 @@ window.Quarto = {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>pd.options.mode.chained_assignment <span class="op">=</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<section id="controls-and-constants" class="level2" data-number="A.1">
-<h2 data-number="A.1" class="anchored" data-anchor-id="controls-and-constants"><span class="header-section-number">A.1</span> Controls and constants</h2>
+<section id="controls-and-constants" class="level2">
+<h2 class="anchored" data-anchor-id="controls-and-constants">Controls and constants</h2>
 <div id="4d861299" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -380,15 +380,15 @@ window.Quarto = {
 <p>We first define two <code>per_capita_minimum</code> parameters for the simulation - one as the scenario under study and the other as a benchmark.</p>
 <p>Then, we grab projected values for FA Grants and the Estimated Resident Population in June from the budget papers. The June ERP was chosen as a metric over methodology specific ERP values (some states use population data from up to 5 years before the allocation year in their allocation methodology) simply to standardize the variable and make the model easy to maintain.</p>
 </section>
-<section id="states-with-data-constraints" class="level2" data-number="A.2">
-<h2 data-number="A.2" class="anchored" data-anchor-id="states-with-data-constraints"><span class="header-section-number">A.2</span> States with data constraints</h2>
+<section id="states-with-data-constraints" class="level2">
+<h2 class="anchored" data-anchor-id="states-with-data-constraints">States with data constraints</h2>
 <p>Queensland and New South Wales do not release their “Funding Gap” variables. Hence, an analogue is reverse engineered from the gap between grant entitlement and minimum grant. Adjustments and normalizations applied to this should, in principle, give fairly robust numbers, especially at the high level.</p>
 <p>Given the lack of published data, a synthetic metric of need - the <code>scaled gap</code>, for a council <code>i</code> in a state <code>S</code> is defined as</p>
 <p><span class="math display">\[
     Gap_i = \frac{General\ Purpose\ Grant_{i} - Minimum\ Allocation_{i, per\ capita\ basis}}{Total\ General\ Purpose\ Grant_{S} - Total\ Per\ Capita\ Allocation_{S}}
 \]</span></p>
-<section id="new-south-wales" class="level3" data-number="A.2.1">
-<h3 data-number="A.2.1" class="anchored" data-anchor-id="new-south-wales"><span class="header-section-number">A.2.1</span> New South Wales</h3>
+<section id="new-south-wales" class="level3">
+<h3 class="anchored" data-anchor-id="new-south-wales">New South Wales</h3>
 <div id="656e6dab" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -484,8 +484,8 @@ window.Quarto = {
 </div>
 <p>No explicit cap or collar has been defined.</p>
 </section>
-<section id="queensland" class="level3" data-number="A.2.2">
-<h3 data-number="A.2.2" class="anchored" data-anchor-id="queensland"><span class="header-section-number">A.2.2</span> Queensland</h3>
+<section id="queensland" class="level3">
+<h3 class="anchored" data-anchor-id="queensland">Queensland</h3>
 <div id="22245343" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -581,8 +581,8 @@ window.Quarto = {
 <p>There’s no cap/collar and minimum grant eligibility is based on population &gt; 80,000.</p>
 </section>
 </section>
-<section id="states-with-workable-data" class="level2" data-number="A.3">
-<h2 data-number="A.3" class="anchored" data-anchor-id="states-with-workable-data"><span class="header-section-number">A.3</span> States with workable data</h2>
+<section id="states-with-workable-data" class="level2">
+<h2 class="anchored" data-anchor-id="states-with-workable-data">States with workable data</h2>
 <p>For these states, a simple algorithm for allocation is defined.</p>
 <ol type="1">
 <li>A raw allocation based on funding gap is made, respectful of minimum grant requirements.</li>
@@ -597,8 +597,8 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>For Victoria, South Australia, and Tasmania a constraint has been placed on the number of iterations run. For the first 100 iterations, both upper and lower limits are enforced. After that, only the lower limits are explicitly enforced.</p>
 </blockquote>
-<section id="victoria" class="level3" data-number="A.3.1">
-<h3 data-number="A.3.1" class="anchored" data-anchor-id="victoria"><span class="header-section-number">A.3.1</span> Victoria</h3>
+<section id="victoria" class="level3">
+<h3 class="anchored" data-anchor-id="victoria">Victoria</h3>
 <div id="3431389c" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -756,8 +756,8 @@ window.Quarto = {
 </div>
 <p>Victorial uses a cap/collar of [2%, 10%] for councils.</p>
 </section>
-<section id="south-australia" class="level3" data-number="A.3.2">
-<h3 data-number="A.3.2" class="anchored" data-anchor-id="south-australia"><span class="header-section-number">A.3.2</span> South Australia</h3>
+<section id="south-australia" class="level3">
+<h3 class="anchored" data-anchor-id="south-australia">South Australia</h3>
 <div id="2105731e" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -911,8 +911,8 @@ window.Quarto = {
 </div>
 <p>South Australia OLG has a cap/collar of [-15%, 30%] for councils.</p>
 </section>
-<section id="western-australia" class="level3" data-number="A.3.3">
-<h3 data-number="A.3.3" class="anchored" data-anchor-id="western-australia"><span class="header-section-number">A.3.3</span> Western Australia</h3>
+<section id="western-australia" class="level3">
+<h3 class="anchored" data-anchor-id="western-australia">Western Australia</h3>
 <div id="f53965c9" class="cell" data-editable="false">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -1064,8 +1064,8 @@ window.Quarto = {
 </div>
 <p>WA State Grants Commission has no ceiling on change, but claims to limit year on year decrease. No explicit floor is given, but the biggest 2023-24 to 2024-25 decrease was about -60%. So, that’s the floor we’ll use.</p>
 </section>
-<section id="tasmania" class="level3" data-number="A.3.4">
-<h3 data-number="A.3.4" class="anchored" data-anchor-id="tasmania"><span class="header-section-number">A.3.4</span> Tasmania</h3>
+<section id="tasmania" class="level3">
+<h3 class="anchored" data-anchor-id="tasmania">Tasmania</h3>
 <div id="cdb57b1e" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
@@ -1228,8 +1228,8 @@ window.Quarto = {
 </div>
 <p>Tasmania State Grants Commission has a cap/collar of [-5%, 10%] for all councils.</p>
 </section>
-<section id="northern-territory" class="level3" data-number="A.3.5">
-<h3 data-number="A.3.5" class="anchored" data-anchor-id="northern-territory"><span class="header-section-number">A.3.5</span> Northern Territory</h3>
+<section id="northern-territory" class="level3">
+<h3 class="anchored" data-anchor-id="northern-territory">Northern Territory</h3>
 <div id="21da5750" class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>

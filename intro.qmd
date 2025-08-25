@@ -5,12 +5,13 @@ date: today
 references: euan_references.bib
 ---
 
-**1.1 An introduction to FA Grants**
+## An introduction to FA Grants
+
 Financial Assistance Grants (FA Grants) are a funding mechanism used by the Commonwealth government to distribute funding to Australia's 538 local councils. Every year, the federal government allocates a pull of money to be distributed to councils nation wide. FA Grants are untied, meaning that councils spend money from the FA Grant program autonomously. 
 
 FA Grants are essential to local government, providing critical funding that supports the delivery of community services, infrastructure, and local development projects. Without these grants, many councils - particularly those in regional and rural areas - would struggle to maintain the service levels expected by their communities. 
 
-**1.2 Allocation of FA Grants** 
+## Allocation of FA Grants
 
 FA Grants are allocated according to the "Local Government (Financial Assistance) Act" (1995). The FA Grant distribution process consists of three components: a local road network component; a general purpose component; and a per capita minimum grant component. This final component requires every council to be given at least 30% of what their grant would be if distributed on a purely per capita basis. 
 
@@ -18,7 +19,7 @@ Whilst the Commonwealth is responsible for providing FA Grants, it is state gove
 
 The federal government directs states to allocate FA grants based on two principles: horizontal equilisation and effort neutrality. Horizontal equilisation refers to allocating funds in a way that takes into consideration the differing revenue raising capacities of councils, and effort neutrality directs grant commissions not to punish councils for political or accounting decisions. 
 
-**1.3 FA Grants as they stand today** 
+## FA Grants as they stand today
 
 Funding for the FA grant program has evolved since its initial introduction, and the program has not kept up with the expanding role that local councils play. Over the past 30 years, FA grants have been cut from equaling 1% of Commonwealth taxation revenue in 1996, to the present day, where they are worth 0.5% of Commonwealth taxation revenue. 
 
