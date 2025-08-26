@@ -296,15 +296,19 @@ class fagrants_model:
             "UID",
             "ERP_2024",
             "Grant_2024",
+            "Min Grant Council_2025",
             "ERP_2025",
             "Grant_base_2025",
             "Grant_2025",
+            "Min Grant Council_2026",
             "ERP_2026",
             "Grant_base_2026",
             "Grant_2026",
+            "Min Grant Council_2027",
             "ERP_2027",
             "Grant_base_2027",
             "Grant_2027",
+            "Min Grant Council_2028",
             "ERP_2028",
             "Grant_base_2028",
             "Grant_2028",
@@ -374,6 +378,8 @@ class fagrants_model:
             )
             nsw_grants[f"Grant_base_{year}"] = min_grant_base + raw_alloc
 
+            nsw_grants[f"Min Grant Council_{year}"] = ["NA"]*nsw_grants.shape[0]
+
         return nsw_grants
 
     # ## Victoria ✅
@@ -436,6 +442,7 @@ class fagrants_model:
             total_deficit = (
                 vic_grants[f"Funding Gap_{year}"] * vic_grants["deficit"]
             ).sum()
+            vic_grants[f"Min Grant Council_{year}"] = ~vic_grants["deficit"]
             # New case
             raw_alloc = (
                 vic_grants[f"Funding Gap_{year}"]
@@ -513,6 +520,8 @@ class fagrants_model:
                 qld_grants[f"Scaled Gap_{year}"]
                 / qld_grants[f"Scaled Gap_{year}"].sum()
             )
+
+            qld_grants[f"Min Grant Council_{year}"] = ~non_min
             # New case
             raw_alloc = qld_grants[f"Scaled Gap_{year}"] * (
                 self.budget_grants["QLD"][f"{year}-{(year+1)%1000}"] - min_grant.sum()
@@ -580,6 +589,9 @@ class fagrants_model:
             total_deficit = (
                 sa_grants[f"Funding Gap_{year}"] * sa_grants["deficit"]
             ).sum()
+
+            sa_grants[f"Min Grant Council_{year}"] = ~sa_grants["deficit"]
+
             # New case
             raw_alloc = (
                 sa_grants[f"Funding Gap_{year}"] * sa_grants["deficit"] / total_deficit
@@ -666,6 +678,9 @@ class fagrants_model:
             total_deficit = (
                 wa_grants[f"Funding Gap_{year}"] * wa_grants["deficit"]
             ).sum()
+
+            wa_grants[f"Min Grant Council_{year}"] = ~wa_grants["deficit"]
+            
             # New case
             raw_alloc = (
                 wa_grants[f"Funding Gap_{year}"] * wa_grants["deficit"] / total_deficit
@@ -760,6 +775,9 @@ class fagrants_model:
             total_deficit = (
                 tas_grants[f"Funding Gap_{year}"] * tas_grants["deficit"]
             ).sum()
+
+            tas_grants[f"Min Grant Council_{year}"] = ~tas_grants["deficit"]
+
             # New case
             raw_alloc = (
                 tas_grants[f"Funding Gap_{year}"]
@@ -862,6 +880,8 @@ class fagrants_model:
                 / nt_grants[f"Grant_{year-1}"]
                 * 100
             )
+            nt_grants[f"Min Grant Council_{year}"] = ~nt_grants["deficit"]
+
             non_min_nt = nt_grants[
                 nt_grants["deficit"]
             ]  # [["LGA", f"Funding Gap_{year}", f"grant_{year-1}", "alloc"]]
@@ -880,6 +900,7 @@ class fagrants_model:
                 / nt_grants[f"Grant_base_{year-1}"]
                 * 100
             )
+
             non_min_nt = nt_grants[
                 nt_grants["deficit"]
             ]  # [["LGA", f"Funding Gap_{year}", f"grant_{year-1}", "alloc"]]
