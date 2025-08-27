@@ -1,6 +1,6 @@
 ---
 title: "An introduction to the FA Grants System"
-author: ["Sreehari Pulickamadhom Sreedhar", "Euan Maclean"]
+author: "Euan Maclean"
 date: today
 references: euan_references.bib
 ---
