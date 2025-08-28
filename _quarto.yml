@@ -15,9 +15,9 @@ book:
     - index.qmd
     - abstract.qmd 
     - intro.qmd
-  # - methodology.qmd
     - historical_context.qmd
-    - jurisdictional_approaches.qmd
+#   - jurisdictional_approaches.qmd
+    - methodology.qmd
     - discussed_issues.qmd
     - modelling_outcomes.ipynb
     - references.qmd

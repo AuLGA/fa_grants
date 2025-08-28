@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Euan Maclean">
-<meta name="dcterms.date" content="2025-08-29">
 
-<title>2&nbsp; An introduction to the FA Grants System – A Characterization of the Australian Financial Assistance Grants System</title>
+<title>4&nbsp; Jurisdictions and Methodologies – A Characterization of the Australian Financial Assistance Grants System</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./historical_context.html" rel="next">
-<link href="./abstract.html" rel="prev">
+<link href="./discussed_issues.html" rel="next">
+<link href="./historical_context.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -107,6 +105,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -119,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An introduction to the FA Grants System</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./methodology.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Jurisdictions and Methodologies</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -158,7 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An introduction to the FA Grants System</span></span></a>
   </div>
 </li>
@@ -170,8 +197,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./methodology.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">FA Grant Allocation Methodology</span></span></a>
+  <a href="./methodology.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Jurisdictions and Methodologies</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -261,9 +288,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#an-introduction-to-fa-grants" id="toc-an-introduction-to-fa-grants" class="nav-link active" data-scroll-target="#an-introduction-to-fa-grants"><span class="header-section-number">2.1</span> An introduction to FA Grants</a></li>
-  <li><a href="#allocation-of-fa-grants" id="toc-allocation-of-fa-grants" class="nav-link" data-scroll-target="#allocation-of-fa-grants"><span class="header-section-number">2.2</span> Allocation of FA Grants</a></li>
-  <li><a href="#fa-grants-as-they-stand-today" id="toc-fa-grants-as-they-stand-today" class="nav-link" data-scroll-target="#fa-grants-as-they-stand-today"><span class="header-section-number">2.3</span> FA Grants as they stand today</a></li>
+  <li><a href="#at-the-federal-level" id="toc-at-the-federal-level" class="nav-link active" data-scroll-target="#at-the-federal-level"><span class="header-section-number">4.1</span> At the Federal Level</a></li>
+  <li><a href="#new-south-wales" id="toc-new-south-wales" class="nav-link" data-scroll-target="#new-south-wales"><span class="header-section-number">4.2</span> New South Wales</a></li>
+  <li><a href="#victoria" id="toc-victoria" class="nav-link" data-scroll-target="#victoria"><span class="header-section-number">4.3</span> Victoria</a></li>
+  <li><a href="#queensland" id="toc-queensland" class="nav-link" data-scroll-target="#queensland"><span class="header-section-number">4.4</span> Queensland</a></li>
+  <li><a href="#south-australia" id="toc-south-australia" class="nav-link" data-scroll-target="#south-australia"><span class="header-section-number">4.5</span> South Australia</a></li>
+  <li><a href="#western-australia" id="toc-western-australia" class="nav-link" data-scroll-target="#western-australia"><span class="header-section-number">4.6</span> Western Australia</a></li>
+  <li><a href="#tasmania" id="toc-tasmania" class="nav-link" data-scroll-target="#tasmania"><span class="header-section-number">4.7</span> Tasmania</a></li>
+  <li><a href="#northern-territory" id="toc-northern-territory" class="nav-link" data-scroll-target="#northern-territory"><span class="header-section-number">4.8</span> Northern Territory</a></li>
   </ul>
 </nav>
     </div>
@@ -272,26 +304,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An introduction to the FA Grants System</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Jurisdictions and Methodologies</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Euan Maclean </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 29, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -301,27 +321,106 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="an-introduction-to-fa-grants" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="an-introduction-to-fa-grants"><span class="header-section-number">2.1</span> An introduction to FA Grants</h2>
-<p>Financial Assistance Grants (FA Grants) are a funding mechanism used by the Commonwealth government to distribute funding to Australia’s 538 local councils. Every year, the federal government allocates a pull of money to be distributed to councils nation wide. FA Grants are untied, meaning that councils spend money from the FA Grant program autonomously.</p>
-<p>FA Grants are essential to local government, providing critical funding that supports the delivery of community services, infrastructure, and local development projects. Without these grants, many councils - particularly those in regional and rural areas - would struggle to maintain the service levels expected by their communities.</p>
+<p>30% of the General Purpose Component grant is allocated on a per capita basis.</p>
+<section id="at-the-federal-level" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="at-the-federal-level"><span class="header-section-number">4.1</span> At the Federal Level</h2>
+<p><strong>General Purpose Component</strong> - Allocation to states on a per capital basis <strong>Roads Component</strong> - Allocation to states based on fixed ratios:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>State</th>
+<th>Roads Component %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>New South Wales</td>
+<td>29.0%</td>
+</tr>
+<tr class="even">
+<td>Victoria</td>
+<td>20.6%</td>
+</tr>
+<tr class="odd">
+<td>Queensland</td>
+<td>18.7%</td>
+</tr>
+<tr class="even">
+<td>South Australia</td>
+<td>5.5%</td>
+</tr>
+<tr class="odd">
+<td>Western Australia</td>
+<td>15.3%</td>
+</tr>
+<tr class="even">
+<td>Tasmania</td>
+<td>5.3%</td>
+</tr>
+<tr class="odd">
+<td>Northern Territory</td>
+<td>2.3%</td>
+</tr>
+<tr class="even">
+<td>Australian Capital Territory</td>
+<td>3.2%</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="allocation-of-fa-grants" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="allocation-of-fa-grants"><span class="header-section-number">2.2</span> Allocation of FA Grants</h2>
-<p>FA Grants are allocated according to the “Local Government (Financial Assistance) Act” (1995). The FA Grant distribution process consists of three components: a local road network component; a general purpose component; and a per capita minimum grant component. This final component requires every council to be given at least 30% of what their grant would be if distributed on a purely per capita basis.</p>
-<p>Whilst the Commonwealth is responsible for providing FA Grants, it is state government appointed grant commissions which decide how FA Grant money will be distributed, and the more intricate details of the general purpose and roads components. This means councils are assessed differently depending on their state jurisdiction.</p>
-<p>The federal government directs states to allocate FA grants based on two principles: horizontal equilisation and effort neutrality. Horizontal equilisation refers to allocating funds in a way that takes into consideration the differing revenue raising capacities of councils, and effort neutrality directs grant commissions not to punish councils for political or accounting decisions.</p>
+<section id="new-south-wales" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="new-south-wales"><span class="header-section-number">4.2</span> New South Wales</h2>
+<p>Consult <a href="https://www.infrastructure.gov.au/territories-regions-cities/local-government/publications/national-reports">Local Government National Report</a> for a high level overview of methodology.</p>
 </section>
-<section id="fa-grants-as-they-stand-today" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="fa-grants-as-they-stand-today"><span class="header-section-number">2.3</span> FA Grants as they stand today</h2>
-<p>Funding for the FA grant program has evolved since its initial introduction, and the program has not kept up with the expanding role that local councils play. Over the past 30 years, FA grants have been cut from equaling 1% of Commonwealth taxation revenue in 1996, to the present day, where they are worth 0.5% of Commonwealth taxation revenue.</p>
-<p>This decline in real value has been due to a number of factors; including the pausing of the program’s indexing between 2014 and 2017.</p>
-<p>The requirement for each council to receive at least 30% of a per capita equivelant grant program is controversial with our members (Australia’s 538 local governments). Regional and rural councils see it as a way to funnel money towards urban and peri-urban councils, even though they are not as financially reliant on FA grants as their regional and rural counterparts. This is an understandable perspective, given inner city councils often run in surplus, with a wide range of revenue streams due to high economic activity and a more dense populus.</p>
-<p>ALGA holds a long standing view that a more practical way to achieve greater financial sustainability for councils is to increase the size of the pie rather than how it is sliced. This is reflected in ALGA’s call for a return to FA Grants being equal to 1% of Commonwealth taxation revenue.</p>
-<p>We have also long suspected that the removal of the 30% minimum allocation would not achieve significant enough stability to regional and rural councils.</p>
-<p>In this report, we break from this view to consider the impacts of a change to the minimum allocation. We achieve this through modelling the per capita gains and losses of a shift from 30%, considering a lower requirement; and the removal of a minimum allocation in its entirety.</p>
-<p>Building off this analysis, we will also perform a macroeconomic modelling of how these changes could impact the broader economy.</p>
-<p>The goal of this analysis is to provide insights into what type of change to the distribution process would optimise the financial sustainability of local governments, whilst also improving the productivity of the broader economy.</p>
+<section id="victoria" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="victoria"><span class="header-section-number">4.3</span> Victoria</h2>
+<ul>
+<li><a href="https://www.localgovernment.vic.gov.au/funding-programs/victoria-grants-commission/financial-assistance-grants">https://www.localgovernment.vic.gov.au/funding-programs/victoria-grants-commission/financial-assistance-grants</a></li>
+<li><a href="https://www.localgovernment.vic.gov.au/funding-programs/victoria-grants-commission/publications">https://www.localgovernment.vic.gov.au/funding-programs/victoria-grants-commission/publications</a></li>
+<li><a href="https://www.localgovernment.vic.gov.au/__data/assets/pdf_file/0019/210727/2024-25-VLGGC-Annual-Allocation-Report-Sept-2024.pdf">https://www.localgovernment.vic.gov.au/__data/assets/pdf_file/0019/210727/2024-25-VLGGC-Annual-Allocation-Report-Sept-2024.pdf</a></li>
+</ul>
+</section>
+<section id="queensland" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="queensland"><span class="header-section-number">4.4</span> Queensland</h2>
+<ul>
+<li><a href="https://www.localgovernment.qld.gov.au/for-councils/governance/queensland-local-government-grants-commission/financial-assistance-grant">https://www.localgovernment.qld.gov.au/for-councils/governance/queensland-local-government-grants-commission/financial-assistance-grant</a></li>
+<li><a href="https://www.localgovernment.qld.gov.au/__data/assets/pdf_file/0030/99174/commission-report-2024.pdf">https://www.localgovernment.qld.gov.au/__data/assets/pdf_file/0030/99174/commission-report-2024.pdf</a></li>
+</ul>
+<p>Population &gt; 80,000 <span class="math inline">\(\rightarrow\)</span> Minimum grant council</p>
+</section>
+<section id="south-australia" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="south-australia"><span class="header-section-number">4.5</span> South Australia</h2>
+<ul>
+<li><a href="https://dit.sa.gov.au/local-government/grants-commission/methodology-review">https://dit.sa.gov.au/local-government/grants-commission/methodology-review</a></li>
+<li><a href="https://dit.sa.gov.au/local-government/grants-commission/methodology-review">https://www.dit.sa.gov.au/local-government/grants-commission/general-purpose-grants</a></li>
+<li><a href="https://dit.sa.gov.au/local-government/grants-commission/methodology-review">https://www.dit.sa.gov.au/local-government/documents/office-of-local-government/grants-commission/general_purpose_grants-adelaide-holdfast_bay.pdf</a></li>
+<li><a href="https://dit.sa.gov.au/local-government/grants-commission/methodology-review">https://www.dit.sa.gov.au/local-government/grants-commission/publications</a></li>
+<li><a href="https://dit.sa.gov.au/local-government/grants-commission/methodology-review">https://www.dit.sa.gov.au/__data/assets/pdf_file/0008/1275470/Database-Reports-2021-22.pdf</a></li>
+</ul>
+</section>
+<section id="western-australia" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="western-australia"><span class="header-section-number">4.6</span> Western Australia</h2>
+<ul>
+<li><a href="https://www.dlgsc.wa.gov.au/local-government/local-governments/financial-assistance-grants">https://www.dlgsc.wa.gov.au/local-government/local-governments/financial-assistance-grants</a></li>
+</ul>
+</section>
+<section id="tasmania" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="tasmania"><span class="header-section-number">4.7</span> Tasmania</h2>
+<ul>
+<li><a href="https://www.treasury.tas.gov.au/state-grants-commission/publications">https://www.treasury.tas.gov.au/state-grants-commission/publications</a></li>
+<li><a href="https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%20Annual%20Report%202023-24.pdf">https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%20Annual%20Report%202023-24.pdf</a></li>
+<li><a href="https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%202024-25%20Financial%20Assistance%20Grant%20Data%20Tables.pdf">https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%202024-25%20Financial%20Assistance%20Grant%20Data%20Tables.pdf</a></li>
+</ul>
+</section>
+<section id="northern-territory" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="northern-territory"><span class="header-section-number">4.8</span> Northern Territory</h2>
+<ul>
+<li><a href="https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%202024-25%20Financial%20Assistance%20Grant%20Data%20Tables.pdf">https://dhlgcd.nt.gov.au/funding-and-support/grants-commission/methodology</a></li>
+<li>Consult <a href="https://territorystories.nt.gov.au/10070/988490">Territory Stories</a> for a lower level exploration.</li>
+</ul>
+<blockquote class="blockquote">
+<p>The 2023-24 allocation data tables can used since the NT Grants Commission annual report is not out yet.</p>
+</blockquote>
 
 
 <!-- -->
@@ -781,57 +880,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./abstract.html" class="pagination-link" aria-label="Abstract">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Abstract</span></span>
+      <a href="./historical_context.html" class="pagination-link" aria-label="Historical Context">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Historical Context</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./historical_context.html" class="pagination-link" aria-label="Historical Context">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Historical Context</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./discussed_issues.html" class="pagination-link" aria-label="Discussed Issues">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Discussed Issues</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "An introduction to the FA Grants System"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Euan Maclean"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> today</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">references:</span><span class="co"> euan_references.bib</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## An introduction to FA Grants</span></span>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Jurisdictions and Methodologies</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>30% of the General Purpose Component grant is allocated on a per capita basis.</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## At the Federal Level</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>**General Purpose Component** - Allocation to states on a per capital basis</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>**Roads Component** - Allocation to states based on fixed ratios: </span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Financial Assistance Grants (FA Grants) are a funding mechanism used by the Commonwealth government to distribute funding to Australia's 538 local councils. Every year, the federal government allocates a pull of money to be distributed to councils nation wide. FA Grants are untied, meaning that councils spend money from the FA Grant program autonomously. </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>FA Grants are essential to local government, providing critical funding that supports the delivery of community services, infrastructure, and local development projects. Without these grants, many councils - particularly those in regional and rural areas - would struggle to maintain the service levels expected by their communities. </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Allocation of FA Grants</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>FA Grants are allocated according to the "Local Government (Financial Assistance) Act" (1995). The FA Grant distribution process consists of three components: a local road network component; a general purpose component; and a per capita minimum grant component. This final component requires every council to be given at least 30% of what their grant would be if distributed on a purely per capita basis. </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Whilst the Commonwealth is responsible for providing FA Grants, it is state government appointed grant commissions which decide how FA Grant money will be distributed, and the more intricate details of the general purpose and roads components. This means councils are assessed differently depending on their state jurisdiction. </span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>The federal government directs states to allocate FA grants based on two principles: horizontal equilisation and effort neutrality. Horizontal equilisation refers to allocating funds in a way that takes into consideration the differing revenue raising capacities of councils, and effort neutrality directs grant commissions not to punish councils for political or accounting decisions. </span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## FA Grants as they stand today</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Funding for the FA grant program has evolved since its initial introduction, and the program has not kept up with the expanding role that local councils play. Over the past 30 years, FA grants have been cut from equaling 1% of Commonwealth taxation revenue in 1996, to the present day, where they are worth 0.5% of Commonwealth taxation revenue. </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> State <span class="pp">|</span> Roads Component %<span class="pp">|</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|------------------|</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> New South Wales <span class="pp">|</span> 29.0% <span class="pp">|</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Victoria <span class="pp">|</span> 20.6% <span class="pp">|</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Queensland <span class="pp">|</span> 18.7% <span class="pp">|</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> South Australia <span class="pp">|</span> 5.5% <span class="pp">|</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Western Australia <span class="pp">|</span> 15.3% <span class="pp">|</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tasmania <span class="pp">|</span> 5.3% <span class="pp">|</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Northern Territory <span class="pp">|</span> 2.3% <span class="pp">|</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Australian Capital Territory <span class="pp">|</span> 3.2% <span class="pp">|</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## New South Wales</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Consult <span class="co">[</span><span class="ot">Local Government National Report</span><span class="co">](https://www.infrastructure.gov.au/territories-regions-cities/local-government/publications/national-reports)</span> for a high level overview of methodology. </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>This decline in real value has been due to a number of factors; including the pausing of the program's indexing between 2014 and 2017. </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>The requirement for each council to receive at least 30% of a per capita equivelant grant program is controversial with our members (Australia's 538 local governments). Regional and rural councils see it as a way to funnel money towards urban and peri-urban councils, even though they are not as financially reliant on FA grants as their regional and rural counterparts. This is an understandable perspective, given inner city councils often run in surplus, with a wide range of revenue streams due to high economic activity and a more dense populus.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>ALGA holds a long standing view that a more practical way to achieve greater financial sustainability for councils is to increase the size of the pie rather than how it is sliced. This is reflected in ALGA's call for a return to FA Grants being equal to 1% of Commonwealth taxation revenue. </span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>We have also long suspected that the removal of the 30% minimum allocation would not achieve significant enough stability to regional and rural councils. </span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>In this report, we break from this view to consider the impacts of a change to the minimum allocation. We achieve this through modelling the per capita gains and losses of a shift from 30%, considering a lower requirement; and the removal of a minimum allocation in its entirety. </span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Building off this analysis, we will also perform a macroeconomic modelling of how these changes could impact the broader economy. </span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>The goal of this analysis is to provide insights into what type of change to the distribution process would optimise the financial sustainability of local governments, whilst also improving the productivity of the broader economy. </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Victoria</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.localgovernment.vic.gov.au/funding-programs/victoria-grants-commission/financial-assistance-grants</span><span class="co">](https://www.localgovernment.vic.gov.au/funding-programs/victoria-grants-commission/financial-assistance-grants)</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.localgovernment.vic.gov.au/funding-programs/victoria-grants-commission/publications</span><span class="co">](https://www.localgovernment.vic.gov.au/funding-programs/victoria-grants-commission/publications)</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.localgovernment.vic.gov.au/__data/assets/pdf_file/0019/210727/2024-25-VLGGC-Annual-Allocation-Report-Sept-2024.pdf</span><span class="co">](https://www.localgovernment.vic.gov.au/__data/assets/pdf_file/0019/210727/2024-25-VLGGC-Annual-Allocation-Report-Sept-2024.pdf)</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Queensland</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.localgovernment.qld.gov.au/for-councils/governance/queensland-local-government-grants-commission/financial-assistance-grant</span><span class="co">](https://www.localgovernment.qld.gov.au/for-councils/governance/queensland-local-government-grants-commission/financial-assistance-grant)</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.localgovernment.qld.gov.au/__data/assets/pdf_file/0030/99174/commission-report-2024.pdf</span><span class="co">](https://www.localgovernment.qld.gov.au/__data/assets/pdf_file/0030/99174/commission-report-2024.pdf)</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Population &gt; 80,000 $\rightarrow$ Minimum grant council</span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## South Australia</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://dit.sa.gov.au/local-government/grants-commission/methodology-review</span><span class="co">](https://dit.sa.gov.au/local-government/grants-commission/methodology-review)</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.dit.sa.gov.au/local-government/grants-commission/general-purpose-grants</span><span class="co">](https://dit.sa.gov.au/local-government/grants-commission/methodology-review)</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.dit.sa.gov.au/local-government/documents/office-of-local-government/grants-commission/general_purpose_grants-adelaide-holdfast_bay.pdf</span><span class="co">](https://dit.sa.gov.au/local-government/grants-commission/methodology-review)</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.dit.sa.gov.au/local-government/grants-commission/publications</span><span class="co">](https://dit.sa.gov.au/local-government/grants-commission/methodology-review)</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.dit.sa.gov.au/__data/assets/pdf_file/0008/1275470/Database-Reports-2021-22.pdf</span><span class="co">](https://dit.sa.gov.au/local-government/grants-commission/methodology-review)</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Western Australia</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.dlgsc.wa.gov.au/local-government/local-governments/financial-assistance-grants</span><span class="co">](https://www.dlgsc.wa.gov.au/local-government/local-governments/financial-assistance-grants)</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tasmania</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.treasury.tas.gov.au/state-grants-commission/publications</span><span class="co">](https://www.treasury.tas.gov.au/state-grants-commission/publications)</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%20Annual%20Report%202023-24.pdf</span><span class="co">](https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%20Annual%20Report%202023-24.pdf)</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%202024-25%20Financial%20Assistance%20Grant%20Data%20Tables.pdf</span><span class="co">](https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%202024-25%20Financial%20Assistance%20Grant%20Data%20Tables.pdf)</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Northern Territory</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">https://dhlgcd.nt.gov.au/funding-and-support/grants-commission/methodology</span><span class="co">](https://www.treasury.tas.gov.au/Documents/State%20Grants%20Commission%202024-25%20Financial%20Assistance%20Grant%20Data%20Tables.pdf)</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consult <span class="co">[</span><span class="ot">Territory Stories</span><span class="co">](https://territorystories.nt.gov.au/10070/988490)</span> for a lower level exploration.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The 2023-24 allocation data tables can used since the NT Grants Commission annual report is not out yet.</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
