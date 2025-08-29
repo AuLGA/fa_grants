@@ -172,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./methodology.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">FA Grant Allocation Methodology</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Jurisdictions and Methodologies</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -398,12 +398,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>        id_vars<span class="op">=</span>[<span class="st">"Jurisdiction"</span>, <span class="st">"ACLG"</span>, <span class="st">"LGA"</span>],</span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>        value_vars<span class="op">=</span>[<span class="ss">f"Grant Delta Per Capita_</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2025</span>, <span class="dv">2029</span>)],</span>
 <span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>        var_name<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>        value_name<span class="op">=</span><span class="st">"Expected Change in GPG Per Capita($)"</span>,</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>        value_name<span class="op">=</span><span class="st">"Expected Change in GPG Per Capita ($)"</span>,</span>
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>    sim_grants_melted[<span class="st">"Year"</span>] <span class="op">=</span> sim_grants_melted[<span class="st">"Year"</span>].<span class="bu">str</span>.split(<span class="st">"_"</span>).<span class="bu">str</span>[<span class="dv">1</span>].astype(<span class="bu">int</span>)</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    sim_grants_melted[<span class="st">"Expected Change in GPG Per Capita($)"</span>] <span class="op">=</span> sim_grants_melted_per_capita[<span class="st">"Expected Change in GPG Per Capita($)"</span>]</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    sim_grants_melted[<span class="st">"Expected Change in GPG Per Capita ($)"</span>] <span class="op">=</span> sim_grants_melted_per_capita[<span class="st">"Expected Change in GPG Per Capita ($)"</span>]</span>
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>    sim_grants_melted[<span class="st">"Population"</span>] <span class="op">=</span> pop_melted[<span class="st">"Population"</span>]</span>
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
@@ -463,7 +463,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> sub.groupby([<span class="st">"Jurisdiction"</span>, <span class="st">"ACLG"</span>, <span class="st">"Year"</span>]).agg(</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        {</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Expected Change in GPG ($)"</span>: <span class="kw">lambda</span> x: <span class="bu">sum</span>(x <span class="op">*</span> sub.loc[x.index, <span class="st">"Population"</span>])<span class="op">/</span>sub.loc[x.index, <span class="st">"Population"</span>].<span class="bu">sum</span>(),</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Expected Change in GPG Per Capita($)"</span>: <span class="kw">lambda</span> x: <span class="bu">sum</span>(x <span class="op">*</span> sub.loc[x.index, <span class="st">"Population"</span>])<span class="op">/</span>sub.loc[x.index, <span class="st">"Population"</span>].<span class="bu">sum</span>(),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Expected Change in GPG Per Capita ($)"</span>: <span class="kw">lambda</span> x: <span class="bu">sum</span>(x <span class="op">*</span> sub.loc[x.index, <span class="st">"Population"</span>])<span class="op">/</span>sub.loc[x.index, <span class="st">"Population"</span>].<span class="bu">sum</span>(),</span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Population"</span>: <span class="st">'sum'</span></span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        }</span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    )</span>
@@ -491,7 +491,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -1005,7 +1005,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -1394,7 +1394,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -1758,7 +1758,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -2197,7 +2197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -2736,7 +2736,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -3000,7 +3000,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -3242,7 +3242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -3756,7 +3756,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -4145,7 +4145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -4509,7 +4509,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -4948,7 +4948,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -5487,7 +5487,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -5751,7 +5751,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -5993,7 +5993,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -6507,7 +6507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -6896,7 +6896,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -7260,7 +7260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -7699,7 +7699,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -8238,7 +8238,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -8502,7 +8502,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -8744,7 +8744,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -9258,7 +9258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -9647,7 +9647,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -10011,7 +10011,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -10450,7 +10450,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -10989,7 +10989,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
@@ -11253,7 +11253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Expected Change in GPG ($)</th>
-<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita($)</th>
+<th data-quarto-table-cell-role="th">Expected Change in GPG Per Capita ($)</th>
 <th data-quarto-table-cell-role="th">Population</th>
 </tr>
 <tr class="even">
