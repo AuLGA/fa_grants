@@ -20,6 +20,7 @@ book:
     - methodology.qmd
     - discussed_issues.qmd
     - modelling_outcomes.ipynb
+    - modelling_outcomes_binned.ipynb
     - references.qmd
    
   appendices:

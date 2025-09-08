@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://spulick.github.io/fa_grants/index.html</loc>
-    <lastmod>2025-08-29T05:03:01.414Z</lastmod>
+    <lastmod>2025-08-05T02:11:25.574Z</lastmod>
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/abstract.html</loc>
@@ -10,15 +10,15 @@
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/intro.html</loc>
-    <lastmod>2025-08-29T05:03:01.414Z</lastmod>
+    <lastmod>2025-08-29T04:16:42.185Z</lastmod>
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/historical_context.html</loc>
-    <lastmod>2025-08-29T05:03:01.414Z</lastmod>
+    <lastmod>2025-08-29T04:19:59.213Z</lastmod>
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/methodology.html</loc>
-    <lastmod>2025-08-29T05:03:01.414Z</lastmod>
+    <lastmod>2025-08-29T04:16:42.187Z</lastmod>
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/discussed_issues.html</loc>
@@ -26,15 +26,19 @@
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/modelling_outcomes.html</loc>
-    <lastmod>2025-08-29T05:03:01.415Z</lastmod>
+    <lastmod>2025-08-29T04:16:42.193Z</lastmod>
+  </url>
+  <url>
+    <loc>https://spulick.github.io/fa_grants/modelling_outcomes_binned.html</loc>
+    <lastmod>2025-08-29T07:37:25.828Z</lastmod>
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/references.html</loc>
-    <lastmod>2025-08-29T05:03:01.426Z</lastmod>
+    <lastmod>2025-08-04T03:20:50.345Z</lastmod>
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/simulation_methodology.html</loc>
-    <lastmod>2025-08-29T05:03:01.427Z</lastmod>
+    <lastmod>2025-08-13T05:48:33.432Z</lastmod>
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/20_perc_min_grant_agg.html</loc>
@@ -54,11 +58,11 @@
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/no_min_grant_agg.html</loc>
-    <lastmod>2025-08-29T05:03:01.426Z</lastmod>
+    <lastmod>2025-08-29T04:16:42.248Z</lastmod>
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/no_min_grant.html</loc>
-    <lastmod>2025-08-29T05:03:01.420Z</lastmod>
+    <lastmod>2025-08-29T04:16:42.216Z</lastmod>
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/aclg_note.html</loc>
@@ -66,6 +70,6 @@
   </url>
   <url>
     <loc>https://spulick.github.io/fa_grants/A-Characterization-of-the-Australian-Financial-Assistance-Grants-System.docx</loc>
-    <lastmod>2025-08-29T02:14:41.791Z</lastmod>
+    <lastmod>2025-08-29T07:38:59.290Z</lastmod>
   </url>
 </urlset>
