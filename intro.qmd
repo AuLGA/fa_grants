@@ -5,17 +5,20 @@ date: today
 references: euan_references.bib
 ---
 ## Executive Summary 
-Local Government is a key provider of services to communities around Australia. Across 537 local governments, $424 Billion worth on community infrastructure, much of which is essential to the day to day lives of Australians, is serviced and maintained by councils.  
+Local Government is a key provider of services to communities around Australia. Across 538 local governments, $424 Billion worth of community infrastructure is serviced and maintained by councils.  
 
-The last fifteen years have seen a period of declining intergovernmental support for local governments. The Commonwealth Government has slashed financial assistance grants, an essential part of local government funding, and state governments have sought to undermine councils by placing arbitrary caps on their funding mechanisms; such as rates.
+The Australian Local Government Association (ALGA) is the peak body for councils at the federal level. ALGA represents councils and their interests to the Commonwealth, advocating for greater support for the local government space. 
 
-This is despite the increasing importance of local government services. In the face of increased risk of natural disasters in rural areas, local governments are the first line of support in servicing disaster-prone communities. Local governments are also the responsible body for planning and monitoring the construction of housing; yet lack often lack the support in this area to properly perform their role. 
+The last fifteen years have seen a period of declining intergovernmental support for local governments. The Commonwealth Government has slashed financial assistance grants, an essential part of local government funding, and state governments have sought to undermine councils through arbitrary caps on revenue sources and cost shifting. 
 
-This paper seeks to evaluate one critical aspect of this debate - the allocation method for Financial Assistance Grants and its 'minimum per capita' model.
+Despite this declining support, local governments maintain their position as an important part of providing services to communities. Whether that be supporting communities in the face of bushfires, or planning our cities to house future generations, local governments are a key piece of the puzzle. 
 
+
+This paper seeks to evaluate one critical aspect of the debate surrounding grants issued by the Commonwealth Government to councils - the minimum grant allocation requirement. 
+
+In order to answer this question, this paper will model the impacts of a change to the minimum grant allocation and its impacts on councils. Our analysis will examine the modelled changes, ascertaining what types of councils are most impacted and performing a qualitative assessment of those impacts. 
 
 ## An introduction to FA Grants
-
 Financial Assistance Grants (FA Grants) are a funding mechanism used by the Commonwealth government to distribute funding to Australia's 538 local councils. Every year, the federal government allocates a pull of money to be distributed to councils nation wide. FA Grants are untied, meaning that councils spend money from the FA Grant program autonomously. 
 
 FA Grants are essential to local government, providing critical funding that supports the delivery of community services, infrastructure, and local development projects. Without these grants, many councils - particularly those in regional and rural areas - would struggle to maintain the service levels expected by their communities. 
