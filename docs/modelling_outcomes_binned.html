@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-9c15b9c3b2558e3310cb2fed5d9d6e95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -380,11 +380,11 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>Future entitlements have been discounted at <span class="math inline">\(r=2.50\%\)</span> when computing total expected gains and losses over the four year period.</p>
 </blockquote>
-<div id="587c816f" class="cell" data-execution_count="1">
+<div id="587c816f" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fagrants_module <span class="im">import</span> fagrants</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fagrants_module <span class="im">import</span> fagrants_gccsa <span class="im">as</span> fagrants</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> weighted_group_delta(grouped_df):</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    return_dict <span class="op">=</span> {}</span>
@@ -483,7 +483,7 @@ window.Quarto = {
 <span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sim_grants_melted</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="ac55cdda" class="cell" data-execution_count="2">
+<div id="ac55cdda" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sim_grants_30 <span class="op">=</span> grants_simulation(<span class="st">"./Data/FA Grants Tables - Python.xlsx"</span>,</span>
@@ -499,7 +499,7 @@ window.Quarto = {
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="fl">0.00</span>, <span class="fl">0.30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="c252b882" class="cell" data-execution_count="3">
+<div id="c252b882" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sim_grants_30_melted <span class="op">=</span> grants_delta(sim_grants_30)</span>
@@ -511,7 +511,7 @@ window.Quarto = {
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>sim_grants_0_melted <span class="op">=</span> grants_delta(sim_grants_0)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="d1345815" class="cell" data-execution_count="4">
+<div id="d1345815" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime <span class="im">as</span> tm</span>
@@ -523,7 +523,7 @@ window.Quarto = {
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    sim_grants_0_melted.to_excel(writer, sheet_name <span class="op">=</span> <span class="st">"0% Minimum Grant"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="7199722a" class="cell" data-execution_count="5">
+<div id="7199722a" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> net_present_value(flows):</span>
@@ -532,7 +532,7 @@ window.Quarto = {
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown, display_markdown</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="33353512" class="cell" data-execution_count="105">
+<div id="33353512" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'display.max_rows'</span>, <span class="dv">500</span>)</span>
@@ -575,7 +575,7 @@ window.Quarto = {
 <h2 data-number="7.1" class="anchored" data-anchor-id="a-20-per-capita-minimum-grant"><span class="header-section-number">7.1</span> A 20% Per Capita Minimum Grant</h2>
 <section id="national" class="level3" data-number="7.1.1">
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="national"><span class="header-section-number">7.1.1</span> National</h3>
-<div id="684abf47" class="cell" data-execution_count="106">
+<div id="684abf47" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_20_melted, <span class="st">"all"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -600,14 +600,14 @@ window.Quarto = {
 <td>Queensland</td>
 <td>RTL</td>
 <td>Torres Strait Island Regional Council</td>
-<td>9,314,682.5</td>
+<td>9,419,851.3</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>Queensland</td>
 <td>UCC</td>
 <td>Brisbane City Council</td>
-<td>-48,715,086.3</td>
+<td>-49,269,604.8</td>
 </tr>
 </tbody>
 </table>
@@ -648,12 +648,12 @@ window.Quarto = {
 <tr class="odd">
 <td data-quarto-table-cell-role="th">New South Wales</td>
 <td>27</td>
-<td>4</td>
-<td>1</td>
+<td>5</td>
+<td>0</td>
 <td>11</td>
 <td>13</td>
 <td>17</td>
-<td>57</td>
+<td>58</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Northern Territory</td>
@@ -691,9 +691,9 @@ window.Quarto = {
 <td>0</td>
 <td>1</td>
 <td>2</td>
-<td>7</td>
-<td>11</td>
-<td>3</td>
+<td>6</td>
+<td>10</td>
+<td>5</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Victoria</td>
@@ -701,9 +701,9 @@ window.Quarto = {
 <td>3</td>
 <td>3</td>
 <td>7</td>
-<td>9</td>
+<td>8</td>
 <td>30</td>
-<td>12</td>
+<td>13</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Western Australia</td>
@@ -727,7 +727,7 @@ window.Quarto = {
 </section>
 <section id="new-south-wales" class="level3" data-number="7.1.2">
 <h3 data-number="7.1.2" class="anchored" data-anchor-id="new-south-wales"><span class="header-section-number">7.1.2</span> New South Wales</h3>
-<div id="a5069a9a" class="cell" data-execution_count="107">
+<div id="a5069a9a" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_20_melted, <span class="st">"New South Wales"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -750,13 +750,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RAL</td>
 <td>Lachlan Council</td>
-<td>4,583,780.3</td>
+<td>4,634,642.5</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UDV</td>
 <td>Canterbury-Bankstown Council</td>
-<td>-13,820,098.9</td>
+<td>-13,976,297.4</td>
 </tr>
 </tbody>
 </table>
@@ -776,7 +776,6 @@ window.Quarto = {
 <th data-quarto-table-cell-role="th">Expected Change in GPG (%) Bin</th>
 <th data-quarto-table-cell-role="th">Decreased 20-40%</th>
 <th data-quarto-table-cell-role="th">Decreased 10-20%</th>
-<th data-quarto-table-cell-role="th">Decreased 5-10%</th>
 <th data-quarto-table-cell-role="th">Decreased less than 5%</th>
 <th data-quarto-table-cell-role="th">Increased less than 5%</th>
 <th data-quarto-table-cell-role="th">Increased 5-10%</th>
@@ -784,7 +783,6 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">ACLG</th>
-<th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
@@ -800,13 +798,11 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
 <td>21</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">RAM</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -821,22 +817,19 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">RAV</td>
-<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>3</td>
-<td>15</td>
+<td>16</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">RTL</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -851,12 +844,10 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">RTX</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -872,12 +863,10 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">UDL</td>
 <td>4</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -892,7 +881,6 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">UDS</td>
@@ -902,13 +890,11 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">UDV</td>
-<td>12</td>
+<td>13</td>
 <td>1</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -919,7 +905,6 @@ window.Quarto = {
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -927,8 +912,7 @@ window.Quarto = {
 <tr class="even">
 <td data-quarto-table-cell-role="th">UFM</td>
 <td>0</td>
-<td>1</td>
-<td>1</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -938,7 +922,6 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">UFV</td>
 <td>2</td>
 <td>2</td>
-<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -946,7 +929,6 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">URL</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>4</td>
@@ -958,7 +940,6 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">URM</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>3</td>
 <td>8</td>
 <td>6</td>
@@ -968,7 +949,6 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">URS</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>6</td>
@@ -976,7 +956,6 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">URV</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>2</td>
@@ -996,7 +975,7 @@ window.Quarto = {
 </section>
 <section id="victoria" class="level3" data-number="7.1.3">
 <h3 data-number="7.1.3" class="anchored" data-anchor-id="victoria"><span class="header-section-number">7.1.3</span> Victoria</h3>
-<div id="2105afb7" class="cell" data-execution_count="108">
+<div id="2105afb7" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_20_melted, <span class="st">"Victoria"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1019,13 +998,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>URM</td>
 <td>East Gippsland Shire Council</td>
-<td>4,877,561.3</td>
+<td>5,047,133.4</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UCC</td>
 <td>Melbourne City Council (City of Melbourne)</td>
-<td>-6,546,242.8</td>
+<td>-6,663,865.9</td>
 </tr>
 </tbody>
 </table>
@@ -1090,8 +1069,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>11</td>
-<td>5</td>
+<td>10</td>
+<td>6</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">UCC</td>
@@ -1179,8 +1158,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>3</td>
-<td>8</td>
+<td>2</td>
+<td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
@@ -1215,7 +1194,7 @@ window.Quarto = {
 </section>
 <section id="queensland" class="level3" data-number="7.1.4">
 <h3 data-number="7.1.4" class="anchored" data-anchor-id="queensland"><span class="header-section-number">7.1.4</span> Queensland</h3>
-<div id="a07910ad" class="cell" data-execution_count="109">
+<div id="a07910ad" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_20_melted, <span class="st">"Queensland"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1238,13 +1217,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RTL</td>
 <td>Torres Strait Island Regional Council</td>
-<td>9,314,682.5</td>
+<td>9,419,851.3</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UCC</td>
 <td>Brisbane City Council</td>
-<td>-48,715,086.3</td>
+<td>-49,269,604.8</td>
 </tr>
 </tbody>
 </table>
@@ -1424,7 +1403,7 @@ window.Quarto = {
 </section>
 <section id="south-australia" class="level3" data-number="7.1.5">
 <h3 data-number="7.1.5" class="anchored" data-anchor-id="south-australia"><span class="header-section-number">7.1.5</span> South Australia</h3>
-<div id="c4e064d8" class="cell" data-execution_count="110">
+<div id="c4e064d8" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_20_melted, <span class="st">"South Australia"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1447,13 +1426,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>UFL</td>
 <td>City of Playford</td>
-<td>3,922,090.9</td>
+<td>3,851,942.2</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UDV</td>
 <td>City of Port Adelaide Enfield</td>
-<td>-4,991,610.7</td>
+<td>-5,048,686.2</td>
 </tr>
 </tbody>
 </table>
@@ -1663,7 +1642,7 @@ window.Quarto = {
 </section>
 <section id="western-australia" class="level3" data-number="7.1.6">
 <h3 data-number="7.1.6" class="anchored" data-anchor-id="western-australia"><span class="header-section-number">7.1.6</span> Western Australia</h3>
-<div id="81bdb346" class="cell" data-execution_count="111">
+<div id="81bdb346" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_20_melted, <span class="st">"Western Australia"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1686,13 +1665,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RTL</td>
 <td>Shire of Derby-West Kimberley</td>
-<td>3,174,280.7</td>
+<td>3,223,356.3</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UDV</td>
 <td>City of Stirling</td>
-<td>-9,066,967.0</td>
+<td>-9,140,445.7</td>
 </tr>
 </tbody>
 </table>
@@ -1942,7 +1921,7 @@ window.Quarto = {
 </section>
 <section id="tasmania" class="level3" data-number="7.1.7">
 <h3 data-number="7.1.7" class="anchored" data-anchor-id="tasmania"><span class="header-section-number">7.1.7</span> Tasmania</h3>
-<div id="659e1db0" class="cell" data-execution_count="112">
+<div id="659e1db0" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_20_melted, <span class="st">"Tasmania"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1963,15 +1942,15 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
-<td>RAL</td>
-<td>Southern Midlands Council</td>
-<td>874,341.2</td>
+<td>URS</td>
+<td>Central Coast Council</td>
+<td>938,616.8</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
-<td>URM</td>
-<td>Launceston City Council</td>
-<td>-2,356,611.6</td>
+<td>UFM</td>
+<td>Clarence City Council</td>
+<td>-2,669,712.2</td>
 </tr>
 </tbody>
 </table>
@@ -2013,8 +1992,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>5</td>
-<td>1</td>
+<td>4</td>
+<td>2</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">RAM</td>
@@ -2022,8 +2001,8 @@ window.Quarto = {
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>3</td>
-<td>0</td>
+<td>2</td>
+<td>1</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">RAS</td>
@@ -2039,8 +2018,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>1</td>
-<td>4</td>
-<td>2</td>
+<td>3</td>
+<td>3</td>
 <td>0</td>
 </tr>
 <tr class="odd">
@@ -2065,8 +2044,8 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">UFS</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>2</td>
+<td>1</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 </tr>
@@ -2083,8 +2062,8 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">URS</td>
 <td>0</td>
 <td>0</td>
-<td>1</td>
-<td>1</td>
+<td>0</td>
+<td>2</td>
 <td>1</td>
 <td>0</td>
 </tr>
@@ -2100,7 +2079,7 @@ window.Quarto = {
 </section>
 <section id="northern-territory" class="level3" data-number="7.1.8">
 <h3 data-number="7.1.8" class="anchored" data-anchor-id="northern-territory"><span class="header-section-number">7.1.8</span> Northern Territory</h3>
-<div id="b937feba" class="cell" data-execution_count="113">
+<div id="b937feba" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_20_melted, <span class="st">"Northern Territory"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2123,13 +2102,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RTL</td>
 <td>East Arnhem Regional Council</td>
-<td>1,905,803.8</td>
+<td>1,883,610.3</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UCC</td>
 <td>City of Darwin</td>
-<td>-3,147,190.5</td>
+<td>-3,089,747.2</td>
 </tr>
 </tbody>
 </table>
@@ -2232,7 +2211,7 @@ window.Quarto = {
 <h2 data-number="7.2" class="anchored" data-anchor-id="a-10-per-capita-minimum-grant"><span class="header-section-number">7.2</span> A 10% Per Capita Minimum Grant</h2>
 <section id="national-1" class="level3" data-number="7.2.1">
 <h3 data-number="7.2.1" class="anchored" data-anchor-id="national-1"><span class="header-section-number">7.2.1</span> National</h3>
-<div id="08ac4397" class="cell" data-execution_count="114">
+<div id="08ac4397" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_10_melted, <span class="st">"all"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2257,14 +2236,14 @@ window.Quarto = {
 <td>Queensland</td>
 <td>RTL</td>
 <td>Torres Strait Island Regional Council</td>
-<td>18,743,760.5</td>
+<td>18,781,751.7</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>Queensland</td>
 <td>UCC</td>
 <td>Brisbane City Council</td>
-<td>-97,430,172.6</td>
+<td>-98,539,209.6</td>
 </tr>
 </tbody>
 </table>
@@ -2309,14 +2288,14 @@ window.Quarto = {
 <tr class="odd">
 <td data-quarto-table-cell-role="th">New South Wales</td>
 <td>27</td>
-<td>4</td>
-<td>1</td>
 <td>5</td>
+<td>0</td>
+<td>6</td>
+<td>4</td>
 <td>7</td>
-<td>6</td>
-<td>6</td>
+<td>7</td>
 <td>17</td>
-<td>57</td>
+<td>58</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Northern Territory</td>
@@ -2348,9 +2327,9 @@ window.Quarto = {
 <td>3</td>
 <td>1</td>
 <td>1</td>
+<td>1</td>
+<td>1</td>
 <td>2</td>
-<td>1</td>
-<td>1</td>
 <td>18</td>
 <td>23</td>
 </tr>
@@ -2361,10 +2340,10 @@ window.Quarto = {
 <td>1</td>
 <td>0</td>
 <td>2</td>
-<td>3</td>
-<td>4</td>
-<td>11</td>
-<td>3</td>
+<td>1</td>
+<td>5</td>
+<td>10</td>
+<td>5</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Victoria</td>
@@ -2374,9 +2353,9 @@ window.Quarto = {
 <td>0</td>
 <td>7</td>
 <td>4</td>
-<td>5</td>
-<td>31</td>
-<td>11</td>
+<td>4</td>
+<td>30</td>
+<td>13</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Western Australia</td>
@@ -2402,7 +2381,7 @@ window.Quarto = {
 </section>
 <section id="new-south-wales-1" class="level3" data-number="7.2.2">
 <h3 data-number="7.2.2" class="anchored" data-anchor-id="new-south-wales-1"><span class="header-section-number">7.2.2</span> New South Wales</h3>
-<div id="bdb5d467" class="cell" data-execution_count="115">
+<div id="bdb5d467" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_10_melted, <span class="st">"New South Wales"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2425,13 +2404,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RAL</td>
 <td>Lachlan Council</td>
-<td>9,296,766.7</td>
+<td>9,266,424.8</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UDV</td>
 <td>Canterbury-Bankstown Council</td>
-<td>-27,640,197.8</td>
+<td>-27,952,594.7</td>
 </tr>
 </tbody>
 </table>
@@ -2451,7 +2430,6 @@ window.Quarto = {
 <th data-quarto-table-cell-role="th">Expected Change in GPG (%) Bin</th>
 <th data-quarto-table-cell-role="th">Decreased more than 40%</th>
 <th data-quarto-table-cell-role="th">Decreased 20-40%</th>
-<th data-quarto-table-cell-role="th">Decreased 10-20%</th>
 <th data-quarto-table-cell-role="th">Decreased 5-10%</th>
 <th data-quarto-table-cell-role="th">Decreased less than 5%</th>
 <th data-quarto-table-cell-role="th">Increased less than 5%</th>
@@ -2461,7 +2439,6 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">ACLG</th>
-<th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
@@ -2481,13 +2458,11 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
 <td>21</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">RAM</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -2506,12 +2481,10 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">RAV</td>
-<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -2519,11 +2492,10 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>3</td>
-<td>15</td>
+<td>16</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">RTL</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -2542,12 +2514,10 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">RTX</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -2567,12 +2537,10 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">UDL</td>
 <td>4</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -2591,7 +2559,6 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">UDS</td>
@@ -2603,13 +2570,11 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">UDV</td>
-<td>12</td>
+<td>13</td>
 <td>1</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -2624,7 +2589,6 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -2632,8 +2596,7 @@ window.Quarto = {
 <tr class="even">
 <td data-quarto-table-cell-role="th">UFM</td>
 <td>0</td>
-<td>1</td>
-<td>1</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -2645,9 +2608,8 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">UFV</td>
 <td>2</td>
 <td>2</td>
-<td>0</td>
-<td>0</td>
 <td>1</td>
+<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -2657,10 +2619,9 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">URL</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>2</td>
-<td>3</td>
-<td>2</td>
+<td>1</td>
+<td>4</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -2669,17 +2630,15 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">URM</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
 <td>2</td>
-<td>3</td>
-<td>5</td>
+<td>2</td>
+<td>6</td>
 <td>6</td>
 <td>0</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">URS</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -2691,7 +2650,6 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">URV</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -2713,7 +2671,7 @@ window.Quarto = {
 </section>
 <section id="victoria-1" class="level3" data-number="7.2.3">
 <h3 data-number="7.2.3" class="anchored" data-anchor-id="victoria-1"><span class="header-section-number">7.2.3</span> Victoria</h3>
-<div id="640b54e1" class="cell" data-execution_count="116">
+<div id="640b54e1" class="cell" data-execution_count="18">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_10_melted, <span class="st">"Victoria"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2736,13 +2694,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>URM</td>
 <td>East Gippsland Shire Council</td>
-<td>9,886,594.0</td>
+<td>10,038,071.9</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UCC</td>
 <td>Melbourne City Council (City of Melbourne)</td>
-<td>-13,092,485.6</td>
+<td>-13,327,731.8</td>
 </tr>
 </tbody>
 </table>
@@ -2812,8 +2770,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>12</td>
-<td>4</td>
+<td>10</td>
+<td>6</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">UCC</td>
@@ -2910,8 +2868,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>3</td>
-<td>8</td>
+<td>2</td>
+<td>9</td>
 <td>0</td>
 </tr>
 <tr class="odd">
@@ -2948,7 +2906,7 @@ window.Quarto = {
 </section>
 <section id="queensland-1" class="level3" data-number="7.2.4">
 <h3 data-number="7.2.4" class="anchored" data-anchor-id="queensland-1"><span class="header-section-number">7.2.4</span> Queensland</h3>
-<div id="7ad60bfe" class="cell" data-execution_count="117">
+<div id="7ad60bfe" class="cell" data-execution_count="19">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_10_melted, <span class="st">"Queensland"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2971,13 +2929,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RTL</td>
 <td>Torres Strait Island Regional Council</td>
-<td>18,743,760.5</td>
+<td>18,781,751.7</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UCC</td>
 <td>Brisbane City Council</td>
-<td>-97,430,172.6</td>
+<td>-98,539,209.6</td>
 </tr>
 </tbody>
 </table>
@@ -3187,7 +3145,7 @@ window.Quarto = {
 </section>
 <section id="south-australia-1" class="level3" data-number="7.2.5">
 <h3 data-number="7.2.5" class="anchored" data-anchor-id="south-australia-1"><span class="header-section-number">7.2.5</span> South Australia</h3>
-<div id="01f2f44a" class="cell" data-execution_count="118">
+<div id="01f2f44a" class="cell" data-execution_count="20">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_10_melted, <span class="st">"South Australia"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3210,13 +3168,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>UFL</td>
 <td>City of Playford</td>
-<td>7,681,331.0</td>
+<td>7,641,706.0</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UDV</td>
 <td>City of Port Adelaide Enfield</td>
-<td>-9,983,221.4</td>
+<td>-10,097,372.4</td>
 </tr>
 </tbody>
 </table>
@@ -3276,8 +3234,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>1</td>
 <td>0</td>
+<td>1</td>
 <td>0</td>
 <td>1</td>
 <td>7</td>
@@ -3409,8 +3367,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>1</td>
-<td>1</td>
 <td>0</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 </tr>
@@ -3462,7 +3420,7 @@ window.Quarto = {
 </section>
 <section id="western-australia-1" class="level3" data-number="7.2.6">
 <h3 data-number="7.2.6" class="anchored" data-anchor-id="western-australia-1"><span class="header-section-number">7.2.6</span> Western Australia</h3>
-<div id="e8a19cdd" class="cell" data-execution_count="119">
+<div id="e8a19cdd" class="cell" data-execution_count="21">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_10_melted, <span class="st">"Western Australia"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3485,13 +3443,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RTL</td>
 <td>Shire of Derby-West Kimberley</td>
-<td>6,350,349.4</td>
+<td>6,394,384.7</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UDV</td>
 <td>City of Stirling</td>
-<td>-18,133,934.1</td>
+<td>-18,280,891.5</td>
 </tr>
 </tbody>
 </table>
@@ -3763,7 +3721,7 @@ window.Quarto = {
 </section>
 <section id="tasmania-1" class="level3" data-number="7.2.7">
 <h3 data-number="7.2.7" class="anchored" data-anchor-id="tasmania-1"><span class="header-section-number">7.2.7</span> Tasmania</h3>
-<div id="d62760fe" class="cell" data-execution_count="120">
+<div id="d62760fe" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_10_melted, <span class="st">"Tasmania"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3784,15 +3742,15 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
-<td>RAL</td>
-<td>Southern Midlands Council</td>
-<td>1,729,901.4</td>
+<td>URS</td>
+<td>Central Coast Council</td>
+<td>1,887,919.7</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
-<td>URM</td>
-<td>Launceston City Council</td>
-<td>-4,713,223.3</td>
+<td>UFM</td>
+<td>Clarence City Council</td>
+<td>-5,339,424.5</td>
 </tr>
 </tbody>
 </table>
@@ -3837,8 +3795,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>5</td>
-<td>1</td>
+<td>4</td>
+<td>2</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">RAM</td>
@@ -3847,8 +3805,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>3</td>
-<td>0</td>
+<td>2</td>
+<td>1</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">RAS</td>
@@ -3865,9 +3823,9 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>1</td>
-<td>1</td>
+<td>0</td>
 <td>3</td>
-<td>2</td>
+<td>3</td>
 <td>0</td>
 </tr>
 <tr class="odd">
@@ -3894,9 +3852,9 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">UFS</td>
 <td>0</td>
 <td>0</td>
+<td>1</td>
 <td>0</td>
-<td>2</td>
-<td>0</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 </tr>
@@ -3914,8 +3872,8 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">URS</td>
 <td>0</td>
 <td>0</td>
-<td>1</td>
 <td>0</td>
+<td>1</td>
 <td>1</td>
 <td>1</td>
 <td>0</td>
@@ -3932,7 +3890,7 @@ window.Quarto = {
 </section>
 <section id="northern-territory-1" class="level3" data-number="7.2.8">
 <h3 data-number="7.2.8" class="anchored" data-anchor-id="northern-territory-1"><span class="header-section-number">7.2.8</span> Northern Territory</h3>
-<div id="f6d87200" class="cell" data-execution_count="121">
+<div id="f6d87200" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_10_melted, <span class="st">"Northern Territory"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3955,13 +3913,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RTL</td>
 <td>East Arnhem Regional Council</td>
-<td>3,816,470.2</td>
+<td>3,775,417.8</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UCC</td>
 <td>City of Darwin</td>
-<td>-6,294,381.0</td>
+<td>-6,179,494.5</td>
 </tr>
 </tbody>
 </table>
@@ -4064,7 +4022,7 @@ window.Quarto = {
 <h2 data-number="7.3" class="anchored" data-anchor-id="a-world-with-no-per-capita-minimum-grant"><span class="header-section-number">7.3</span> A World With No Per Capita Minimum Grant</h2>
 <section id="national-2" class="level3" data-number="7.3.1">
 <h3 data-number="7.3.1" class="anchored" data-anchor-id="national-2"><span class="header-section-number">7.3.1</span> National</h3>
-<div id="49cc2aba" class="cell" data-execution_count="122">
+<div id="49cc2aba" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_0_melted, <span class="st">"all"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4089,14 +4047,14 @@ window.Quarto = {
 <td>Queensland</td>
 <td>RTL</td>
 <td>Torres Strait Island Regional Council</td>
-<td>28,433,738.3</td>
+<td>27,919,245.6</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>Queensland</td>
 <td>UCC</td>
 <td>Brisbane City Council</td>
-<td>-146,145,258.9</td>
+<td>-147,808,814.3</td>
 </tr>
 </tbody>
 </table>
@@ -4149,8 +4107,8 @@ window.Quarto = {
 <td>2</td>
 <td>4</td>
 <td>4</td>
-<td>9</td>
-<td>62</td>
+<td>8</td>
+<td>64</td>
 <td>8</td>
 </tr>
 <tr class="even">
@@ -4188,8 +4146,8 @@ window.Quarto = {
 <td>2</td>
 <td>0</td>
 <td>1</td>
-<td>8</td>
-<td>34</td>
+<td>6</td>
+<td>36</td>
 <td>0</td>
 </tr>
 <tr class="odd">
@@ -4197,12 +4155,12 @@ window.Quarto = {
 <td>5</td>
 <td>1</td>
 <td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
 <td>0</td>
-<td>2</td>
-<td>0</td>
-<td>5</td>
-<td>6</td>
-<td>10</td>
+<td>7</td>
+<td>13</td>
 <td>0</td>
 </tr>
 <tr class="even">
@@ -4210,10 +4168,10 @@ window.Quarto = {
 <td>18</td>
 <td>2</td>
 <td>1</td>
-<td>2</td>
-<td>5</td>
 <td>3</td>
-<td>1</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
 <td>12</td>
 <td>35</td>
 <td>0</td>
@@ -4228,8 +4186,8 @@ window.Quarto = {
 <td>3</td>
 <td>3</td>
 <td>4</td>
-<td>49</td>
-<td>39</td>
+<td>48</td>
+<td>40</td>
 </tr>
 </tbody>
 </table>
@@ -4243,7 +4201,7 @@ window.Quarto = {
 </section>
 <section id="new-south-wales-2" class="level3" data-number="7.3.2">
 <h3 data-number="7.3.2" class="anchored" data-anchor-id="new-south-wales-2"><span class="header-section-number">7.3.2</span> New South Wales</h3>
-<div id="b6007aa0" class="cell" data-execution_count="123">
+<div id="b6007aa0" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_0_melted, <span class="st">"New South Wales"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4266,13 +4224,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RAL</td>
 <td>Lachlan Council</td>
-<td>13,877,476.5</td>
+<td>13,891,886.7</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UDV</td>
 <td>Canterbury-Bankstown Council</td>
-<td>-41,460,296.7</td>
+<td>-41,928,892.1</td>
 </tr>
 </tbody>
 </table>
@@ -4357,15 +4315,15 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">RAV</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 <td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>17</td>
+<td>18</td>
 <td>0</td>
 </tr>
 <tr class="odd">
@@ -4461,7 +4419,7 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">UDV</td>
-<td>13</td>
+<td>14</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -4520,8 +4478,8 @@ window.Quarto = {
 <td>2</td>
 <td>2</td>
 <td>1</td>
-<td>1</td>
 <td>0</td>
+<td>1</td>
 <td>0</td>
 </tr>
 <tr class="odd">
@@ -4575,7 +4533,7 @@ window.Quarto = {
 </section>
 <section id="victoria-2" class="level3" data-number="7.3.3">
 <h3 data-number="7.3.3" class="anchored" data-anchor-id="victoria-2"><span class="header-section-number">7.3.3</span> Victoria</h3>
-<div id="88b9ac97" class="cell" data-execution_count="124">
+<div id="88b9ac97" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_0_melted, <span class="st">"Victoria"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4598,13 +4556,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>URM</td>
 <td>East Gippsland Shire Council</td>
-<td>14,774,699.8</td>
+<td>14,883,595.2</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UCC</td>
 <td>Melbourne City Council (City of Melbourne)</td>
-<td>-19,638,728.4</td>
+<td>-19,991,597.7</td>
 </tr>
 </tbody>
 </table>
@@ -4737,8 +4695,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>1</td>
 <td>0</td>
+<td>1</td>
 <td>1</td>
 <td>0</td>
 </tr>
@@ -4759,8 +4717,8 @@ window.Quarto = {
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>3</td>
+<td>1</td>
+<td>2</td>
 <td>1</td>
 <td>0</td>
 <td>1</td>
@@ -4826,7 +4784,7 @@ window.Quarto = {
 </section>
 <section id="queensland-2" class="level3" data-number="7.3.4">
 <h3 data-number="7.3.4" class="anchored" data-anchor-id="queensland-2"><span class="header-section-number">7.3.4</span> Queensland</h3>
-<div id="2e5e04d8" class="cell" data-execution_count="125">
+<div id="2e5e04d8" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_0_melted, <span class="st">"Queensland"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4849,13 +4807,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RTL</td>
 <td>Torres Strait Island Regional Council</td>
-<td>28,433,738.3</td>
+<td>27,919,245.6</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UCC</td>
 <td>Brisbane City Council</td>
-<td>-146,145,258.9</td>
+<td>-147,808,814.3</td>
 </tr>
 </tbody>
 </table>
@@ -5050,7 +5008,7 @@ window.Quarto = {
 </section>
 <section id="south-australia-2" class="level3" data-number="7.3.5">
 <h3 data-number="7.3.5" class="anchored" data-anchor-id="south-australia-2"><span class="header-section-number">7.3.5</span> South Australia</h3>
-<div id="a06f8407" class="cell" data-execution_count="126">
+<div id="a06f8407" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_0_melted, <span class="st">"South Australia"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5073,13 +5031,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>UFL</td>
 <td>City of Playford</td>
-<td>11,808,007.8</td>
+<td>11,539,296.0</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UDV</td>
 <td>City of Port Adelaide Enfield</td>
-<td>-14,974,832.2</td>
+<td>-15,146,058.6</td>
 </tr>
 </tbody>
 </table>
@@ -5124,8 +5082,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>2</td>
-<td>8</td>
+<td>1</td>
+<td>9</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">RAM</td>
@@ -5274,8 +5232,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>2</td>
-<td>5</td>
+<td>1</td>
+<td>6</td>
 </tr>
 </tbody>
 </table>
@@ -5289,7 +5247,7 @@ window.Quarto = {
 </section>
 <section id="western-australia-2" class="level3" data-number="7.3.6">
 <h3 data-number="7.3.6" class="anchored" data-anchor-id="western-australia-2"><span class="header-section-number">7.3.6</span> Western Australia</h3>
-<div id="6d3ba4a4" class="cell" data-execution_count="127">
+<div id="6d3ba4a4" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_0_melted, <span class="st">"Western Australia"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5312,13 +5270,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RTL</td>
 <td>Shire of Derby-West Kimberley</td>
-<td>9,588,494.0</td>
+<td>9,574,676.2</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UDV</td>
 <td>City of Stirling</td>
-<td>-27,200,901.1</td>
+<td>-27,421,337.2</td>
 </tr>
 </tbody>
 </table>
@@ -5393,8 +5351,8 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>24</td>
-<td>26</td>
+<td>23</td>
+<td>27</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">RAV</td>
@@ -5612,7 +5570,7 @@ window.Quarto = {
 </section>
 <section id="tasmania-2" class="level3" data-number="7.3.7">
 <h3 data-number="7.3.7" class="anchored" data-anchor-id="tasmania-2"><span class="header-section-number">7.3.7</span> Tasmania</h3>
-<div id="ae113013" class="cell" data-execution_count="128">
+<div id="ae113013" class="cell" data-execution_count="30">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_0_melted, <span class="st">"Tasmania"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5633,15 +5591,15 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
-<td>RAL</td>
-<td>Southern Midlands Council</td>
-<td>2,615,445.2</td>
+<td>URS</td>
+<td>Central Coast Council</td>
+<td>2,797,392.2</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
-<td>URM</td>
-<td>Launceston City Council</td>
-<td>-7,069,834.9</td>
+<td>UFM</td>
+<td>Clarence City Council</td>
+<td>-8,009,136.7</td>
 </tr>
 </tbody>
 </table>
@@ -5661,13 +5619,15 @@ window.Quarto = {
 <th data-quarto-table-cell-role="th">Expected Change in GPG (%) Bin</th>
 <th data-quarto-table-cell-role="th">Decreased more than 40%</th>
 <th data-quarto-table-cell-role="th">Decreased 20-40%</th>
+<th data-quarto-table-cell-role="th">Decreased 5-10%</th>
 <th data-quarto-table-cell-role="th">Decreased less than 5%</th>
-<th data-quarto-table-cell-role="th">Increased 5-10%</th>
+<th data-quarto-table-cell-role="th">Increased less than 5%</th>
 <th data-quarto-table-cell-role="th">Increased 10-20%</th>
 <th data-quarto-table-cell-role="th">Increased 20-40%</th>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">ACLG</th>
+<th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
@@ -5684,12 +5644,14 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
+<td>0</td>
 <td>6</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">RAM</td>
 <td>0</td>
 <td>1</td>
+<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -5702,6 +5664,7 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
+<td>0</td>
 <td>2</td>
 </tr>
 <tr class="even">
@@ -5709,13 +5672,15 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>1</td>
-<td>3</td>
-<td>3</td>
 <td>0</td>
+<td>0</td>
+<td>4</td>
+<td>2</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">UCC</td>
 <td>1</td>
+<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -5730,14 +5695,16 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">UFS</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>2</td>
+<td>1</td>
 <td>0</td>
+<td>1</td>
 <td>0</td>
 </tr>
 <tr class="even">
@@ -5748,15 +5715,17 @@ window.Quarto = {
 <td>0</td>
 <td>0</td>
 <td>0</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">URS</td>
 <td>0</td>
 <td>0</td>
+<td>0</td>
+<td>0</td>
 <td>1</td>
-<td>0</td>
-<td>2</td>
-<td>0</td>
+<td>1</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
@@ -5770,7 +5739,7 @@ window.Quarto = {
 </section>
 <section id="northern-territory-2" class="level3" data-number="7.3.8">
 <h3 data-number="7.3.8" class="anchored" data-anchor-id="northern-territory-2"><span class="header-section-number">7.3.8</span> Northern Territory</h3>
-<div id="574e2d18" class="cell" data-execution_count="129">
+<div id="574e2d18" class="cell" data-execution_count="31">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_0_melted, <span class="st">"Northern Territory"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5793,13 +5762,13 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Largest total gains in the 2025-26 to 2028-29 period</td>
 <td>RTL</td>
 <td>East Arnhem Regional Council</td>
-<td>5,710,540.5</td>
+<td>5,700,740.9</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Largest total losses in the 2025-26 to 2028-29 period</td>
 <td>UCC</td>
 <td>City of Darwin</td>
-<td>-9,441,571.5</td>
+<td>-9,269,241.7</td>
 </tr>
 </tbody>
 </table>
@@ -5882,7 +5851,7 @@ window.Quarto = {
 <h2 data-number="7.4" class="anchored" data-anchor-id="and-for-sanity-reasons-status-quo"><span class="header-section-number">7.4</span> And for sanity reasons, status quo</h2>
 <section id="national-3" class="level3" data-number="7.4.1">
 <h3 data-number="7.4.1" class="anchored" data-anchor-id="national-3"><span class="header-section-number">7.4.1</span> National</h3>
-<div id="a45f3a26" class="cell" data-execution_count="130">
+<div id="a45f3a26" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_30_melted, <span class="st">"all"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5942,7 +5911,7 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">New South Wales</td>
-<td>130</td>
+<td>131</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Northern Territory</td>
@@ -5980,7 +5949,7 @@ window.Quarto = {
 </section>
 <section id="new-south-wales-3" class="level3" data-number="7.4.2">
 <h3 data-number="7.4.2" class="anchored" data-anchor-id="new-south-wales-3"><span class="header-section-number">7.4.2</span> New South Wales</h3>
-<div id="e7494413" class="cell" data-execution_count="131">
+<div id="e7494413" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_30_melted, <span class="st">"New South Wales"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -6081,7 +6050,7 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">UDV</td>
-<td>13</td>
+<td>14</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">UFL</td>
@@ -6123,7 +6092,7 @@ window.Quarto = {
 </section>
 <section id="victoria-3" class="level3" data-number="7.4.3">
 <h3 data-number="7.4.3" class="anchored" data-anchor-id="victoria-3"><span class="header-section-number">7.4.3</span> Victoria</h3>
-<div id="67878a5b" class="cell" data-execution_count="132">
+<div id="67878a5b" class="cell" data-execution_count="34">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_30_melted, <span class="st">"Victoria"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -6246,7 +6215,7 @@ window.Quarto = {
 </section>
 <section id="queensland-3" class="level3" data-number="7.4.4">
 <h3 data-number="7.4.4" class="anchored" data-anchor-id="queensland-3"><span class="header-section-number">7.4.4</span> Queensland</h3>
-<div id="2f4e401b" class="cell" data-execution_count="133">
+<div id="2f4e401b" class="cell" data-execution_count="35">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_30_melted, <span class="st">"Queensland"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -6365,7 +6334,7 @@ window.Quarto = {
 </section>
 <section id="south-australia-3" class="level3" data-number="7.4.5">
 <h3 data-number="7.4.5" class="anchored" data-anchor-id="south-australia-3"><span class="header-section-number">7.4.5</span> South Australia</h3>
-<div id="969f876a" class="cell" data-execution_count="134">
+<div id="969f876a" class="cell" data-execution_count="36">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_30_melted, <span class="st">"South Australia"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -6496,7 +6465,7 @@ window.Quarto = {
 </section>
 <section id="western-australia-3" class="level3" data-number="7.4.6">
 <h3 data-number="7.4.6" class="anchored" data-anchor-id="western-australia-3"><span class="header-section-number">7.4.6</span> Western Australia</h3>
-<div id="dddedca4" class="cell" data-execution_count="135">
+<div id="dddedca4" class="cell" data-execution_count="37">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_30_melted, <span class="st">"Western Australia"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -6643,7 +6612,7 @@ window.Quarto = {
 </section>
 <section id="tasmania-3" class="level3" data-number="7.4.7">
 <h3 data-number="7.4.7" class="anchored" data-anchor-id="tasmania-3"><span class="header-section-number">7.4.7</span> Tasmania</h3>
-<div id="5ff09a6f" class="cell" data-execution_count="136">
+<div id="5ff09a6f" class="cell" data-execution_count="38">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_30_melted, <span class="st">"Tasmania"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -6746,7 +6715,7 @@ window.Quarto = {
 </section>
 <section id="northern-territory-3" class="level3" data-number="7.4.8">
 <h3 data-number="7.4.8" class="anchored" data-anchor-id="northern-territory-3"><span class="header-section-number">7.4.8</span> Northern Territory</h3>
-<div id="e2894a8d" class="cell" data-execution_count="137">
+<div id="e2894a8d" class="cell" data-execution_count="39">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>display_data(sim_grants_30_melted, <span class="st">"Northern Territory"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
