@@ -1,7 +1,7 @@
 project:
-  type: manuscript
-  output-dir: manuscript
-#  post-render: meta/fix_page_breaks.py
+  type: book
+  output-dir: docs
+  post-render: meta/fix_page_breaks.py
 
 book:
   title: "A Characterization of the Australian Financial Assistance Grants System"
@@ -19,8 +19,7 @@ book:
 #   - jurisdictional_approaches.qmd
     - methodology.qmd
     - discussed_issues.qmd
-    - modelling_outcomes.ipynb
-    - modelling_outcomes_binned.ipynb
+    - aclg_note.qmd
     - references.qmd
    
   appendices:
@@ -31,8 +30,8 @@ book:
     - 10_perc_min_grant.ipynb
     - no_min_grant_agg.ipynb
     - no_min_grant.ipynb
-    - aclg_note.qmd
-    
+    - modelling_outcomes.ipynb
+    - modelling_outcomes_binned.ipynb
 
 bibliography: [references.bib, euan_references.bib]
 csl: meta/style-manual-australian-government.csl

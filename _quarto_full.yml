@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: docx_render
+  output-dir: docs
   post-render: meta/fix_page_breaks.py
 
 book:
@@ -19,14 +19,31 @@ book:
 #   - jurisdictional_approaches.qmd
     - methodology.qmd
     - discussed_issues.qmd
+    - aclg_note.qmd
+    - references.qmd
+   
+  appendices:
+    - simulation_methodology.ipynb
+    - 20_perc_min_grant_agg.ipynb
+    - 20_perc_min_grant.ipynb
+    - 10_perc_min_grant_agg.ipynb
+    - 10_perc_min_grant.ipynb
+    - no_min_grant_agg.ipynb
+    - no_min_grant.ipynb
     - modelling_outcomes.ipynb
     - modelling_outcomes_binned.ipynb
-    - references.qmd
 
 bibliography: [references.bib, euan_references.bib]
 csl: meta/style-manual-australian-government.csl
 
 format:
+  html:
+    theme:
+      - pandoc
+      - brand
+    code-fold: true
+    code-summary: "Show the code"
+    code-tools: true
   docx:
     order: 1
     reference-doc: meta/custom-reference-doc.docx
