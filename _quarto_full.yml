@@ -1,0 +1,41 @@
+project:
+  type: book
+  output-dir: docx_render
+  post-render: meta/fix_page_breaks.py
+
+book:
+  title: "A Characterization of the Australian Financial Assistance Grants System"
+  author: ["Sreehari Pulickamadhom Sreedhar", "Euan Maclean"]
+  date: today
+  reader-mode: false
+  site-url: https://spulick.github.io/fa_grants/
+  search: true
+
+  chapters: # naming convention to remember: 1. always use lowercase for file names, 2. use underscores for spaces
+    - index.qmd
+    - abstract.qmd 
+    - intro.qmd
+    - historical_context.qmd
+#   - jurisdictional_approaches.qmd
+    - methodology.qmd
+    - discussed_issues.qmd
+    - modelling_outcomes.ipynb
+    - modelling_outcomes_binned.ipynb
+    - references.qmd
+
+bibliography: [references.bib, euan_references.bib]
+csl: meta/style-manual-australian-government.csl
+
+format:
+  docx:
+    order: 1
+    reference-doc: meta/custom-reference-doc.docx
+    toc-depth: 1
+    fig-align: "center"
+    fig-dpi: 600
+    df-print: paged
+    execute:
+      echo: false
+      output: true
+
+
