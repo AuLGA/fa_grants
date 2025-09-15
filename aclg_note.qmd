@@ -1,11 +1,15 @@
 ---
 title: "A note on the Australian Classification of Local Government"
 author: Sreehari Pulickamadhom Sreedhar
+date: today
+references: references.bib
 ---
+
+The Australian Classification of Local Governments (ACLG) was a system maintained and published by the Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts (DITRDCSA) [@ditrdcsaLocalGovernmentNational2022]. The Department is aiming to phase out the ACLG system in favour of the ABS Australian Statistical Geographical System Remoteness classifcation.  
 
 
 | **Step 1**                               | **Step 2**                                                                                                       | **Step 3**        |             | **Category** | **Alpha** |
-|------------------------------------------|------------------------------------------------------------------------------------------------------------------|-------------------|------------------|--------------|-----------|
+|-|-|-|-|-|-|
 | **URBAN \(U\)**                          |                                                                                                                  |                   |                  |              |           |
 |                                     | Capital City \(CC\)                                                                                              | Not applicable    |                  | 1            | UCC       |
 | **Pop\. > 20,000**                       | Metropolitan Developed \(D\) \- Part of an urban centre > 1,000,000 and pop\. density > 600/sq km\.              | Small \(S\)       | up to 30,000     | 2            | UDS       |
@@ -30,3 +34,5 @@ author: Sreehari Pulickamadhom Sreedhar
 |                                     |                                                                                                                  | Small             | 401\-1,000       | 20           | RTS       |
 |                                     |                                                                                                                  | Medium            | 1,001–3,000      | 21           | RTM       |
 |                                     |                                                                                                                  | Large             | 3,001 to 20,000  | 22           | RTL       |
+
+: {.striped .hover}

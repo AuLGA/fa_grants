@@ -19,10 +19,10 @@ book:
 #   - jurisdictional_approaches.qmd
     - methodology.qmd
     - discussed_issues.qmd
-    - aclg_note.qmd
     - references.qmd
    
   appendices:
+    - aclg_note.qmd
     - simulation_methodology.ipynb
     - 20_perc_min_grant_agg.ipynb
     - 20_perc_min_grant.ipynb

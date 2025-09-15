@@ -19,8 +19,10 @@ book:
 #   - jurisdictional_approaches.qmd
     - methodology.qmd
     - discussed_issues.qmd
-    - aclg_note.qmd
     - references.qmd
+  
+  appendices:
+    - aclg_note.qmd
 
 bibliography: [references.bib, euan_references.bib]
 csl: meta/style-manual-australian-government.csl
