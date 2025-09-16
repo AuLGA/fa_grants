@@ -31,7 +31,7 @@ book:
     - no_min_grant_agg.ipynb
     - no_min_grant.ipynb
     - modelling_outcomes.ipynb
-    - modelling_outcomes_binned.ipynb
+#    - modelling_outcomes_binned.ipynb
 
 bibliography: [references.bib, euan_references.bib]
 csl: meta/style-manual-australian-government.csl

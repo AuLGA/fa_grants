@@ -23,6 +23,7 @@ book:
   
   appendices:
     - aclg_note.qmd
+#    - modelling_outcomes_binned.ipynb
 
 bibliography: [references.bib, euan_references.bib]
 csl: meta/style-manual-australian-government.csl
