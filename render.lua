@@ -7,7 +7,7 @@ quarto_yaml = io.open("_quarto.yml", "w")
 quarto_yaml:write(quarto_docx_yaml)
 quarto_yaml:close()
 
-os.execute("quarto render")
+-- os.execute("quarto render")
 
 -- Render the whole document
 
@@ -19,4 +19,9 @@ quarto_yaml = io.open("_quarto.yml", "w")
 quarto_yaml:write(quarto_full_yaml)
 quarto_yaml:close()
 
-os.execute("quarto render")
+-- os.execute("quarto render")
+
+-- Rendering the standalone reference file (because I'm lazy)
+
+os.execute("quarto render modelling_outcomes_binned.ipynb")
+os.execute("python meta/table_formatter.py")
