@@ -19,6 +19,7 @@ book:
 #   - jurisdictional_approaches.qmd
     - methodology.qmd
     - discussed_issues.qmd
+    - map_view.ipynb
     - references.qmd
    
   appendices:
