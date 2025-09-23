@@ -23,5 +23,17 @@ os.execute("quarto render")
 
 -- Rendering the standalone reference file (because I'm lazy)
 
+quarto_file = io.open("_quarto.yml", "w")
+quarto_full_yaml_edit = string.gsub(quarto_full_yaml, "    - modelling_outcomes_binned.ipynb", "#    - modelling_outcomes_binned.ipynb")
+quarto_full_yaml_edit = string.gsub(quarto_full_yaml_edit, "    - aclg_note.qmd", "#    - aclg_note.qmd")
+quarto_file:write(quarto_full_yaml_edit)
+
 os.execute("quarto render modelling_outcomes_binned.ipynb")
+os.execute("quarto render aclg_note.qmd")
 os.execute("python meta/table_formatter.py")
+
+quarto_yaml = io.open("_quarto.yml", "w")
+quarto_yaml:write(quarto_full_yaml)
+quarto_yaml:close()
+
+

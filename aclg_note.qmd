@@ -1,11 +1,22 @@
 ---
 title: "A note on the Australian Classification of Local Government"
-author: Sreehari Pulickamadhom Sreedhar
-date: today
-references: references.bib
+format:
+  docx:
+    order: 1
+    reference-doc: meta/custom-reference-doc.docx
+    toc-depth: 1
+    fig-align: "center"
+    fig-dpi: 600
+    df-print: default
+    filters:
+      - quarto
+      - meta/pagebreak.lua
+    execute:
+      echo: false
+      output: true
 ---
 
-The Australian Classification of Local Governments (ACLG) was a system maintained and published by the Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts (DITRDCSA) [@ditrdcsaLocalGovernmentNational2022]. The Department is aiming to phase out the ACLG system in favour of the ABS Australian Statistical Geographical System Remoteness classifcation.  
+The Australian Classification of Local Governments (ACLG) was a system maintained and published by the Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts (DITRDCSA). The Department is aiming to phase out the ACLG system in favour of the ABS Australian Statistical Geographical System Remoteness classifcation.  
 
 
 | **Step 1**                               | **Step 2**                                                                                                       | **Step 3**        |             | **Category** | **Alpha** |

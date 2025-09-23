@@ -19,7 +19,7 @@ book:
 #   - jurisdictional_approaches.qmd
     - methodology.qmd
     - discussed_issues.qmd
-    - references.qmd
+#    - references.qmd
   
   appendices:
     - aclg_note.qmd

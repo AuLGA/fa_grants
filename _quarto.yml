@@ -20,7 +20,7 @@ book:
     - methodology.qmd
     - discussed_issues.qmd
     - map_view.ipynb
-    - references.qmd
+#    - references.qmd
    
   appendices:
     - aclg_note.qmd
@@ -32,7 +32,7 @@ book:
     - no_min_grant_agg.ipynb
     - no_min_grant.ipynb
     - modelling_outcomes.ipynb
-#    - modelling_outcomes_binned.ipynb
+    - modelling_outcomes_binned.ipynb
 
 bibliography: [references.bib, euan_references.bib]
 csl: meta/style-manual-australian-government.csl
