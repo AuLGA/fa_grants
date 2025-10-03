@@ -28,7 +28,7 @@ This repository contains code, data, and documentation for analyzing the Austral
    - Recommended: Create a virtual environment using mamba/conda
    - Install required packages:
      ```bash
-     pip install -r requirements.txt
+     conda create --name <env name> --file requirements.txt
      ```
 3. **Run analyses:**
    - Execute notebooks in the root or `Code/` directory for simulations and data exploration.
