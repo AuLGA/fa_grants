@@ -24,15 +24,16 @@ This repository contains code, data, and documentation for analyzing the Austral
 2. **Install dependencies:**
    - On Windows, Windows Subsystem for Linux (WSL) is **strongly recommended**
    - Python 3.8+
-   - Lua (comes preinstalled with Unix+/Linux+GNU/WSL etc.)
-   - Recommended: Create a virtual environment using mamba/conda
+   - [Lua](https://www.lua.org) 
+   - [Quarto](https://quarto.org/)
+   - [conda/mamba/miniforge](https://github.com/conda-forge/miniforge)
    - Install required packages:
      ```bash
      conda create --name <env name> --file requirements.txt
      ```
 3. **Run analyses:**
    - Execute notebooks in the root or `Code/` directory for simulations and data exploration.
-   - To create new scenarios, duplicate `Data/FA Grants Tables - Python.xlsx` and tweak numbers in there. Make sure to pass the right input file while creating the model instance (the function call that goes `inst = fagrants.fagrants_mode(...)`)
+   - To create new scenarios, **duplicate** `Data/FA Grants Tables - Python.xlsx` and tweak numbers in there. Make sure to pass the right input file while creating the model instance (the function call that goes `inst = fagrants.fagrants_mode(...)`)
    > If you do tweak numbers in the Excel input file, make sure to not change the structure of the file or change row/column positions since the modelling scripts have hardcoded pointers to fetch values from the file.
    > If you're sure of what you're doing, feel free to play with the structure and alter the pointers in the scripts on a **fork or a branch**. 
 
