@@ -1,0 +1,64 @@
+---
+title: "Financial Assistance Grants: Paths towards equitable reform"
+format:
+  docx:
+    order: 1
+    reference-doc: meta/custom-reference-doc.docx
+    toc-depth: 1
+    fig-align: "center"
+    fig-dpi: 600
+    df-print: default
+    filters:
+      - quarto
+      - meta/pagebreak.lua
+    execute:
+      echo: false
+      output: true
+---
+
+## Executive Summary
+
+Modelling of Financial Assistance Grants for Australian local governments reveals significant impacts from changes to minimum grant entitlements. 
+
+Simulations across four scenarios — baseline (30%), 20%, 10%, and 0% per-capita minimums — show that reducing or removing the minimum grant shifts significant amount of funding away from high-growth, high-population urban and fringe councils toward regional and remote areas. 
+
+The gradual move to a **transparent, needs-based, and deterministic formula** is the recommended course of action. Such an approach should
+
+- balance the needs of critical growth areas against the limited revenue raising capacity of regional councils. 
+- reduce the dependence of regional and remote councils on General Purpose Grants for purposes that would be better served by targeted, non-competitive grants.
+
+Alternatively, an **increased quantum of the grant could be coupled with a reformed grant allocation formula** over the medium term to allow for investment into regional and remote areas, abating inequitous growth trends. Such a systen would
+
+- favor currently disadvantaged councils.
+- not be detrimental to critical growth areas.
+
+## A high level look at weaknesses in the model
+
+Modelling shows that urban councils, especially those in metropolitan and fringe categories, tend to lose funding as the minimum grant is reduced. These councils are critical growth areas, with high upward demographic pressures. Consequently, these councils are also expected to face upwards pressure to invest in housing, roads, and trunk-infrastructure construction and maintenance. 
+
+Conversely, regional and remote councils, particularly those with lower revenue-raising capacity, are more likely to gain under any scenario that reduces the minimum per-capita grant entitlements. 
+
+This points to possible flaws in how the correlation between growth and perceived ability to raise revenue is factored into the calculation of General Purpose Grant entitlements. That is, the calculations rely on measures of revenue-raising capacity and financial sustainability while heavily discounting any adverse effects caused in the future from suboptimal investment right now.
+
+The needs of regional and remote councils stemming from higher per-capita infrastructure maintenance costs are better serviced through targeted policies and non-competitive grants that work independently of Financial Assistance Grants. 
+
+The current system of caps and collars that limit year-over-year movement of grant entitlements offer insufficient protection to councils deemed "Minimum Grant Councils", as councils are projected to lose anywhere between 40% to 100% of their General Purpose Grants under certain scenarios.
+
+## Possible courses of action
+
+1. **Increase the total quantum of grant**: Allows significant increases to councils with insufficient revenue raising capacity without adversely impacting critical growth areas.
+2. **Retain the current minimum grant (30%)**: Maintains stability but may perpetuate inequities.
+3. **Reduce the minimum to 20% or 10%**: Targets funding to needier councils, but risks destabilizing urban and fringe council budgets.
+4. **Remove the minimum entirely**: Maximizes targeting but may result in large funding swings and political resistance.
+5. **Reform the GPG formula**: Restructure the approach to calculating General Purpose Grants to better capture critical growth areas and revenue raising capacity.
+
+## Recommendations
+
+With options 3 and 4 being obviously unsustainable and politically infeasible, this study distills its recommendations into the following:
+
+- Increase total funding available to the Financial Assistance Grants program.
+- Stagger the introduction of changes to the minimum grant - if any, monitoring impacts on council finances and service delivery.
+- Provide transitional support for councils facing significant reductions.
+- Improve transparency of grant entitlement calculations through hands-on analytical workshops and clear published documentation.
+- Engage stakeholders in reform design to ensure buy-in and minimize disruption.
+- Continue to refine modelling and data collection to support evidence-based policy.

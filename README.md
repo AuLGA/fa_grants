@@ -2,6 +2,10 @@
 
 This repository contains code, data, and documentation for analyzing the Australian Financial Assistance Grants (FA Grants) system. The project explores grant allocation methodologies, simulates outcomes under different scenarios, and provides visualizations and reports for policy and research purposes.
 
+### Some bits of wisdom from one so wise
+- The files in `meta/` are reusable. 
+- `custom-reference-doc.docx` might be of special interest. It is built around the current ALGA Word template. It can be used in any pandoc derived pipeline to generate ALGA themed Word documents from markdown, and Quarto and Jupyter notebook files. 
+
 ## Contents
 - **Code/**: Python scripts and Jupyter notebooks for data analysis, simulation, and modeling.
 - **Data/**: Source datasets, working tables, and output files used in the analysis.
@@ -38,7 +42,8 @@ This repository contains code, data, and documentation for analyzing the Austral
    > If you're sure of what you're doing, feel free to play with the structure and alter the pointers in the scripts on a **fork or a branch**. 
 
 4. **Render**
-    - A lazy approach to rendering the whole project would be to tweak the `render.lua` script and run it using `lua render.lua` from the project root. This generates both the full report (html and docx) and the smaller report (docx only).
+    - The lazy approach to rendering the whole project would be to tweak the `render.lua` script and run it using `lua render.lua` from the project root. This generates both the full report (html and docx) and the smaller report (docx only).
+    - Else, `quarto render` should do the trick as long as `_quarto.yml` has the right config in it (have a look at the lua script). It contains `_quarto_full.yml` by default. 
 
 ## Documentation
 - Main reports and notes are available in the `docs/` folder as HTML and DOCX files.
