@@ -18,43 +18,63 @@ format:
 
 ## Executive Summary
 
-Modelling of Financial Assistance Grants for Australian local governments reveals significant impacts from changes to minimum grant entitlements. 
+* A study into the financial flows from changes to minimum grant entitlements was warranted given the current rhetoric surrounding Financial Assistance (FA) grants. 
+* A model of FA Grants was created to simulate grant distribution under various scenarios - simulations reveal significant impacts from changes to minimum grant entitlements. 
+* Reducing or removing the per-capita minimum grant shifts significant amounts of funding away from high-growth, high-population urban and fringe councils towards regional and remote areas.
+* Councils that stand to gain most are amongst those that receive the highest quantum of grants per capita, due to their low population numbers and remoteness. 
+* Under the current funding models, many urban and urban-fringe councils stand to lose large parts of their general purpose grant money because they are already receiving the minimum  amount per-capita. Furthermore, since the current constraints on year-on-year movement on grant entitlement are applicable only to non-minimum grant councils, many high growth councils have no constraints on how much grant funding they stand to lose. 
+* The broad trends identified here can support future discussions surrounding Federal grants in the local government landscape.
+* If Australia wants to have a sustainable and equitable funding model for local government into the future, it needs to have more nuanced methods that factor in demographic change, economic growth, and refined indicators of need.
 
-Simulations across four scenarios — baseline (30%), 20%, 10%, and 0% per-capita minimums — show that reducing or removing the minimum grant shifts significant amount of funding away from high-growth, high-population urban and fringe councils toward regional and remote areas. 
+## Overview of the Financial Assistance Grants model
 
-The gradual move to a **transparent, needs-based, and deterministic formula** is the recommended course of action. Such an approach should
+Financial Assistance Grants (FA Grants) play a critical role in supporting the operations of Australia’s 538 local councils. These grants are untied, allowing councils to allocate funds based on local priorities, and are essential for maintaining infrastructure and delivering community services—especially in regional and rural areas. Despite their importance, FA Grants have declined significantly over the past 30 years, dropping from 1% of Commonwealth taxation revenue in 1996 to under 0.5% today.
 
-- balance the needs of critical growth areas against the limited revenue raising capacity of regional councils. 
-- reduce the dependence of regional and remote councils on General Purpose Grants for purposes that would be better served by targeted, non-competitive grants.
+FA Grants are distributed by Grants Commissions in each state and consist of two components: general purpose, local roads. Each state estimates entitlements using its own methodology (or model, as it is referred to hereon) guided by overarching principles defined under the Local Government (Financial Assistance) Act 1995.
 
-Alternatively, an **increased quantum of the grant could be coupled with a reformed grant allocation formula** over the medium term to allow for investment into regional and remote areas, abating inequitous growth trends. Such a systen would
+The general purpose grants (GPG) have a per-capita minimum grant constraint that ensures each council receives at least 30% of what they would get under a model based purely on population size. However, this minimum allocation is controversial, with regional councils arguing it disproportionately benefits urban councils that are less reliant on federal funding due to stronger local economies and broader revenue streams.
 
-- favor currently disadvantaged councils.
-- not be detrimental to critical growth areas.
+ALGA’s longstanding position is that increasing the overall funding pool is more effective than adjusting distribution formulas. To better inform subsequent rhetoric in this regard, this report explores the potential impacts of changing GPG allocation formulae through various modelling scenarios. The aim is to assess how changes to the grant structure could potentially affect councils.
 
-## A high level look at weaknesses in the model
+As discussed earlier, State Grant Commissions employ varying methodologies to estimate GPG entitlements. At a high level, all models use a metric of funding gap as a starting point. Iterative distributive process constrained by the minimum per-capita entitlements are used to allocate available funds. The distribution process is also constrained by varying levels of lower and upper limits (caps and collars) on year-on-year change in entitlements. This ensures stability but sometimes impedes responsive redistribution.
+
+## Approach to analysis
+
+Efforts were taken to replicate grant entitlement estimation models. Due to data and documentation limitations in Queensland and New South Wales, synthetic metrics informed by heuristics were developed to estimate funding gaps. Grant entitlement data from 2024-25 and 2025-26 were used along with macroeconomic variables from the 2025 Federal Budget. The Australian Classification of Local Government (ACLG) was used to stratify and characterize local government areas. 
+
+Iterative algorithms were then used to model fund distribution under four scenarios - baseline (30%), 20%, 10%, and 0% per-capita minimums, accounting for caps and collars on annual changes. Repeated sampling was used to approximate distributions for change in entitlements. 
+
+## Findings
 
 Modelling shows that urban councils, especially those in metropolitan and fringe categories, tend to lose funding as the minimum grant is reduced. These councils are critical growth areas, with high upward demographic pressures. Consequently, these councils are also expected to face upwards pressure to invest in housing, roads, and trunk-infrastructure construction and maintenance. 
 
-Conversely, regional and remote councils, particularly those with lower revenue-raising capacity, are more likely to gain under any scenario that reduces the minimum per-capita grant entitlements. 
+On the other hand, regional and remote councils, particularly those with lower revenue-raising capacity, are more likely to gain under any scenario that reduces the minimum per-capita grant entitlements. 
 
-This points to possible flaws in how the correlation between growth and perceived ability to raise revenue is factored into the calculation of General Purpose Grant entitlements. That is, the calculations rely on measures of revenue-raising capacity and financial sustainability while heavily discounting any adverse effects caused in the future from suboptimal investment right now.
+These findings demonstrate that the method for calculating the GPG entitlements do not sufficiently account for projected demographic changes and subsequent needs. 
 
-The needs of regional and remote councils stemming from higher per-capita infrastructure maintenance costs are better serviced through targeted policies and non-competitive grants that work independently of Financial Assistance Grants. 
+Current models rely on measures of revenue-raising capacity and financial sustainability while heavily discounting any adverse effects caused in the future from suboptimal investment right now - there seems to be limited consideration of how the correlation between growth and perceived ability to raise revenue is factored into the calculation of GPG entitlements.
 
-The current system of caps and collars that limit year-over-year movement of grant entitlements offer insufficient protection to councils deemed "Minimum Grant Councils", as councils are projected to lose anywhere between 40% to 100% of their General Purpose Grants under certain scenarios.
+This could constitute a limitation in its suitability for allocating funding based on need. However, it is important to note that ‘need’ is also contextually defined, so any changes to a needs-based formula would require sensitive consideration for how variegated needs manifest across communities.
 
-## Possible courses of action
+Furthermore, the needs of regional and remote councils stemming from higher per-capita infrastructure maintenance costs might be better serviced through targeted policies and non-competitive grants that work independently of Financial Assistance Grants. 
+
+The current system of caps and collars that limit year-over-year movement of grant entitlements offer insufficient protection to councils deemed "Minimum Grant Councils", as councils are projected to lose anywhere between 40% to 100% of their GPG under certain scenarios.
+
+## Implications
+
+Modelling indicates that reducing the minimum per-capita entitlements from 30% to any of the three scenarios studied here would target funding to needier councils but also would pose a significant risk of destabilizing urban and fringe council budgets. They are likely to be faced with large political resistance. 
+
+As such, there seem to be three possible pathways for policy response from the Federal Government.
 
 1. **Increase the total quantum of grant**: Allows significant increases to councils with insufficient revenue raising capacity without adversely impacting critical growth areas.
 2. **Retain the current minimum grant (30%)**: Maintains stability but may perpetuate inequities.
-3. **Reduce the minimum to 20% or 10%**: Targets funding to needier councils, but risks destabilizing urban and fringe council budgets.
-4. **Remove the minimum entirely**: Maximizes targeting but may result in large funding swings and political resistance.
 5. **Reform the GPG formula**: Restructure the approach to calculating General Purpose Grants to better capture critical growth areas and revenue raising capacity.
 
-## Recommendations
+\newpage 
 
-With options 3 and 4 being obviously unsustainable and politically infeasible, this study distills its recommendations into the following:
+# Looking into the future of FA Grants (Internal)
+
+With reducing the per-capita minimum constraint being economically unsustainable and politically infeasible, this study distills its recommendations into the following:
 
 - Increase total funding available to the Financial Assistance Grants program.
 - Stagger the introduction of changes to the minimum grant - if any, monitoring impacts on council finances and service delivery.
@@ -62,3 +82,13 @@ With options 3 and 4 being obviously unsustainable and politically infeasible, t
 - Improve transparency of grant entitlement calculations through hands-on analytical workshops and clear published documentation.
 - Engage stakeholders in reform design to ensure buy-in and minimize disruption.
 - Continue to refine modelling and data collection to support evidence-based policy.
+
+As such, the gradual move to a **transparent, needs-based, and deterministic formula** is the recommended course of action. Such an approach should
+
+- balance the needs of critical growth areas against the limited revenue raising capacity of regional councils. 
+- reduce the dependence of regional and remote councils on General Purpose Grants for purposes that would be better served by targeted, non-competitive grants.
+
+Alternatively, an **increased quantum of the grant could be coupled with a reformed grant allocation formula** over the medium term to allow for investment into regional and remote areas, abating inequitable growth trends. Such a system would
+
+- favor currently disadvantaged councils.
+- not be detrimental to critical growth areas.
